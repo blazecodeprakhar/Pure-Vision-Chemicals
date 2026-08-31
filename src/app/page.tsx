@@ -80,7 +80,7 @@ export default function Home() {
               <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
                 Where Nature Meets <br />
                 <span className="italic font-normal text-[#C49A45]">
-                  & Precise Formulation
+                  Formulation.
                 </span>
               </h1>
 
