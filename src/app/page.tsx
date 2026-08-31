@@ -22,9 +22,11 @@ import { PRODUCTS, Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 
 const CATEGORIES = [
-  "Rheology Modifiers",
   "Actives",
+  "Sunscreen & Moisturizer",
+  "Functional Products",
   "Preservatives",
+  "Rheology Modifiers",
   "Herbal Extracts (Water Soluble)",
   "Herbal Extracts (Oil Soluble)",
   "Natural Oils",
@@ -33,8 +35,9 @@ const CATEGORIES = [
 
 export default function Home() {
   const { inquiryCart, toggleCartItem, setCartOpen } = useCart();
-  const [selectedCategory, setSelectedCategory] = useState<string>("Rheology Modifiers");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Actives");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [catalogueViewMode, setCatalogueViewMode] = useState<"list" | "grid">("list");
 
   // Filter products cleanly
   const filteredProducts = useMemo(() => {
@@ -217,60 +220,69 @@ export default function Home() {
             </div>
           </div>
 
-          {/* MASTER 4x4 CATEGORY DASHBOARD GRID */}
+          {/* MASTER 4x2 CATEGORY DASHBOARD GRID */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-xs uppercase tracking-widest font-semibold text-[#62736B]">Select Category Family</span>
-              <span className="text-xs text-[#62736B]">7 Core Families</span>
+              <span className="text-xs text-[#62736B]">8 Core Families</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 {
                   id: "01",
+                  name: "Actives",
+                  description: "Targeted ingredients for high-performance skin and hair care.",
+                  bg: "bg-[#E8F0EC]",
+                },
+                {
+                  id: "02",
+                  name: "Sunscreen & Moisturizer",
+                  description: "UV filters and hydration systems for modern formulations.",
+                  bg: "bg-[#FDF6E9]",
+                },
+                {
+                  id: "03",
+                  name: "Functional Products",
+                  description: "Emollients, emulsifiers, surfactants and conditioning systems.",
+                  bg: "bg-[#F4EFEA]",
+                },
+                {
+                  id: "04",
+                  name: "Preservatives",
+                  description: "Reliable preservation systems for safe, stable products.",
+                  bg: "bg-[#EAF1F0]",
+                },
+                {
+                  id: "05",
                   name: "Rheology Modifiers",
                   description: "Texture, viscosity and sensory control for elegant formulas.",
                   bg: "bg-[#E8F0EC]",
                 },
                 {
-                  id: "02",
-                  name: "Actives",
-                  description: "Targeted ingredients for high-performance skin and hair care.",
-                  bg: "bg-[#FDF6E9]",
-                },
-                {
-                  id: "03",
-                  name: "Preservatives",
-                  description: "Reliable preservation systems for safe, stable products.",
-                  bg: "bg-[#F4EFEA]",
-                },
-                {
-                  id: "04",
+                  id: "06",
                   name: "Herbal Extracts (Water Soluble)",
-                  description: "Water-soluble botanical extracts for conscious product makers.",
-                  bg: "bg-[#EAF1F0]",
-                },
-                {
-                  id: "05",
-                  name: "Herbal Extracts (Oil Soluble)",
-                  description: "Lipid-soluble botanical extracts for anhydrous formulations.",
+                  description: "Water-soluble botanical extracts selected for conscious formulation.",
                   bg: "bg-[#FBF6EE]",
                 },
                 {
-                  id: "06",
+                  id: "07",
                   name: "Natural Oils",
                   description: "Plant-derived oils for nourishment and sensory richness.",
                   bg: "bg-[#F6F2EC]",
                 },
                 {
-                  id: "07",
+                  id: "08",
                   name: "Butters",
                   description: "Rich botanical butters for balms, creams and care.",
                   bg: "bg-[#F1ECE6]",
                 },
               ].map((cat) => {
-                const count = PRODUCTS.filter((p) => p.category === cat.name).length;
-                const isSelected = selectedCategory === cat.name;
+                const count = PRODUCTS.filter((p) => 
+                  p.category === cat.name || 
+                  (cat.name === "Herbal Extracts (Water Soluble)" && p.category.includes("Herbal Extracts"))
+                ).length;
+                const isSelected = selectedCategory === cat.name || (selectedCategory.includes("Herbal Extracts") && cat.name.includes("Herbal Extracts"));
 
                 return (
                   <motion.div
@@ -289,7 +301,7 @@ export default function Home() {
                         <span className="font-serif-luxury text-xs font-bold text-[#C49A45]">
                           {cat.id}
                         </span>
-                        <span className={`px-2 py-0.5 text-[10px] font-extrabold rounded-full ${
+                        <span className={`px-2.5 py-0.5 text-[10px] font-extrabold rounded-full ${
                           isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#1A2E26] border border-[#D9E0DA]"
                         }`}>
                           {count} Items
@@ -325,20 +337,47 @@ export default function Home() {
           </div>
 
 
-          {/* SELECTED CATEGORY LIVE RESULTS HEADER & PRODUCT GRID */}
+          {/* SELECTED CATEGORY LIVE RESULTS HEADER & SPEC SHEET LIST / GRID TOGGLE */}
           <div className="pt-8 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D9E0DA] pb-4">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C49A45]">Showing Category Results</span>
-                <h3 className="font-serif-luxury text-2xl font-bold text-[#1A2E26] pt-0.5">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C49A45]">Showing Category</span>
+                <h3 className="font-serif-luxury text-2xl sm:text-3xl font-bold text-[#1A2E26] pt-0.5">
                   {selectedCategory} <span className="text-sm font-normal text-[#62736B]">({filteredProducts.length} items)</span>
                 </h3>
               </div>
-              {searchQuery && (
-                <span className="text-xs text-[#62736B] bg-white px-3 py-1 border border-[#D9E0DA]">
-                  Filter query: "<strong className="text-[#1A2E26]">{searchQuery}</strong>"
-                </span>
-              )}
+
+              {/* View Switcher: Spec Sheet List vs Card Grid */}
+              <div className="flex items-center gap-3">
+                {searchQuery && (
+                  <span className="text-xs text-[#62736B] bg-white px-3 py-1 border border-[#D9E0DA]">
+                    Query: "<strong className="text-[#1A2E26]">{searchQuery}</strong>"
+                  </span>
+                )}
+
+                <div className="inline-flex border border-[#D9E0DA] bg-white p-1">
+                  <button
+                    onClick={() => setCatalogueViewMode("list")}
+                    className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
+                      catalogueViewMode === "list"
+                        ? "bg-[#1A2E26] text-white"
+                        : "text-[#62736B] hover:text-[#1A2E26]"
+                    }`}
+                  >
+                    <span>Spec List</span>
+                  </button>
+                  <button
+                    onClick={() => setCatalogueViewMode("grid")}
+                    className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
+                      catalogueViewMode === "grid"
+                        ? "bg-[#1A2E26] text-white"
+                        : "text-[#62736B] hover:text-[#1A2E26]"
+                    }`}
+                  >
+                    <span>Card Grid</span>
+                  </button>
+                </div>
+              </div>
             </div>
 
             {filteredProducts.length === 0 ? (
@@ -347,14 +386,65 @@ export default function Home() {
                 <p className="font-serif-luxury text-lg text-[#1A2E26] font-bold">No ingredients found</p>
                 <p className="text-xs text-[#62736B]">Try adjusting your search query or select another category above.</p>
                 <button
-                  onClick={() => { setSelectedCategory("Rheology Modifiers"); setSearchQuery(""); }}
+                  onClick={() => { setSelectedCategory("Actives"); setSearchQuery(""); }}
                   className="mt-2 text-xs text-[#C49A45] font-bold uppercase tracking-wider underline cursor-pointer"
                 >
                   Reset All Filters
                 </button>
               </div>
 
+            ) : catalogueViewMode === "list" ? (
+              /* ULTRA-AESTHETIC SPEC SHEET LIST VIEW MATCHING SCREENSHOT 2 */
+              <div className="bg-[#F6F6F1] border border-[#D9E0DA] p-4 sm:p-8">
+                <div className="divide-y divide-[#D9E0DA]">
+                  {filteredProducts.map((product, idx) => {
+                    const isInCart = inquiryCart.some((item) => item.id === product.id);
+                    return (
+                      <motion.div
+                        key={product.id}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.2, delay: Math.min(idx * 0.02, 0.2) }}
+                        className="py-4 sm:py-5 flex items-center justify-between hover:bg-white/80 px-4 sm:px-6 transition-all duration-200 group border-b border-[#D9E0DA]/60 last:border-b-0"
+                      >
+                        <div className="flex items-center gap-6 sm:gap-10">
+                          <span className="font-serif-luxury text-xs sm:text-sm text-[#C49A45] font-bold w-6">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                          <h4 className="font-serif-luxury font-bold text-base sm:text-xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors">
+                            {product.name}
+                          </h4>
+                        </div>
+
+                        <button
+                          onClick={() => toggleCartItem(product)}
+                          className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold transition-all cursor-pointer ${
+                            isInCart
+                              ? "text-[#C49A45] font-bold bg-[#1A2E26] px-3.5 py-1.5"
+                              : "text-[#1A2E26] hover:text-[#C49A45] bg-transparent"
+                          }`}
+                        >
+                          {isInCart ? (
+                            <>
+                              <Check className="h-3.5 w-3.5 text-[#C49A45]" />
+                              <span>Added to Quote</span>
+                            </>
+                          ) : (
+                            <>
+                              <span>Add to quote</span>
+                              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                            </>
+                          )}
+                        </button>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+
             ) : (
+              /* CARD GRID VIEW */
               <div className="flex flex-wrap justify-center gap-4">
                 {filteredProducts.map((product, idx) => {
                   const isInCart = inquiryCart.some((item) => item.id === product.id);

@@ -1,10 +1,28 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'Actives' | 'Preservatives' | 'Rheology Modifiers' | 'Herbal Extracts (Water Soluble)' | 'Herbal Extracts (Oil Soluble)' | 'Natural Oils' | 'Butters';
+  category: 'Actives' | 'Sunscreen & Moisturizer' | 'Functional Products' | 'Preservatives' | 'Rheology Modifiers' | 'Herbal Extracts (Water Soluble)' | 'Herbal Extracts (Oil Soluble)' | 'Natural Oils' | 'Butters';
 }
 
 export const PRODUCTS: Product[] = [
+  // SUNSCREEN & MOISTURIZER
+  { id: "sun-1", name: "Solar Defense", category: "Sunscreen & Moisturizer" },
+  { id: "sun-2", name: "Solar Defense Plus", category: "Sunscreen & Moisturizer" },
+  { id: "sun-3", name: "Solar Defense Advanced", category: "Sunscreen & Moisturizer" },
+  { id: "sun-4", name: "Solar Defense Advanced Plus", category: "Sunscreen & Moisturizer" },
+  { id: "sun-5", name: "HydraBoost", category: "Sunscreen & Moisturizer" },
+  { id: "sun-6", name: "HydraBoost Advanced", category: "Sunscreen & Moisturizer" },
+  { id: "sun-7", name: "HydraXYL", category: "Sunscreen & Moisturizer" },
+  { id: "sun-8", name: "Octocrylene", category: "Sunscreen & Moisturizer" },
+  { id: "sun-9", name: "Avobenzone", category: "Sunscreen & Moisturizer" },
+
+  // FUNCTIONAL PRODUCTS
+  { id: "func-1", name: "Caprylic / Capric Triglyceride", category: "Functional Products" },
+  { id: "func-2", name: "Cetearyl Alcohol & Ceteareth-20", category: "Functional Products" },
+  { id: "func-3", name: "Glyceryl Monostearate SE", category: "Functional Products" },
+  { id: "func-4", name: "Polysorbate 20", category: "Functional Products" },
+  { id: "func-5", name: "PEG-40 Hydrogenated Castor Oil", category: "Functional Products" },
+
   // ACTIVES
   { id: "act-1", name: "Sodium Hyaluronate- 5KDA", category: "Actives" },
   { id: "act-2", name: "Sodium Hyaluronate - 10KDA", category: "Actives" },
@@ -13,6 +31,7 @@ export const PRODUCTS: Product[] = [
   { id: "act-5", name: "Sodium Hyaluronate - 1.2MDA", category: "Actives" },
   { id: "act-6", name: "Sodium Hyaluronate - 2MDA", category: "Actives" },
   { id: "act-7", name: "Biotinoyl Tripeptide - 1", category: "Actives" },
+
   { id: "act-8", name: "Decapeptide - 10", category: "Actives" },
   { id: "act-9", name: "Ceramide Blend - 5", category: "Actives" },
   { id: "act-10", name: "Coenzyme Q 10", category: "Actives" },
