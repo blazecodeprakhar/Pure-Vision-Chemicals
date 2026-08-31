@@ -402,7 +402,7 @@ export default function Home() {
                           <span className="font-serif-luxury text-xs sm:text-sm text-[#C49A45] font-bold w-6">
                             {String(idx + 1).padStart(2, "0")}
                           </span>
-                          <h4 className="font-serif-luxury font-bold text-base sm:text-xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors">
+                          <h4 className="font-sans font-semibold text-base sm:text-lg text-[#1A2E26] tracking-tight group-hover:text-[#C49A45] transition-colors">
                             {product.name}
                           </h4>
                         </div>
@@ -458,7 +458,7 @@ export default function Home() {
                           </span>
                         </div>
 
-                        <h3 className="font-serif-luxury font-bold text-base text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-snug pt-1">
+                        <h3 className="font-sans font-semibold text-base text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-snug pt-1">
                           {product.name}
                         </h3>
                       </div>
