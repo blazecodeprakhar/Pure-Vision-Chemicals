@@ -327,51 +327,69 @@ export default function Home() {
           </div>
 
 
-          {/* SELECTED CATEGORY LIVE RESULTS HEADER & SPEC SHEET LIST / GRID TOGGLE */}
-          <div className="pt-8 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D9E0DA] pb-4">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C49A45]">Showing Category</span>
-                <h3 className="font-serif-luxury text-2xl sm:text-3xl font-bold text-[#1A2E26] pt-0.5">
-                  {selectedCategory} <span className="text-sm font-normal text-[#62736B]">({filteredProducts.length} items)</span>
+          {/* SELECTED CATEGORY LIVE RESULTS HEADER & SPEC SHEET CONTAINER */}
+          <div className="pt-8 space-y-6 bg-[#F8F8F3] p-4 sm:p-8 select-none">
+            
+            {/* Header & Minimal Search Bar matching Screenshot 3 & 4 */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#D9E0DA]/80 pb-5">
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">
+                  SHOWING CATEGORY {String(CATEGORIES.indexOf(selectedCategory as any) + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#1A2E26]">
+                  {selectedCategory}
                 </h3>
               </div>
 
-              {/* View Switcher: Spec Sheet List vs Card Grid */}
-              <div className="flex items-center gap-3">
-                {searchQuery && (
-                  <span className="text-xs text-[#62736B] bg-white px-3 py-1 border border-[#D9E0DA]">
-                    Query: "<strong className="text-[#1A2E26]">{searchQuery}</strong>"
-                  </span>
-                )}
+              {/* Right Side: Minimal Search Bar & View Mode Toggle matching Screenshot 3 & 4 */}
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                <div className="relative w-full sm:w-60">
+                  <Search className="absolute left-0 top-2.5 h-3.5 w-3.5 text-[#62736B]" />
+                  <input
+                    type="text"
+                    placeholder="Search products"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-6 pr-4 py-1.5 bg-transparent border-b border-[#D9E0DA] focus:border-[#1A2E26] text-xs text-[#1A2E26] focus:outline-none transition-colors"
+                  />
+                  {searchQuery && (
+                    <button 
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-0 top-1.5 text-[10px] uppercase font-bold text-[#C49A45]"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
 
-                <div className="inline-flex border border-[#D9E0DA] bg-white p-1">
+                <div className="inline-flex border border-[#D9E0DA] bg-white p-0.5 shrink-0">
                   <button
                     onClick={() => setCatalogueViewMode("list")}
-                    className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
+                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${
                       catalogueViewMode === "list"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
                     }`}
                   >
-                    <span>Spec List</span>
+                    Spec List
                   </button>
                   <button
                     onClick={() => setCatalogueViewMode("grid")}
-                    className={`px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
+                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${
                       catalogueViewMode === "grid"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
                     }`}
                   >
-                    <span>Card Grid</span>
+                    Card Grid
                   </button>
                 </div>
               </div>
             </div>
 
+            {/* Spec Sheet List View matching Screenshot 3 & 4 (No outer box border, background #F8F8F3, text-sm text-[#2D4A3E]) */}
             {filteredProducts.length === 0 ? (
-              <div className="text-center py-16 bg-white border border-[#D9E0DA] space-y-3">
+              <div className="text-center py-16 bg-white/50 space-y-3">
                 <FlaskConical className="h-10 w-10 text-[#62736B] mx-auto opacity-50" />
                 <p className="font-serif-luxury text-lg text-[#1A2E26] font-bold">No ingredients found</p>
                 <p className="text-xs text-[#62736B]">Try adjusting your search query or select another category above.</p>
@@ -384,53 +402,50 @@ export default function Home() {
               </div>
 
             ) : catalogueViewMode === "list" ? (
-              /* ULTRA-AESTHETIC SPEC SHEET LIST VIEW MATCHING SCREENSHOT 2 */
-              <div className="bg-[#F6F6F1] border border-[#D9E0DA] p-4 sm:p-8">
-                <div className="divide-y divide-[#D9E0DA]">
-                  {filteredProducts.map((product, idx) => {
-                    const isInCart = inquiryCart.some((item) => item.id === product.id);
-                    return (
-                      <motion.div
-                        key={product.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.2, delay: Math.min(idx * 0.02, 0.2) }}
-                        className="py-4 sm:py-5 flex items-center justify-between hover:bg-white/80 px-4 sm:px-6 transition-all duration-200 group border-b border-[#D9E0DA]/60 last:border-b-0"
-                      >
-                        <div className="flex items-center gap-6 sm:gap-10">
-                          <span className="font-serif-luxury text-xs sm:text-sm text-[#C49A45] font-bold w-6">
-                            {String(idx + 1).padStart(2, "0")}
-                          </span>
-                          <h4 className="font-sans font-semibold text-base sm:text-lg text-[#1A2E26] tracking-tight group-hover:text-[#C49A45] transition-colors">
-                            {product.name}
-                          </h4>
-                        </div>
+              <div className="divide-y divide-[#D9E0DA]/70">
+                {filteredProducts.map((product, idx) => {
+                  const isInCart = inquiryCart.some((item) => item.id === product.id);
+                  return (
+                    <motion.div
+                      key={product.id}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.15, delay: Math.min(idx * 0.015, 0.15) }}
+                      className="py-3.5 sm:py-4 flex items-center justify-between hover:bg-white/60 px-2 sm:px-4 transition-all duration-200 group"
+                    >
+                      <div className="flex items-center gap-6 sm:gap-10">
+                        <span className="font-serif-luxury text-xs text-[#C49A45] font-bold w-6">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                        <h4 className="font-sans font-semibold text-sm sm:text-base text-[#2D4A3E] tracking-tight group-hover:text-[#1A2E26] transition-colors">
+                          {product.name}
+                        </h4>
+                      </div>
 
-                        <button
-                          onClick={() => toggleCartItem(product)}
-                          className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold transition-all cursor-pointer ${
-                            isInCart
-                              ? "text-[#C49A45] font-bold bg-[#1A2E26] px-3.5 py-1.5"
-                              : "text-[#1A2E26] hover:text-[#C49A45] bg-transparent"
-                          }`}
-                        >
-                          {isInCart ? (
-                            <>
-                              <Check className="h-3.5 w-3.5 text-[#C49A45]" />
-                              <span>Added to Quote</span>
-                            </>
-                          ) : (
-                            <>
-                              <span>Add to quote</span>
-                              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                            </>
-                          )}
-                        </button>
-                      </motion.div>
-                    );
-                  })}
-                </div>
+                      <button
+                        onClick={() => toggleCartItem(product)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
+                          isInCart
+                            ? "text-[#C49A45] font-bold bg-[#1A2E26] px-3.5 py-1.5"
+                            : "text-[#62736B] hover:text-[#1A2E26] bg-transparent"
+                        }`}
+                      >
+                        {isInCart ? (
+                          <>
+                            <Check className="h-3.5 w-3.5 text-[#C49A45]" />
+                            <span>Added to Quote</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Add to quote</span>
+                            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                          </>
+                        )}
+                      </button>
+                    </motion.div>
+                  );
+                })}
               </div>
 
             ) : (
