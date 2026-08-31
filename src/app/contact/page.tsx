@@ -6,11 +6,12 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Clock, 
   Check, 
   ArrowRight,
-  ChevronDown
+  ChevronDown,
+  ShoppingBag
 } from "lucide-react";
+
 import { useCart } from "@/context/CartContext";
 
 export default function Contact() {
@@ -25,13 +26,13 @@ export default function Contact() {
     message: ""
   });
 
-  // Pre-fill form from cart inquiry list
+  // Pre-fill form message when inquiryCart changes
   useEffect(() => {
     if (inquiryCart.length > 0) {
       const productListText = inquiryCart.map(p => `• ${p.name} (${p.category})`).join("\n");
       setFormState(prev => ({
         ...prev,
-        message: `Hello PV Chem Team,\n\nI would like to request detailed specifications, availability, and quotes for the following specialty ingredients:\n${productListText}\n\nPlease get back to me with the details.\n`
+        message: `Hello Pure Vision Chemicals Team,\n\nI would like to request detailed COA specification sheets, stock availability, and bulk pricing for the following ingredients:\n${productListText}\n\nPlease share the proposal.\n`
       }));
     }
   }, [inquiryCart]);
@@ -50,127 +51,173 @@ export default function Contact() {
       setSubmitted(false);
       setFormState({ name: "", company: "", email: "", phone: "", interest: "Actives", message: "" });
       clearCart();
-    }, 5000);
+    }, 6000);
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="relative min-h-screen bg-slate-50 text-slate-700 select-none pb-20"
-    >
+    <div className="relative min-h-screen bg-[#F8F8F3] text-[#1A2E26] flex flex-col select-none pb-20">
       
-      {/* HEADER SECTION */}
-      <section className="bg-gradient-to-r from-brand-primary-dark via-brand-primary to-slate-900 text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
-        <div className="absolute top-[-50px] right-[-50px] h-36 w-36 rounded-full bg-brand-secondary/20 blur-2xl" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-          <span className="text-xs font-bold tracking-widest text-brand-secondary-bright uppercase">Contact Channels</span>
-          <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight">Request Samples & Quotations</h1>
-          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Collaborate on raw material formulations. Send us a message or reach out via email or phone.
-          </p>
+      {/* GRAND EDITORIAL CONTACT HERO SECTION */}
+      <section className="relative bg-[#1A2E26] text-[#E4ECE6] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA]/20 overflow-hidden">
+        {/* Ambient Glow */}
+        <div className="absolute inset-0 pointer-events-none opacity-25">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#2D4A3E] rounded-full blur-[150px]" />
+          <div className="absolute top-0 right-10 w-[350px] h-[350px] bg-[#C49A45]/15 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto"
+          >
+            <span>Specification Sourcing • Technical Desk</span>
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
+          >
+            Request Samples <br />
+            <span className="italic font-normal text-[#C49A45]">
+              & Custom Quotations
+            </span>
+          </motion.h1>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="flex items-center justify-center gap-4 pt-2"
+          >
+            <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
+            <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
+              "Collaborate directly with our technical sales engineers for COA specification sheets, stock availability, and bulk pricing."
+            </p>
+            <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
+          </motion.div>
+
+          {/* Quick Pillars Badge Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="pt-6 flex flex-wrap items-center justify-center gap-4 text-[11px] font-semibold uppercase tracking-widest text-[#E4ECE6]/80"
+          >
+            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Fast COA Verification</span>
+            <span className="hidden sm:inline text-[#C49A45]">•</span>
+            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Dedicated Technical Support</span>
+            <span className="hidden sm:inline text-[#C49A45]">•</span>
+            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Pan-India Logistics</span>
+          </motion.div>
+
         </div>
       </section>
+
 
       {/* CONTACT BODY & FORM */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Left side details */}
+          {/* Left Details */}
           <motion.div 
             className="lg:col-span-5 space-y-8"
-            initial={{ opacity: 0, x: -35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="space-y-3">
-              <h2 className="font-display text-2xl font-bold text-brand-primary">Get in Touch</h2>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                We look forward to partnering with your procurement and technical R&D teams.
+            <div className="space-y-2">
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">Direct Desk</span>
+              <h2 className="font-serif-luxury text-2xl sm:text-3xl font-bold text-[#1A2E26]">Get in Touch</h2>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                We look forward to partnering with your procurement and R&D formulation teams.
               </p>
             </div>
 
-            {/* Direct details card */}
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-brand-secondary shrink-0">
+            {/* Direct Channel Cards */}
+            <div className="space-y-5">
+              
+              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
+                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-sm text-slate-800">Email Address</h5>
-                  <p className="text-sm text-slate-500 mt-0.5"><a href="mailto:purevisionchem@outlook.com" className="hover:text-brand-primary transition-colors">purevisionchem@outlook.com</a></p>
+                  <h5 className="font-bold text-xs uppercase tracking-wider text-[#1A2E26]">Email Address</h5>
+                  <p className="text-xs text-[#62736B] mt-1">
+                    <a href="mailto:purevisionchem@outlook.com" className="hover:text-[#C49A45] transition-colors font-medium">
+                      purevisionchem@outlook.com
+                    </a>
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-brand-secondary shrink-0">
+              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
+                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-sm text-slate-800">Telephone</h5>
-                  <p className="text-sm text-slate-500 mt-0.5"><a href="tel:+919326395502" className="hover:text-brand-primary transition-colors">+91 93263 95502</a></p>
+                  <h5 className="font-bold text-xs uppercase tracking-wider text-[#1A2E26]">Telephone</h5>
+                  <p className="text-xs text-[#62736B] mt-1">
+                    <a href="tel:+919326395502" className="hover:text-[#C49A45] transition-colors font-medium">
+                      +91 93263 95502
+                    </a>
+                  </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-brand-secondary shrink-0">
+              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
+                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-sm text-slate-800">HQ Office Address</h5>
-                  <p className="text-sm text-slate-500 mt-0.5 leading-relaxed">
+                  <h5 className="font-bold text-xs uppercase tracking-wider text-[#1A2E26]">HQ Office Address</h5>
+                  <p className="text-xs text-[#62736B] mt-1 leading-relaxed font-light">
                     Unit 201, Jai Malhar, Mumbai - 400064, India
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-brand-secondary shrink-0">
-                  <Clock className="h-5 w-5" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-sm text-slate-800">Operation Hours</h5>
-                  <p className="text-sm text-slate-500 mt-0.5">Mon - Sat: 10:00 AM - 7:00 PM IST</p>
-                </div>
-              </div>
             </div>
 
-            {/* Simulated Map rendering */}
-            <div className="relative h-60 w-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-center">
-              <div className="absolute inset-0 opacity-[0.25] bg-[radial-gradient(#808080_1px,transparent_1px)] [background-size:16px_16px]" />
-              <div className="text-center space-y-2 z-10 px-4">
-                <MapPin className="h-8 w-8 text-brand-primary mx-auto animate-bounce" />
-                <p className="font-display font-bold text-slate-800 text-sm">PV Chem Mumbai HQ</p>
-                <p className="text-[11px] text-slate-400">Unit 201, Jai Malhar, Mumbai 064</p>
+
+            {/* HQ Map Display Card */}
+            <div className="relative h-56 w-full border border-[#D9E0DA] bg-[#E4ECE6] flex items-center justify-center p-6 text-center">
+              <div className="space-y-2 z-10">
+                <MapPin className="h-8 w-8 text-[#1A2E26] mx-auto animate-bounce" />
+                <p className="font-serif-luxury font-bold text-[#1A2E26] text-base">Pure Vision Chemicals Mumbai HQ</p>
+                <p className="text-xs text-[#62736B]">Unit 201, Jai Malhar, Mumbai 400064, India</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right side form */}
+          {/* Right Form */}
           <motion.div 
-            className="lg:col-span-7 bg-white border border-slate-200/80 p-8 sm:p-10 rounded-3xl shadow-sm"
-            initial={{ opacity: 0, x: 35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-7 bg-white border border-[#D9E0DA] p-8 sm:p-10 shadow-sm"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <h3 className="font-display text-xl font-bold text-slate-800 mb-6">Specification Sourcing Request</h3>
+            <div className="border-b border-[#D9E0DA] pb-6 mb-6">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C49A45]">Official Form</span>
+              <h3 className="font-serif-luxury text-2xl font-bold text-[#1A2E26] mt-1">Specification Sourcing Request</h3>
+            </div>
             
             {submitted ? (
               <motion.div 
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-800 space-y-3"
+                className="bg-[#E4ECE6] border border-[#2D4A3E] p-8 text-center text-[#1A2E26] space-y-4"
               >
-                <div className="h-12 w-12 rounded-full bg-emerald-100 flex items-center justify-center mx-auto text-emerald-600">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center mx-auto">
                   <Check className="h-6 w-6" />
                 </div>
-                <h4 className="font-bold text-base">Inquiry Submitted Successfully</h4>
-                <p className="text-xs text-emerald-600 leading-relaxed max-w-sm mx-auto">
-                  Thank you! Our technical sales engineers will verify stock, specification sheets (COA), and send a proposal to your inbox shortly.
+                <h4 className="font-serif-luxury text-xl font-bold">Inquiry Submitted Successfully</h4>
+                <p className="text-xs text-[#62736B] leading-relaxed max-w-sm mx-auto font-light">
+                  Thank you! Our technical sales engineers will verify stock, prepare specification sheets (COA), and send a proposal to your inbox shortly.
                 </p>
               </motion.div>
             ) : (
@@ -178,7 +225,7 @@ export default function Contact() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Your Name</label>
+                    <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Your Name *</label>
                     <input 
                       type="text"
                       name="name"
@@ -186,11 +233,11 @@ export default function Contact() {
                       value={formState.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Company Name</label>
+                    <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Company Name *</label>
                     <input 
                       type="text"
                       name="company"
@@ -198,14 +245,14 @@ export default function Contact() {
                       value={formState.company}
                       onChange={handleInputChange}
                       placeholder="Acme Formulations Ltd."
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Corporate Email</label>
+                    <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Corporate Email *</label>
                     <input 
                       type="email"
                       name="email"
@@ -213,11 +260,11 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleInputChange}
                       placeholder="purchasing@acme.com"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone / WhatsApp</label>
+                    <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Phone / WhatsApp *</label>
                     <input 
                       type="tel"
                       name="phone"
@@ -225,40 +272,46 @@ export default function Contact() {
                       value={formState.phone}
                       onChange={handleInputChange}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Primary Category of Interest</label>
+                  <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Primary Category of Interest</label>
                   <div className="relative">
                     <select 
                       name="interest"
                       value={formState.interest}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] appearance-none focus:outline-none focus:border-[#1A2E26] transition-all"
                     >
                       <option value="Actives">Actives (Peptides, Hyaluronates)</option>
                       <option value="Preservatives">Preservatives (Phenoxyethanol, Hydantoins)</option>
                       <option value="Rheology Modifiers">Rheology Modifiers (Copolymers, Gels)</option>
-                      <option value="Herbal Extracts">Botanical / Herbal Extracts</option>
+                      <option value="Herbal Extracts (Water Soluble)">Water Soluble Botanical Extracts</option>
+                      <option value="Herbal Extracts (Oil Soluble)">Oil Soluble Botanical Extracts</option>
                       <option value="Natural Oils">Natural & Essential Oils</option>
                       <option value="Butters">Natural Butters (Shea, Cocoa)</option>
                     </select>
-                    <ChevronDown className="absolute right-4 top-3.5 h-5 w-5 text-slate-400 pointer-events-none" />
+                    <ChevronDown className="absolute right-4 top-3.5 h-4 w-4 text-[#62736B] pointer-events-none" />
                   </div>
                 </div>
 
-                {/* Prepopulated Inquiry Items display */}
+                {/* Prepopulated Quote Cart Display */}
                 {inquiryCart.length > 0 && (
-                  <div className="space-y-2 p-4 bg-slate-50 rounded-xl border border-slate-200">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Attached Sourcing List ({inquiryCart.length})</span>
-                    <div className="max-h-24 overflow-y-auto divide-y divide-slate-100 pr-2 custom-scrollbar">
+                  <div className="space-y-2 p-4 bg-[#E4ECE6] border border-[#D9E0DA]">
+                    <div className="flex items-center justify-between text-[10px] font-bold text-[#1A2E26] uppercase tracking-wider">
+                      <span className="flex items-center gap-1.5">
+                        <ShoppingBag className="h-3.5 w-3.5 text-[#C49A45]" />
+                        Attached Sourcing List ({inquiryCart.length} items)
+                      </span>
+                    </div>
+                    <div className="max-h-28 overflow-y-auto divide-y divide-[#D9E0DA] pr-2 custom-scrollbar">
                       {inquiryCart.map(item => (
-                        <div key={item.id} className="text-xs py-1.5 text-slate-600 flex justify-between font-medium">
+                        <div key={item.id} className="text-xs py-1.5 text-[#1A2E26] flex justify-between font-medium">
                           <span>{item.name}</span>
-                          <span className="text-[9px] text-slate-400 uppercase font-semibold">{item.category}</span>
+                          <span className="text-[9px] text-[#62736B] uppercase font-semibold">{item.category}</span>
                         </div>
                       ))}
                     </div>
@@ -266,7 +319,7 @@ export default function Contact() {
                 )}
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Specification Details / Message</label>
+                  <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Specification Details / Message *</label>
                   <textarea 
                     name="message"
                     rows={5}
@@ -274,16 +327,16 @@ export default function Contact() {
                     value={formState.message}
                     onChange={handleInputChange}
                     placeholder="Specify molecular weights, purity levels, estimated volume quantities required..."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-secondary focus:bg-white focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
                   />
                 </div>
 
                 <button 
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand-primary hover:bg-brand-primary-dark text-white py-4 font-bold shadow-md shadow-brand-primary/10 transition-all hover:translate-y-[-1px] cursor-pointer"
+                  className="w-full flex items-center justify-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer shadow-md"
                 >
-                  <span>Submit B2B Sourcing Request</span>
-                  <ArrowRight className="h-5 w-5" />
+                  <span>Submit Sourcing Request</span>
+                  <ArrowRight className="h-4 w-4 text-[#C49A45]" />
                 </button>
 
               </form>
@@ -293,6 +346,6 @@ export default function Contact() {
         </div>
       </section>
 
-    </motion.div>
+    </div>
   );
 }

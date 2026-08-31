@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Pure Vision Chemicals | Where Vision Meets Science",
-  description: "Specialty chemical ingredients supplier based in Mumbai, India. Sourcing high-value ingredients for Personal Care, Home Care, Pet Care, and Food industries.",
-  keywords: ["Pure Vision Chemicals", "PV Chem", "specialty chemicals India", "chemical ingredients Mumbai", "personal care raw materials", "home care chemicals", "actives", "natural oils supplier"],
+  title: "Pure Vision Chemicals | Botanical Intelligence & Specialty Actives",
+  description: "High-value specialty chemical ingredients sourced from globally renowned partners. Serving Personal Care, Home Care, Pet Care, and Food industries.",
+  keywords: ["Pure Vision Chemicals", "PV Chem", "specialty chemical ingredients", "actives", "preservatives", "rheology modifiers", "natural oils", "botanical extracts", "Mumbai chemicals"],
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
-    title: "Pure Vision Chemicals | Where Vision Meets Science",
-    description: "High-value specialty chemicals and performance ingredients sourced from globally renowned manufacturing partners.",
+    title: "Pure Vision Chemicals | Botanical Intelligence & Specialty Actives",
+    description: "Sourcing high-value specialty chemical ingredients across India and global markets.",
     type: "website",
   }
 };
@@ -34,10 +41,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col font-sans bg-slate-50 text-slate-700">
+      <body className="min-h-full flex flex-col font-sans bg-[#F8F8F3] text-[#1A2E26]">
         <CartProvider>
           <Header />
           <main className="flex-1 flex flex-col">
@@ -49,4 +56,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

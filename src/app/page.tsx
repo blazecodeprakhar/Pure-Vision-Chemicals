@@ -1,453 +1,626 @@
 "use client";
 
-import React from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import {
+  Search,
+  Check,
+  Plus,
   ArrowRight,
-  ChevronRight,
-  FlaskConical,
-  Sprout,
+  Droplets,
   ShieldCheck,
   Globe2,
-  Droplet,
-  Award,
-  Zap,
-  CheckCircle2
+  Leaf,
+  FlaskConical,
+  ShoppingBag,
+  ChevronRight
 } from "lucide-react";
 
-export default function Home() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  };
+import { PRODUCTS, Product } from "@/data/products";
+import { useCart } from "@/context/CartContext";
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring" as const, stiffness: 100, damping: 15 }
-    }
-  };
+const CATEGORIES = [
+  "Rheology Modifiers",
+  "Actives",
+  "Preservatives",
+  "Herbal Extracts (Water Soluble)",
+  "Herbal Extracts (Oil Soluble)",
+  "Natural Oils",
+  "Butters"
+] as const;
+
+export default function Home() {
+  const { inquiryCart, toggleCartItem, setCartOpen } = useCart();
+  const [selectedCategory, setSelectedCategory] = useState<string>("Rheology Modifiers");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  // Filter products cleanly
+  const filteredProducts = useMemo(() => {
+    return PRODUCTS.filter((product) => {
+      const matchesCategory = product.category === selectedCategory;
+      const matchesSearch = product.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchQuery]);
+
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="relative min-h-screen bg-slate-50 text-slate-700 overflow-hidden flex flex-col select-none"
-    >
-
-      {/* HERO SECTION */}
-      <section className="relative min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-5rem)] bg-gradient-to-br from-brand-primary-dark via-brand-primary to-slate-900 text-white overflow-hidden flex items-center py-8 lg:py-0">
-
-        {/* Abstract Bio-Chemical Floating Graphic Ornaments */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-brand-secondary/25 blur-3xl opacity-60" />
-          <div className="absolute bottom-[-100px] right-[-100px] h-[600px] w-[600px] rounded-full bg-brand-secondary-bright/15 blur-3xl animate-pulse" />
-          {/* Subtle grid lines background overlay */}
-          <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:32px_32px]" />
+    <div className="relative min-h-screen bg-[#F8F8F3] text-[#1A2E26] flex flex-col select-none">
+      
+      {/* HERO SECTION - LUXURY PERFUME / BOTANICAL EDITORIAL */}
+      <section className="relative overflow-hidden bg-[#1A2E26] text-[#E4ECE6] py-20 sm:py-24 lg:py-32 border-b border-[#D9E0DA]/20">
+        
+        {/* Background Subtle Gradient Glow */}
+        <div className="absolute inset-0 pointer-events-none opacity-25">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2D4A3E] rounded-full blur-[160px]" />
+          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#C49A45]/15 rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 lg:py-0 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
-            {/* Left Content */}
-            <motion.div
-              className="lg:col-span-7 flex flex-col justify-center"
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+            
+            {/* Left Copy */}
+            <motion.div 
+              className="lg:col-span-7 space-y-7"
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
             >
+              <div className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]">
+                <span>Botanical Intelligence • Specialty Actives</span>
+              </div>
 
-              <motion.h1
-                variants={itemVariants}
-                className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6"
-              >
-                Where Vision <br className="hidden sm:inline" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-secondary-bright to-emerald-400">
-                  Meets Science
+              <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+                Where Nature Meets <br />
+                <span className="italic font-normal text-[#C49A45]">
+                  & Precise Formulation
                 </span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                variants={itemVariants}
-                className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl"
-              >
-                Positioned at the forefront of India's dynamic specialty chemicals market, PV Chem delivers a comprehensive portfolio of high-value specialty chemicals and performance ingredients sourced from globally renowned manufacturing partners. Through technical excellence, innovation, and a steadfast commitment to quality, we serve as a trusted partner.
-              </motion.p>
+              <p className="text-[#A3B8AC] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light">
+                Positioned at the forefront of India's dynamic specialty chemicals market, Pure Vision Chemicals delivers high-value performance ingredients sourced from globally renowned partners for Personal Care, Home Care, Pet Care, and Food formulation sectors.
+              </p>
 
-              <motion.div
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-4 sm:items-center"
-              >
-                <Link
-                  href="/products"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-brand-secondary hover:bg-teal-600 text-white font-bold px-8 py-4 shadow-lg shadow-brand-secondary/20 transition-all hover:translate-y-[-2px] cursor-pointer"
+              <div className="pt-2 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#catalog"
+                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  <span>Explore Product Catalog</span>
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+                  <span>Explore Ingredients</span>
+                  <ArrowRight className="h-4 w-4 text-[#1A2E26]" />
+                </a>
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-2 rounded-xl border border-white/30 hover:border-white bg-white/5 hover:bg-white/10 px-8 py-4 font-bold transition-all hover:translate-y-[-2px] cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer"
                 >
-                  <span>Get in Touch</span>
+                  <span>Request Custom Quote</span>
                 </Link>
-              </motion.div>
+              </div>
 
-              {/* Statistics row */}
-              <motion.div
-                variants={itemVariants}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 pt-6 border-t border-white/10 text-center sm:text-left"
-              >
+              {/* Quick Metrics Bar */}
+              <div className="pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
                 <div>
-                  <p className="font-display text-3xl font-extrabold text-brand-secondary-bright">144+</p>
-                  <p className="text-xs text-slate-400 uppercase tracking-widest mt-1 font-semibold">Natural Oils</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">389+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Raw Materials</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl font-extrabold text-brand-secondary-bright">89+</p>
-                  <p className="text-xs text-slate-400 uppercase tracking-widest mt-1 font-semibold">Water Extracts</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">7</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl font-extrabold text-brand-secondary-bright">87+</p>
-                  <p className="text-xs text-slate-400 uppercase tracking-widest mt-1 font-semibold">Oil Extracts</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">100%</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">COA Quality Verified</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl font-extrabold text-brand-secondary-bright">23+</p>
-                  <p className="text-xs text-slate-400 uppercase tracking-widest mt-1 font-semibold">Actives</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Established</p>
                 </div>
-              </motion.div>
+              </div>
+
             </motion.div>
 
-            {/* Right Graphic Visualization */}
-            <div className="lg:col-span-5 hidden lg:flex justify-center relative">
-              <motion.div
-                className="relative w-[450px] h-[450px] flex items-center justify-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
-              >
+            {/* Right Editorial Hero Image Container */}
+            <motion.div 
+              className="lg:col-span-5 flex justify-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-none border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl">
+                <div className="relative w-full h-full overflow-hidden">
+                  <Image
+                    src="/pics-1.png"
+                    alt="Pure Vision Specialty Botanical Active Oil"
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    priority
+                  />
 
-                {/* Simulated laboratory abstract grid rings */}
-                <motion.div
-                  className="absolute inset-0 rounded-full border border-white/10"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                />
-                <motion.div
-                  className="absolute inset-8 rounded-full border border-dashed border-white/20"
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-                />
-                <div className="absolute inset-16 rounded-full border border-white/5" />
-
-                {/* 3D-feeling translucent card containing beaker & plant illustration */}
-                <motion.div
-                  className="glass-dark p-8 rounded-3xl shadow-2xl relative w-[380px] h-[400px] flex flex-col justify-between border border-white/15"
-                  whileHover={{ y: -8 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                >
-                  <div className="flex justify-between items-start">
-                    <span className="text-xs uppercase font-bold tracking-widest text-slate-400">R&D Formulation</span>
-                    <FlaskConical className="h-6 w-6 text-brand-secondary-bright" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-65" />
+                  
+                  {/* Badge overlay on hero image */}
+                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-4 bg-[#1A2E26]/90 backdrop-blur-md border border-white/10 text-white space-y-1">
+                    <span className="text-[9px] uppercase tracking-widest font-semibold text-[#C49A45]">Featured Ingredient</span>
+                    <p className="font-serif-luxury text-base font-bold">Sodium Hyaluronate 5KDA</p>
+                    <p className="text-[11px] text-[#A3B8AC] font-light">Deep penetrating bioactive active for skincare formulation</p>
                   </div>
-
-                  <div className="my-auto flex flex-col items-center">
-                    {/* Glowing graphic element representing chemistry and botany */}
-                    <div className="relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-tr from-brand-secondary to-emerald-500/20 text-white shadow-xl shadow-brand-secondary/20">
-                      <FlaskConical className="h-16 w-16 text-brand-secondary-bright" />
-                      <div className="absolute bottom-1 right-1 bg-brand-primary p-2 rounded-full border border-white/20">
-                        <Sprout className="h-5 w-5 text-emerald-400" />
-                      </div>
-                    </div>
-                    <span className="font-display text-2xl font-bold text-white mt-5">Pure Sourcing Model</span>
-                    <span className="text-sm text-slate-400 mt-1.5 text-center max-w-[280px]">Formulating for skincare, pet care, home & foods</span>
-                  </div>
-
-                  <div className="flex items-center justify-between border-t border-white/15 pt-4 text-xs text-slate-400">
-                    <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand-secondary-bright" /> QC Approved</span>
-                    <span>100% Compliant</span>
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
+                </div>
+              </div>
+            </motion.div>
 
           </div>
         </div>
       </section>
 
-      {/* CORE PHILOSOPHY & BANNER */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white border-y border-slate-200 shadow-sm relative z-10"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-brand-secondary">Core Value System</span>
-            <h3 className="font-display text-xl sm:text-2xl font-bold text-brand-primary text-center md:text-left italic">
+      {/* CORE VALUE BANNER - EDITORIAL MARQUEE BAR */}
+      <section className="bg-[#E4ECE6] border-b border-[#D9E0DA] py-7 select-none">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#62736B]">Our Core Philosophy</span>
+            <p className="font-serif-luxury text-lg sm:text-2xl italic font-normal text-[#1A2E26]">
               "Customer first, strong partnership, succeed together."
-            </h3>
+            </p>
             <Link
               href="/about"
-              className="flex items-center gap-1.5 text-sm font-bold text-brand-primary hover:text-brand-secondary transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#1A2E26] hover:text-[#C49A45] transition-colors"
             >
-              <span>Our Philosophy</span>
-              <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <span>Corporate Profile</span>
+              <ChevronRight className="h-4 w-4 text-[#C49A45]" />
             </Link>
           </div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* INTRODUCTION PREVIEW SECTIONS */}
-      <section className="py-20 lg:py-24 bg-slate-50 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Image/Visual Mock Column */}
-            <motion.div
-              className="lg:col-span-5 order-last lg:order-first"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
-            >
-              <div className="relative p-6 rounded-3xl bg-white border border-slate-200/80 shadow-md">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-teal-50 text-brand-secondary flex items-center justify-center shrink-0">
-                      <Zap className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-display font-bold text-slate-800 text-sm">Responsive local service</h4>
-                      <p className="text-xs text-slate-400">Technical sales engineers across key hubs</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-blue-50 text-brand-primary flex items-center justify-center shrink-0">
-                      <Award className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-display font-bold text-slate-800 text-sm">Regulatory Sourcing Integrity</h4>
-                      <p className="text-xs text-slate-400">Full COA and specification compliance sheets</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-emerald-50 text-emerald-500 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-display font-bold text-slate-800 text-sm">Green Chemistry Focus</h4>
-                      <p className="text-xs text-slate-400">Natural essential oils and botanical extracts</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Content Column */}
-            <motion.div
-              className="lg:col-span-7 space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
-            >
-              <span className="text-xs font-extrabold tracking-widest text-brand-secondary uppercase">Corporate Profile</span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary">
-                Technical Expertise, Sourcing Integrity, and Long-Term Value
+      {/* MAIN INTERACTIVE PRODUCT CATALOGUE */}
+      <section id="catalog" className="py-20 lg:py-24 bg-[#F8F8F3]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
+          
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#D9E0DA] pb-8">
+            <div className="space-y-2">
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">Raw Material Sourcing</span>
+              <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#1A2E26]">
+                Specialty Ingredients Portfolio
               </h2>
-              <div className="h-1.5 w-20 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full" />
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                At <strong>Pure Vision Chemicals</strong>, we combine scientific expertise, global partnerships, and market intelligence to deliver specialty chemical solutions that keep pace with the evolving needs of modern industries.
+              <p className="text-xs text-[#62736B] font-light max-w-xl">
+                Browse our verified collection of actives, preservatives, rheology modifiers, botanical extracts, natural oils, and butters.
               </p>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                We serve a broad spectrum of industries, including <strong>Personal Care, Home Care, Pet Care, and Food & Nutrition</strong>. Our carefully curated portfolio meets the highest standards of quality and regulatory compliance.
-              </p>
-              <div className="pt-4">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-primary hover:bg-brand-primary-dark text-white font-bold px-6 py-3 shadow-md shadow-brand-primary/10 transition-all hover:translate-y-[-1px] cursor-pointer text-sm"
+            </div>
+
+            {/* Live Search Bar */}
+            <div className="relative w-full md:w-80">
+              <Search className="absolute left-3.5 top-3.5 h-4 w-4 text-[#62736B]" />
+              <input
+                type="text"
+                placeholder="Search 389+ ingredients..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
+              />
+            </div>
+          </div>
+
+          {/* Category Filter Tabs (Two-Line Flex Layout with Larger Buttons) */}
+          <div className="flex flex-wrap items-center gap-3 pb-4 border-b border-[#D9E0DA]">
+            {CATEGORIES.map((cat) => {
+              const count = PRODUCTS.filter((p) => p.category === cat).length;
+              const isSelected = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-5 py-3 text-xs sm:text-sm uppercase tracking-wider font-bold transition-all cursor-pointer border shadow-xs ${
+                    isSelected
+                      ? "bg-[#1A2E26] text-white border-[#1A2E26] shadow-md"
+                      : "bg-white text-[#1A2E26] border-[#D9E0DA] hover:border-[#C49A45]/50 hover:bg-[#E4ECE6]"
+                  }`}
                 >
-                  <span>Learn More About Us</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                  {cat}{" "}
+                  <span
+                    className={`ml-1.5 px-2 py-0.5 text-xs font-extrabold rounded-full ${
+                      isSelected
+                        ? "bg-[#C49A45] text-[#1A2E26]"
+                        : "bg-[#E4ECE6] text-[#2D4A3E]"
+                    }`}
+                  >
+                    ({count})
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+
+          {/* Product Items Table / Cards Grid */}
+          <div>
+            {filteredProducts.length === 0 ? (
+              <div className="text-center py-16 bg-white border border-[#D9E0DA] space-y-3">
+                <FlaskConical className="h-10 w-10 text-[#62736B] mx-auto opacity-50" />
+                <p className="font-serif-luxury text-lg text-[#1A2E26] font-bold">No ingredients found</p>
+                <p className="text-xs text-[#62736B]">Try adjusting your search criteria or category filter.</p>
+                <button
+                  onClick={() => { setSelectedCategory("Rheology Modifiers"); setSearchQuery(""); }}
+                  className="mt-2 text-xs text-[#C49A45] font-bold uppercase tracking-wider underline cursor-pointer"
+                >
+                  Reset All Filters
+                </button>
               </div>
-            </motion.div>
+
+            ) : (
+              <div className="flex flex-wrap justify-center gap-4">
+                {filteredProducts.map((product, idx) => {
+                  const isInCart = inquiryCart.some((item) => item.id === product.id);
+                  return (
+                    <motion.div
+                      key={product.id}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: Math.min(idx * 0.03, 0.3) }}
+                      className="w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-5 flex flex-col justify-between transition-all duration-300 group hover:shadow-md"
+                    >
+
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-[#62736B]">
+                          <span className="text-[#C49A45]">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                          <span className="bg-[#E4ECE6] px-2 py-0.5 text-[#1A2E26]">
+                            {product.category}
+                          </span>
+                        </div>
+
+                        <h3 className="font-serif-luxury font-bold text-base text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-snug pt-1">
+                          {product.name}
+                        </h3>
+                      </div>
+
+                      <div className="pt-5 mt-4 border-t border-[#D9E0DA]/50 flex items-center justify-between">
+                        <span className="text-[11px] text-[#62736B] font-light">COA Specification</span>
+                        <button
+                          onClick={() => toggleCartItem(product)}
+                          className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                            isInCart
+                              ? "bg-[#2D4A3E] text-white"
+                              : "bg-[#F0F4F1] hover:bg-[#1A2E26] text-[#1A2E26] hover:text-white border border-[#D9E0DA]"
+                          }`}
+                        >
+                          {isInCart ? (
+                            <>
+                              <Check className="h-3.5 w-3.5 text-[#C49A45]" />
+                              <span>Added</span>
+                            </>
+                          ) : (
+                            <>
+                              <Plus className="h-3.5 w-3.5" />
+                              <span>Add Quote</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
         </div>
       </section>
 
-      {/* CORE CAPABILITIES PREVIEW */}
-      <section className="py-20 bg-white border-y border-slate-200/80">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-          <motion.div
-            className="text-center max-w-3xl mx-auto space-y-4 mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-xs font-extrabold tracking-widest text-brand-secondary uppercase">Sectors We Supply</span>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-brand-primary">
-              Empowering Chemical Formulations Across India
+      {/* SECTORS WE SUPPLY SECTION - ANIMATED CARDS WITH DISTANCE */}
+      <section className="py-24 lg:py-28 bg-[#E4ECE6] border-y border-[#D9E0DA]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
+          
+          {/* Header with single-line Commercial Applications */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs uppercase tracking-widest text-[#62736B] font-semibold">Industrial Applications</span>
+            <h2 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A2E26] leading-tight">
+              Targeted Sectors <br />
+              <span className="italic font-normal text-[#C49A45] whitespace-nowrap">
+                & Commercial Applications
+              </span>
             </h2>
-            <p className="text-sm text-slate-500">
-              We offer technical sales guidance and tailored formulation assistance across key industrial domains.
+            <p className="text-xs sm:text-sm text-[#62736B] font-light leading-relaxed max-w-xl mx-auto">
+              High-performance specialty raw materials optimized for demanding commercial formulation standards.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={{
-              hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.1 }
-              }
-            }}
-          >
+          {/* Cards Grid with Distance & Mouse Hover Animations */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            
             {/* Personal Care */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-              }}
-              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
-              <div className="h-12 w-12 rounded-xl bg-brand-primary text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Droplet className="h-6 w-6" />
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                  <Droplets className="h-6 w-6" />
+                </div>
+                
+                <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors pt-1">
+                  Personal Care
+                </h3>
+
+                <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                  High-purity actives, hyaluronates, and botanical oils for skincare and haircare formulation.
+                </p>
               </div>
-              <h3 className="font-display text-lg font-bold text-brand-primary mb-3">Personal Care</h3>
-              <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Premium actives, gelling agents, emollients, and botanical extracts for skincare and cosmetics.
-              </p>
-              <Link href="/industries" className="text-xs font-bold text-brand-secondary hover:text-brand-primary flex items-center gap-1">
-                <span>View Ingredients</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
+
+              {/* Spec Sheet Tick Mark List */}
+              <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Bio-actives & Peptides</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Natural Emollients</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Botanical Extracts</span>
+                </div>
+              </div>
+
+              {/* Bottom Gold Accent Bar */}
+              <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
             {/* Home Care */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-              }}
-              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.08 }}
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
-              <div className="h-12 w-12 rounded-xl bg-brand-primary text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="h-6 w-6" />
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                  <ShieldCheck className="h-6 w-6" />
+                </div>
+                
+                <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors pt-1">
+                  Home Care
+                </h3>
+
+                <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                  Preservatives, rheology modifiers, and surfactants designed for surface cleaners and detergents.
+                </p>
               </div>
-              <h3 className="font-display text-lg font-bold text-brand-primary mb-3">Home Care</h3>
-              <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Preservatives, emulsifiers, surfactants, and rheology modifiers optimized for detergents.
-              </p>
-              <Link href="/industries" className="text-xs font-bold text-brand-secondary hover:text-brand-primary flex items-center gap-1">
-                <span>View Ingredients</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
+
+              {/* Spec Sheet Tick Mark List */}
+              <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Safe Preservatives</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Surfactant Blends</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Rheology Modifiers</span>
+                </div>
+              </div>
+
+              {/* Bottom Gold Accent Bar */}
+              <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
             {/* Pet Care */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-              }}
-              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.16 }}
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
-              <div className="h-12 w-12 rounded-xl bg-brand-primary text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Sprout className="h-6 w-6" />
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                  <Leaf className="h-6 w-6" />
+                </div>
+                
+                <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors pt-1">
+                  Pet Care
+                </h3>
+
+                <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                  Gentle botanical oils, natural herbal extracts, and mild thickeners tailored for pet hygiene.
+                </p>
               </div>
-              <h3 className="font-display text-lg font-bold text-brand-primary mb-3">Pet Care</h3>
-              <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Mild surfactants, gelling systems, natural botanical oils, and safe preservatives for pet shampoos.
-              </p>
-              <Link href="/industries" className="text-xs font-bold text-brand-secondary hover:text-brand-primary flex items-center gap-1">
-                <span>View Ingredients</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
+
+              {/* Spec Sheet Tick Mark List */}
+              <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Gentle Botanical Oils</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Safe Herbal Extracts</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Mild Thickeners</span>
+                </div>
+              </div>
+
+              {/* Bottom Gold Accent Bar */}
+              <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Food Ingredients */}
+            {/* Food & Nutrition */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-              }}
-              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.24 }}
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
-              <div className="h-12 w-12 rounded-xl bg-brand-primary text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Globe2 className="h-6 w-6" />
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                  <Globe2 className="h-6 w-6" />
+                </div>
+                
+                <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors pt-1">
+                  Food & Nutrition
+                </h3>
+
+                <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                  Specialty thickeners, natural gums, and texture enhancers meeting strict food standards.
+                </p>
               </div>
-              <h3 className="font-display text-lg font-bold text-brand-primary mb-3">Food & Nutrition</h3>
-              <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                Specialty thickeners, standard gums, texture enhancers, and nutrient oils adhering strictly to standards.
-              </p>
-              <Link href="/industries" className="text-xs font-bold text-brand-secondary hover:text-brand-primary flex items-center gap-1">
-                <span>View Ingredients</span>
-                <ChevronRight className="h-3.5 w-3.5" />
-              </Link>
+
+              {/* Spec Sheet Tick Mark List */}
+              <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Specialty Thickeners</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Hydrocolloids & Gums</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#C49A45] font-bold">✓</span>
+                  <span>Texture Enhancers</span>
+                </div>
+              </div>
+
+              {/* Bottom Gold Accent Bar */}
+              <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
-          </motion.div>
+
+          </div>
+
         </div>
       </section>
 
-      {/* PRODUCTS PREVIEW & CALL TO ACTION */}
-      <section className="py-20 lg:py-24 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="bg-brand-primary-dark text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl border border-white/10"
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, type: "spring" }}
-          >
-            <div className="absolute top-[-50px] right-[-50px] h-40 w-40 rounded-full bg-brand-secondary/20 blur-2xl" />
 
-            <div className="relative z-10 max-w-3xl space-y-6">
-              <span className="text-xs font-extrabold tracking-widest text-brand-secondary-bright uppercase">Specialty Catalog</span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight">
-                Explore Our Specialty Ingredients Catalog
+
+
+
+      {/* TECHNICAL EXCELLENCE & SOURCING MODEL BANNER */}
+      <section className="py-20 lg:py-28 bg-[#F8F8F3] border-t border-[#D9E0DA]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Editorial Image Frame with Label */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5 relative aspect-[4/5] border border-[#D9E0DA] p-3 bg-white shadow-xl"
+            >
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/tech-excellence.jpg"
+                  alt="Laboratory Sourcing Precision"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-65" />
+                <div className="absolute bottom-5 left-5 right-5 p-3.5 bg-[#1A2E26]/90 border border-white/10 text-white space-y-0.5">
+                  <span className="text-[9px] uppercase tracking-widest text-[#C49A45] font-bold">R&D & Formulation Desk</span>
+                  <p className="font-serif-luxury text-xs font-bold">Pure Technical Guidance & Logistics</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Editorial Copy & Typography Pairing */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-7 space-y-6"
+            >
+              <div className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-3.5 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">
+                <span>Technical Excellence • Global Network</span>
+              </div>
+
+              <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#1A2E26] leading-[1.18]">
+                Global Sourcing Integrity <br />
+                <span className="italic font-normal text-[#C49A45]">
+                  & Technical Assistance
+                </span>
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Filter and search through our extensive database of functionals, safe preservatives, botanical extracts, natural oils, and emollient butters. Add items directly to your B2B Inquiry list.
+
+              <p className="font-serif-luxury italic text-base sm:text-lg text-[#1A2E26] leading-relaxed border-l-2 border-[#C49A45] pl-4">
+                "Combining scientific expertise, manufacturer partnerships, and market intelligence to power next-generation formulations."
               </p>
-              <div className="pt-4 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/products"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-secondary hover:bg-teal-600 text-white font-bold px-8 py-4 shadow-md shadow-brand-secondary/10 transition-all hover:translate-y-[-1px] cursor-pointer text-sm"
-                >
-                  <span>Open Interactive Catalog</span>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
+                Our sales engineers across India provide formulation guidance, technical documentation (COA/MSDS), and dependable supply chain logistics to keep your production moving forward.
+              </p>
+
+              {/* Feature Badges */}
+              <div className="pt-1 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-wider text-[#1A2E26]">
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ COA & MSDS Verified</span>
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ Formulation Support</span>
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ Pan-India Logistics</span>
+              </div>
+
+              <div className="pt-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 hover:border-white bg-white/5 hover:bg-white/10 px-8 py-4 font-bold transition-all hover:translate-y-[-1px] cursor-pointer text-sm"
+                  className="inline-flex items-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer shadow-lg hover:shadow-xl"
                 >
-                  <span>Submit Custom Sourcing Request</span>
+                  <span>Connect with Technical Desk</span>
+                  <ArrowRight className="h-4 w-4 text-[#C49A45]" />
                 </Link>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
-    </motion.div>
+
+      {/* STICKY BOTTOM QUOTE LIST FLOATING BAR */}
+      <AnimatePresence>
+        {inquiryCart.length > 0 && (
+          <motion.div
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 80, opacity: 0 }}
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] max-w-xl bg-[#1A2E26] text-white p-4 shadow-2xl border border-[#C49A45]/40 flex items-center justify-between"
+          >
+            <div className="flex items-center gap-3">
+              <div className="h-9 w-9 bg-[#C49A45] text-[#1A2E26] flex items-center justify-center font-bold text-xs">
+                {inquiryCart.length}
+              </div>
+              <div>
+                <p className="font-serif-luxury text-sm font-bold">Selected Ingredients for Quote</p>
+                <p className="text-[10px] text-[#A3B8AC]">Ready to send for specification & pricing proposal</p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setCartOpen(true)}
+              className="bg-white hover:bg-[#E4ECE6] text-[#1A2E26] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
+            >
+              Review Quote List
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+    </div>
   );
 }
