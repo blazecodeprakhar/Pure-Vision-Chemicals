@@ -312,11 +312,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTORS WE SUPPLY SECTION - ANIMATED CARDS WITH DISTANCE */}
+      {/* SECTORS WE SUPPLY SECTION - COMMENTED OUT AS REQUESTED */}
+      {/* 
       <section className="py-24 lg:py-28 bg-[#E4ECE6] border-y border-[#D9E0DA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           
-          {/* Header with single-line Commercial Applications */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#62736B] font-semibold">Industrial Applications</span>
             <h2 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1A2E26] leading-tight">
@@ -330,10 +330,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Cards Grid with Distance & Mouse Hover Animations */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             
-            {/* Personal Care */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -356,7 +354,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Spec Sheet Tick Mark List */}
               <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
                 <div className="flex items-center gap-2">
                   <span className="text-[#C49A45] font-bold">✓</span>
@@ -372,11 +369,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Gold Accent Bar */}
               <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Home Care */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -399,7 +394,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Spec Sheet Tick Mark List */}
               <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
                 <div className="flex items-center gap-2">
                   <span className="text-[#C49A45] font-bold">✓</span>
@@ -415,11 +409,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Gold Accent Bar */}
               <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Pet Care */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -442,7 +434,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Spec Sheet Tick Mark List */}
               <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
                 <div className="flex items-center gap-2">
                   <span className="text-[#C49A45] font-bold">✓</span>
@@ -458,11 +449,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Gold Accent Bar */}
               <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Food & Nutrition */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -485,7 +474,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Spec Sheet Tick Mark List */}
               <div className="pt-4 border-t border-[#D9E0DA]/60 space-y-2.5 text-xs text-[#1A2E26] font-medium">
                 <div className="flex items-center gap-2">
                   <span className="text-[#C49A45] font-bold">✓</span>
@@ -501,7 +489,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bottom Gold Accent Bar */}
               <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
@@ -509,6 +496,7 @@ export default function Home() {
 
         </div>
       </section>
+      */}
 
 
 
