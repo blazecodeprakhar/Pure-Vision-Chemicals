@@ -285,15 +285,13 @@ export default function Home() {
                 const isSelected = selectedCategory === cat.name || (selectedCategory.includes("Herbal Extracts") && cat.name.includes("Herbal Extracts"));
 
                 return (
-                  <motion.div
+                  <div
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.name)}
-                    whileHover={{ y: -4 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-6 cursor-pointer group relative ${cat.bg} ${
+                    className={`p-6 border transition-all duration-200 flex flex-col justify-between space-y-5 cursor-pointer group relative ${cat.bg} ${
                       isSelected
-                        ? "border-2 border-[#1A2E26] shadow-md ring-1 ring-[#1A2E26]/20"
-                        : "border-[#D9E0DA] hover:border-[#1A2E26]/50 hover:shadow-sm"
+                        ? "border-[#C49A45] ring-1 ring-[#C49A45]/40 shadow-sm"
+                        : "border-[#D9E0DA] hover:border-[#C49A45]/40"
                     }`}
                   >
                     <div className="space-y-3">
@@ -301,14 +299,14 @@ export default function Home() {
                         <span className="font-serif-luxury text-xs font-bold text-[#C49A45]">
                           {cat.id}
                         </span>
-                        <span className={`px-2.5 py-0.5 text-[10px] font-extrabold rounded-full ${
-                          isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#1A2E26] border border-[#D9E0DA]"
+                        <span className={`px-2.5 py-0.5 text-[10px] font-semibold rounded-full ${
+                          isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#62736B] border border-[#D9E0DA]/80"
                         }`}>
                           {count} Items
                         </span>
                       </div>
 
-                      <h3 className="font-serif-luxury font-bold text-lg sm:text-xl text-[#1A2E26] leading-snug group-hover:text-[#2D4A3E] transition-colors">
+                      <h3 className="font-serif-luxury font-bold text-lg sm:text-xl text-[#1A2E26] leading-snug">
                         {cat.name}
                       </h3>
 
@@ -317,20 +315,12 @@ export default function Home() {
                       </p>
                     </div>
 
-                    <div className="pt-2 flex items-center justify-between border-t border-[#D9E0DA]/40 text-xs font-semibold text-[#1A2E26]">
-                      <span className={isSelected ? "text-[#C49A45] font-bold" : "text-[#62736B]"}>
-                        {isSelected ? "✓ Active View" : "Browse Category"}
-                      </span>
-                      <ChevronRight className={`h-4 w-4 transition-transform duration-300 ${
-                        isSelected ? "translate-x-1 text-[#C49A45]" : "group-hover:translate-x-1 text-[#1A2E26]"
+                    <div className="flex items-center justify-end pt-1">
+                      <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${
+                        isSelected ? "text-[#C49A45] translate-x-0.5" : "text-[#62736B]/60 group-hover:text-[#1A2E26]"
                       }`} />
                     </div>
-
-                    {/* Active Selected Bottom Line */}
-                    {isSelected && (
-                      <div className="h-1 bg-[#1A2E26] absolute bottom-0 left-0 right-0" />
-                    )}
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
