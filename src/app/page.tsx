@@ -175,73 +175,177 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MAIN INTERACTIVE PRODUCT CATALOGUE */}
-      <section id="catalog" className="py-20 lg:py-24 bg-[#F8F8F3]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
+      {/* MAIN INTERACTIVE PRODUCT CATALOGUE - MASTER 4x4 DASHBOARD & SEARCH */}
+      <section id="catalog" className="py-20 lg:py-28 bg-[#F8F8F3] border-t border-[#D9E0DA]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#D9E0DA] pb-8">
-            <div className="space-y-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">Raw Material Sourcing</span>
-              <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#1A2E26]">
-                Specialty Ingredients Portfolio
+          {/* Top Header: Title, Description & Integrated Search Bar */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#D9E0DA] pb-8">
+            <div className="space-y-3 max-w-2xl">
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]">
+                The Portfolio / 2025–26
+              </span>
+              <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#1A2E26] leading-tight">
+                Ingredients with <br />
+                <span className="italic font-normal text-[#C49A45]">
+                  intention.
+                </span>
               </h2>
-              <p className="text-xs text-[#62736B] font-light max-w-xl">
-                Browse our verified collection of actives, preservatives, rheology modifiers, botanical extracts, natural oils, and butters.
+              <p className="text-xs sm:text-sm text-[#62736B] font-light leading-relaxed">
+                From the first botanical extract to the final texture, our catalogue brings essential building blocks into one considered source.
               </p>
             </div>
 
-            {/* Live Search Bar */}
-            <div className="relative w-full md:w-80">
+            {/* Live Search Input Bar */}
+            <div className="relative w-full sm:w-80 shrink-0">
               <Search className="absolute left-3.5 top-3.5 h-4 w-4 text-[#62736B]" />
               <input
                 type="text"
                 placeholder="Search 389+ ingredients..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
+                className="w-full pl-10 pr-4 py-3 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
               />
+              {searchQuery && (
+                <button 
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-3 text-[10px] uppercase font-bold text-[#C49A45] hover:text-[#1A2E26]"
+                >
+                  Clear
+                </button>
+              )}
             </div>
           </div>
 
-          {/* Category Filter Tabs (Two-Line Flex Layout with Larger Buttons) */}
-          <div className="flex flex-wrap items-center gap-3 pb-4 border-b border-[#D9E0DA]">
-            {CATEGORIES.map((cat) => {
-              const count = PRODUCTS.filter((p) => p.category === cat).length;
-              const isSelected = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-5 py-3 text-xs sm:text-sm uppercase tracking-wider font-bold transition-all cursor-pointer border shadow-xs ${
-                    isSelected
-                      ? "bg-[#1A2E26] text-white border-[#1A2E26] shadow-md"
-                      : "bg-white text-[#1A2E26] border-[#D9E0DA] hover:border-[#C49A45]/50 hover:bg-[#E4ECE6]"
-                  }`}
-                >
-                  {cat}{" "}
-                  <span
-                    className={`ml-1.5 px-2 py-0.5 text-xs font-extrabold rounded-full ${
+          {/* MASTER 4x4 CATEGORY DASHBOARD GRID */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-xs uppercase tracking-widest font-semibold text-[#62736B]">Select Category Family</span>
+              <span className="text-xs text-[#62736B]">7 Core Families</span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  id: "01",
+                  name: "Rheology Modifiers",
+                  description: "Texture, viscosity and sensory control for elegant formulas.",
+                  bg: "bg-[#E8F0EC]",
+                },
+                {
+                  id: "02",
+                  name: "Actives",
+                  description: "Targeted ingredients for high-performance skin and hair care.",
+                  bg: "bg-[#FDF6E9]",
+                },
+                {
+                  id: "03",
+                  name: "Preservatives",
+                  description: "Reliable preservation systems for safe, stable products.",
+                  bg: "bg-[#F4EFEA]",
+                },
+                {
+                  id: "04",
+                  name: "Herbal Extracts (Water Soluble)",
+                  description: "Water-soluble botanical extracts for conscious product makers.",
+                  bg: "bg-[#EAF1F0]",
+                },
+                {
+                  id: "05",
+                  name: "Herbal Extracts (Oil Soluble)",
+                  description: "Lipid-soluble botanical extracts for anhydrous formulations.",
+                  bg: "bg-[#FBF6EE]",
+                },
+                {
+                  id: "06",
+                  name: "Natural Oils",
+                  description: "Plant-derived oils for nourishment and sensory richness.",
+                  bg: "bg-[#F6F2EC]",
+                },
+                {
+                  id: "07",
+                  name: "Butters",
+                  description: "Rich botanical butters for balms, creams and care.",
+                  bg: "bg-[#F1ECE6]",
+                },
+              ].map((cat) => {
+                const count = PRODUCTS.filter((p) => p.category === cat.name).length;
+                const isSelected = selectedCategory === cat.name;
+
+                return (
+                  <motion.div
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.name)}
+                    whileHover={{ y: -4 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-6 cursor-pointer group relative ${cat.bg} ${
                       isSelected
-                        ? "bg-[#C49A45] text-[#1A2E26]"
-                        : "bg-[#E4ECE6] text-[#2D4A3E]"
+                        ? "border-2 border-[#1A2E26] shadow-md ring-1 ring-[#1A2E26]/20"
+                        : "border-[#D9E0DA] hover:border-[#1A2E26]/50 hover:shadow-sm"
                     }`}
                   >
-                    ({count})
-                  </span>
-                </button>
-              );
-            })}
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <span className="font-serif-luxury text-xs font-bold text-[#C49A45]">
+                          {cat.id}
+                        </span>
+                        <span className={`px-2 py-0.5 text-[10px] font-extrabold rounded-full ${
+                          isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#1A2E26] border border-[#D9E0DA]"
+                        }`}>
+                          {count} Items
+                        </span>
+                      </div>
+
+                      <h3 className="font-serif-luxury font-bold text-lg sm:text-xl text-[#1A2E26] leading-snug group-hover:text-[#2D4A3E] transition-colors">
+                        {cat.name}
+                      </h3>
+
+                      <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                        {cat.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-[#D9E0DA]/40 text-xs font-semibold text-[#1A2E26]">
+                      <span className={isSelected ? "text-[#C49A45] font-bold" : "text-[#62736B]"}>
+                        {isSelected ? "✓ Active View" : "Browse Category"}
+                      </span>
+                      <ChevronRight className={`h-4 w-4 transition-transform duration-300 ${
+                        isSelected ? "translate-x-1 text-[#C49A45]" : "group-hover:translate-x-1 text-[#1A2E26]"
+                      }`} />
+                    </div>
+
+                    {/* Active Selected Bottom Line */}
+                    {isSelected && (
+                      <div className="h-1 bg-[#1A2E26] absolute bottom-0 left-0 right-0" />
+                    )}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
 
 
-          {/* Product Items Table / Cards Grid */}
-          <div>
+          {/* SELECTED CATEGORY LIVE RESULTS HEADER & PRODUCT GRID */}
+          <div className="pt-8 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#D9E0DA] pb-4">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C49A45]">Showing Category Results</span>
+                <h3 className="font-serif-luxury text-2xl font-bold text-[#1A2E26] pt-0.5">
+                  {selectedCategory} <span className="text-sm font-normal text-[#62736B]">({filteredProducts.length} items)</span>
+                </h3>
+              </div>
+              {searchQuery && (
+                <span className="text-xs text-[#62736B] bg-white px-3 py-1 border border-[#D9E0DA]">
+                  Filter query: "<strong className="text-[#1A2E26]">{searchQuery}</strong>"
+                </span>
+              )}
+            </div>
+
             {filteredProducts.length === 0 ? (
               <div className="text-center py-16 bg-white border border-[#D9E0DA] space-y-3">
                 <FlaskConical className="h-10 w-10 text-[#62736B] mx-auto opacity-50" />
                 <p className="font-serif-luxury text-lg text-[#1A2E26] font-bold">No ingredients found</p>
-                <p className="text-xs text-[#62736B]">Try adjusting your search criteria or category filter.</p>
+                <p className="text-xs text-[#62736B]">Try adjusting your search query or select another category above.</p>
                 <button
                   onClick={() => { setSelectedCategory("Rheology Modifiers"); setSearchQuery(""); }}
                   className="mt-2 text-xs text-[#C49A45] font-bold uppercase tracking-wider underline cursor-pointer"
