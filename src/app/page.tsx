@@ -125,8 +125,8 @@ export default function Home() {
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
                 </div>
                 <div>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">100%</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Quality Assured</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">{PRODUCTS.length}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Total Products</p>
                 </div>
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
