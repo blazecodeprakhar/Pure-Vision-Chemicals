@@ -287,10 +287,11 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] appearance-none focus:outline-none focus:border-[#1A2E26] transition-all"
                     >
                       <option value="Actives">Actives (Peptides, Hyaluronates)</option>
+                      <option value="UV Filters & Moisturizer">UV Filters & Moisturizer</option>
+                      <option value="Functional Products">Functional Products</option>
                       <option value="Preservatives">Preservatives (Phenoxyethanol, Hydantoins)</option>
                       <option value="Rheology Modifiers">Rheology Modifiers (Copolymers, Gels)</option>
-                      <option value="Herbal Extracts (Water Soluble)">Water Soluble Botanical Extracts</option>
-                      <option value="Herbal Extracts (Oil Soluble)">Oil Soluble Botanical Extracts</option>
+                      <option value="Herbal Extracts">Botanical Herbal Extracts</option>
                       <option value="Natural Oils">Natural & Essential Oils</option>
                       <option value="Butters">Natural Butters (Shea, Cocoa)</option>
                     </select>

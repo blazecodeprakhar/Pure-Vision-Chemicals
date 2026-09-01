@@ -23,12 +23,11 @@ import { useCart } from "@/context/CartContext";
 
 const CATEGORIES = [
   "Actives",
-  "Sunscreen & Moisturizer",
+  "UV Filters & Moisturizer",
   "Functional Products",
   "Preservatives",
   "Rheology Modifiers",
-  "Herbal Extracts (Water Soluble)",
-  "Herbal Extracts (Oil Soluble)",
+  "Herbal Extracts",
   "Natural Oils",
   "Butters"
 ] as const;
@@ -107,11 +106,11 @@ export default function Home() {
               {/* Quick Metrics Bar */}
               <div className="pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
                 <div>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">389+</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">{PRODUCTS.length}+</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Raw Materials</p>
                 </div>
                 <div>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">7</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-white">{CATEGORIES.length}</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
                 </div>
                 <div>
@@ -204,7 +203,7 @@ export default function Home() {
               <Search className="absolute left-3.5 top-3.5 h-4 w-4 text-[#62736B]" />
               <input
                 type="text"
-                placeholder="Search 389+ ingredients..."
+                placeholder={`Search ${PRODUCTS.length}+ ingredients...`}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
@@ -237,7 +236,7 @@ export default function Home() {
                 },
                 {
                   id: "02",
-                  name: "Sunscreen & Moisturizer",
+                  name: "UV Filters & Moisturizer",
                   description: "UV filters and hydration systems for modern formulations.",
                   bg: "bg-[#FDF6E9]",
                 },
@@ -261,8 +260,8 @@ export default function Home() {
                 },
                 {
                   id: "06",
-                  name: "Herbal Extracts (Water Soluble)",
-                  description: "Water-soluble botanical extracts selected for conscious formulation.",
+                  name: "Herbal Extracts",
+                  description: "Botanical extracts selected for conscious formulation.",
                   bg: "bg-[#FBF6EE]",
                 },
                 {
@@ -278,11 +277,8 @@ export default function Home() {
                   bg: "bg-[#F1ECE6]",
                 },
               ].map((cat) => {
-                const count = PRODUCTS.filter((p) => 
-                  p.category === cat.name || 
-                  (cat.name === "Herbal Extracts (Water Soluble)" && p.category.includes("Herbal Extracts"))
-                ).length;
-                const isSelected = selectedCategory === cat.name || (selectedCategory.includes("Herbal Extracts") && cat.name.includes("Herbal Extracts"));
+                const count = PRODUCTS.filter((p) => p.category === cat.name).length;
+                const isSelected = selectedCategory === cat.name;
 
                 return (
                   <div

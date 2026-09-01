@@ -71,7 +71,7 @@ export default function About() {
           >
             <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">2025 Sourcing Foundation</span>
             <span className="hidden sm:inline text-[#C49A45]">•</span>
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">389+ Verified Raw Materials</span>
+            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">220+ Verified Raw Materials</span>
             <span className="hidden sm:inline text-[#C49A45]">•</span>
             <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Global Sourcing Integrity</span>
           </motion.div>
