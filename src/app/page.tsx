@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">100%</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">COA Quality Verified</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Quality Assured</p>
                 </div>
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
@@ -137,7 +137,7 @@ export default function Home() {
             </motion.div>
 
             {/* Right Editorial Hero Image Container */}
-            <motion.div
+            <motion.div 
               className="lg:col-span-5 flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -146,21 +146,14 @@ export default function Home() {
               <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-none border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/pics-1.png"
-                    alt="Pure Vision Specialty Botanical Active Oil"
+                    src="/hero-image.png"
+                    alt="Pure Vision Specialty Botanical Active Formulation"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     priority
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-65" />
-
-                  {/* Badge overlay on hero image */}
-                  <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-4 bg-[#1A2E26]/90 backdrop-blur-md border border-white/10 text-white space-y-1">
-                    <span className="text-[9px] uppercase tracking-widest font-semibold text-[#C49A45]">Featured Ingredient</span>
-                    <p className="font-serif-luxury text-base font-bold">Sodium Hyaluronate 5KDA</p>
-                    <p className="text-[11px] text-[#A3B8AC] font-light">Deep penetrating bioactive active for skincare formulation</p>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-40" />
                 </div>
               </div>
             </motion.div>
