@@ -127,7 +127,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-xs text-[#62736B] leading-relaxed font-light">
-                To be a trusted partner for customers and global suppliers by delivering high-quality specialty chemicals, technical expertise, and value-added services. We are committed to sustainable growth through responsible business practices, green chemistry, innovation, and the highest standards of corporate governance.
+                Our main goals are to provide the personal care and cosmetic industries with value-added raw materials, unparalleled customer service, and a competitive edge in innovation.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-xs text-[#62736B] leading-relaxed font-light">
-                To be a leading provider of sustainable specialty chemical solutions that enrich lives and industries worldwide. Through innovation, global partnerships, technical excellence, and responsible business practices, we aspire to create lasting value across Personal Care, Home Care, Pet Care, and Food sectors.
+                To be the global benchmark for technical excellence in chemical manufacturing and botanical extraction, empowering our partners to create safer, highly effective, and sustainable products for a better tomorrow.
               </p>
             </div>
 
