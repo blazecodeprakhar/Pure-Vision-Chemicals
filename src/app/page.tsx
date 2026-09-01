@@ -62,10 +62,10 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#1A2E26] flex flex-col select-none">
-      
+
       {/* HERO SECTION - LUXURY PERFUME / BOTANICAL EDITORIAL */}
       <section className="relative overflow-hidden bg-[#1A2E26] text-[#E4ECE6] py-20 sm:py-24 lg:py-32 border-b border-[#D9E0DA]/20">
-        
+
         {/* Background Subtle Gradient Glow */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2D4A3E] rounded-full blur-[160px]" />
@@ -74,9 +74,9 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-            
+
             {/* Left Copy */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-7 space-y-7"
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
@@ -136,7 +136,7 @@ export default function Home() {
             </motion.div>
 
             {/* Right Editorial Hero Image Container */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -153,7 +153,7 @@ export default function Home() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-65" />
-                  
+
                   {/* Badge overlay on hero image */}
                   <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-4 bg-[#1A2E26]/90 backdrop-blur-md border border-white/10 text-white space-y-1">
                     <span className="text-[9px] uppercase tracking-widest font-semibold text-[#C49A45]">Featured Ingredient</span>
@@ -190,7 +190,7 @@ export default function Home() {
       {/* MAIN INTERACTIVE PRODUCT CATALOGUE - MASTER 4x4 DASHBOARD & SEARCH */}
       <section id="catalog" className="py-20 lg:py-28 bg-[#F8F8F3] border-t border-[#D9E0DA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           {/* Top Header: Title, Description & Integrated Search Bar */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#D9E0DA] pb-8">
             <div className="space-y-3 max-w-2xl">
@@ -219,7 +219,7 @@ export default function Home() {
                 className="w-full pl-10 pr-4 py-3 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
               />
               {searchQuery && (
-                <button 
+                <button
                   onClick={() => setSearchQuery("")}
                   className="absolute right-3 top-3 text-[10px] uppercase font-bold text-[#C49A45] hover:text-[#1A2E26]"
                 >
@@ -294,20 +294,18 @@ export default function Home() {
                   <div
                     key={cat.id}
                     onClick={() => handleCategorySelect(cat.name)}
-                    className={`p-6 border transition-all duration-200 flex flex-col justify-between space-y-5 cursor-pointer group relative ${cat.bg} ${
-                      isSelected
+                    className={`p-6 border transition-all duration-200 flex flex-col justify-between space-y-5 cursor-pointer group relative ${cat.bg} ${isSelected
                         ? "border-[#C49A45] ring-1 ring-[#C49A45]/40 shadow-sm"
                         : "border-[#D9E0DA] hover:border-[#C49A45]/40"
-                    }`}
+                      }`}
                   >
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="font-serif-luxury text-xs font-bold text-[#C49A45]">
                           {cat.id}
                         </span>
-                        <span className={`px-2.5 py-0.5 text-[10px] font-semibold rounded-full ${
-                          isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#62736B] border border-[#D9E0DA]/80"
-                        }`}>
+                        <span className={`px-2.5 py-0.5 text-[10px] font-semibold rounded-full ${isSelected ? "bg-[#1A2E26] text-white" : "bg-white/80 text-[#62736B] border border-[#D9E0DA]/80"
+                          }`}>
                           {count} Items
                         </span>
                       </div>
@@ -322,9 +320,8 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-end pt-1">
-                      <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${
-                        isSelected ? "text-[#C49A45] translate-x-0.5" : "text-[#62736B]/60 group-hover:text-[#1A2E26]"
-                      }`} />
+                      <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${isSelected ? "text-[#C49A45] translate-x-0.5" : "text-[#62736B]/60 group-hover:text-[#1A2E26]"
+                        }`} />
                     </div>
                   </div>
                 );
@@ -335,7 +332,7 @@ export default function Home() {
 
           {/* SELECTED CATEGORY LIVE RESULTS HEADER & SPEC SHEET CONTAINER */}
           <div id="products-display" className="pt-8 space-y-6 bg-[#F8F8F3] p-4 sm:p-8 select-none scroll-mt-20 sm:scroll-mt-24">
-            
+
             {/* Header & Minimal Search Bar matching Screenshot 3 & 4 */}
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#D9E0DA]/80 pb-5">
               <div className="space-y-1">
@@ -359,7 +356,7 @@ export default function Home() {
                     className="w-full pl-6 pr-4 py-1.5 bg-transparent border-b border-[#D9E0DA] focus:border-[#1A2E26] text-xs text-[#1A2E26] focus:outline-none transition-colors"
                   />
                   {searchQuery && (
-                    <button 
+                    <button
                       onClick={() => setSearchQuery("")}
                       className="absolute right-0 top-1.5 text-[10px] uppercase font-bold text-[#C49A45]"
                     >
@@ -371,21 +368,19 @@ export default function Home() {
                 <div className="inline-flex border border-[#D9E0DA] bg-white p-0.5 shrink-0">
                   <button
                     onClick={() => setCatalogueViewMode("list")}
-                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${
-                      catalogueViewMode === "list"
+                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${catalogueViewMode === "list"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
-                    }`}
+                      }`}
                   >
                     Spec List
                   </button>
                   <button
                     onClick={() => setCatalogueViewMode("grid")}
-                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${
-                      catalogueViewMode === "grid"
+                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${catalogueViewMode === "grid"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
-                    }`}
+                      }`}
                   >
                     Card Grid
                   </button>
@@ -431,11 +426,10 @@ export default function Home() {
 
                       <button
                         onClick={() => toggleCartItem(product)}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
-                          isInCart
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer ${isInCart
                             ? "text-[#C49A45] font-bold bg-[#1A2E26] px-3.5 py-1.5"
                             : "text-[#62736B] hover:text-[#1A2E26] bg-transparent"
-                        }`}
+                          }`}
                       >
                         {isInCart ? (
                           <>
@@ -488,11 +482,10 @@ export default function Home() {
                         <span className="text-[11px] text-[#62736B] font-light">COA Specification</span>
                         <button
                           onClick={() => toggleCartItem(product)}
-                          className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                            isInCart
+                          className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer ${isInCart
                               ? "bg-[#2D4A3E] text-white"
                               : "bg-[#F0F4F1] hover:bg-[#1A2E26] text-[#1A2E26] hover:text-white border border-[#D9E0DA]"
-                          }`}
+                            }`}
                         >
                           {isInCart ? (
                             <>
@@ -705,6 +698,81 @@ export default function Home() {
 
 
 
+
+
+      {/* TECHNICAL EXCELLENCE & SOURCING MODEL BANNER */}
+      <section className="py-20 lg:py-28 bg-[#F8F8F3] border-t border-[#D9E0DA]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Left Editorial Image Frame with Label */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5 relative aspect-[4/5] border border-[#D9E0DA] p-3 bg-white shadow-xl"
+            >
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/tech-excellence.jpg"
+                  alt="Laboratory Sourcing Precision"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-65" />
+                <div className="absolute bottom-5 left-5 right-5 p-3.5 bg-[#1A2E26]/90 border border-white/10 text-white space-y-0.5">
+                  <span className="text-[9px] uppercase tracking-widest text-[#C49A45] font-bold">R&D & Formulation Desk</span>
+                  <p className="font-serif-luxury text-xs font-bold">Pure Technical Guidance & Logistics</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Editorial Copy & Typography Pairing */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-7 space-y-6"
+            >
+              <div className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-3.5 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">
+                <span>Technical Excellence • Global Network</span>
+              </div>
+
+              <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#1A2E26] leading-[1.18]">
+                Global Sourcing Integrity <br />
+                <span className="italic font-normal text-[#C49A45]">
+                  & Technical Assistance
+                </span>
+              </h2>
+
+
+              <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
+                Our sales engineers across India provide formulation guidance, technical documentation (COA/MSDS), and dependable supply chain logistics to keep your production moving forward.
+              </p>
+
+              {/* Feature Badges */}
+              <div className="pt-1 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-wider text-[#1A2E26]">
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ COA & MSDS Verified</span>
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ Formulation Support</span>
+                <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ Pan-India Logistics</span>
+              </div>
+
+              <div className="pt-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer shadow-lg hover:shadow-xl"
+                >
+                  <span>Connect with Technical Desk</span>
+                  <ArrowRight className="h-4 w-4 text-[#C49A45]" />
+                </Link>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
 
 
       {/* STICKY BOTTOM QUOTE LIST FLOATING BAR */}
