@@ -96,23 +96,9 @@ export default function Contact() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Collaborate directly with our technical sales engineers for COA specification sheets, stock availability, and bulk pricing."
+              "Collaborate directly with our technical sales experts for specification sheets, stock availability, and bulk pricing."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
-          </motion.div>
-
-          {/* Quick Pillars Badge Bar */}
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="pt-6 flex flex-wrap items-center justify-center gap-4 text-[11px] font-semibold uppercase tracking-widest text-[#E4ECE6]/80"
-          >
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Fast COA Verification</span>
-            <span className="hidden sm:inline text-[#C49A45]">•</span>
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Dedicated Technical Support</span>
-            <span className="hidden sm:inline text-[#C49A45]">•</span>
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Pan-India Logistics</span>
           </motion.div>
 
         </div>
@@ -217,7 +203,7 @@ export default function Contact() {
                 </div>
                 <h4 className="font-serif-luxury text-xl font-bold">Inquiry Submitted Successfully</h4>
                 <p className="text-xs text-[#62736B] leading-relaxed max-w-sm mx-auto font-light">
-                  Thank you! Our technical sales engineers will verify stock, prepare specification sheets (COA), and send a proposal to your inbox shortly.
+                  Thank you! Our technical sales experts will verify stock, prepare specification sheets, and send a proposal to your inbox shortly.
                 </p>
               </motion.div>
             ) : (
