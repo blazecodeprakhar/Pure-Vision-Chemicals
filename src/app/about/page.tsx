@@ -10,8 +10,7 @@ import {
   Compass,
   Users,
   Award,
-  ArrowRight,
-  Truck
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 
