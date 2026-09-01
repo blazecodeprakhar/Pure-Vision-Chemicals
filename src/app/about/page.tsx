@@ -28,15 +28,6 @@ export default function About() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto"
-          >
-            <span>Corporate Profile • Established 2025</span>
-          </motion.div>
-
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,23 +48,9 @@ export default function About() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Delivering high-value specialty chemical ingredients sourced from globally renowned manufacturing partners."
+              "Your end-to-end partner for custom botanical extracts and specialty cosmetic ingredients."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
-          </motion.div>
-
-          {/* Quick Pillars Badge Bar */}
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="pt-6 flex flex-wrap items-center justify-center gap-4 text-[11px] font-semibold uppercase tracking-widest text-[#E4ECE6]/80"
-          >
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">2025 Sourcing Foundation</span>
-            <span className="hidden sm:inline text-[#C49A45]">•</span>
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">220+ Verified Raw Materials</span>
-            <span className="hidden sm:inline text-[#C49A45]">•</span>
-            <span className="px-3.5 py-1.5 border border-white/10 bg-white/5">Global Sourcing Integrity</span>
           </motion.div>
 
         </div>
