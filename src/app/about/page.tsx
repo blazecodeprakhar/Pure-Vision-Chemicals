@@ -19,36 +19,54 @@ export default function About() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#1A2E26] flex flex-col select-none pb-20">
       
       {/* GRAND EDITORIAL ABOUT HERO SECTION */}
-      <section className="relative bg-[#1A2E26] text-[#E4ECE6] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA]/20 overflow-hidden">
+      <section className="relative bg-[#1A2E26] text-[#E4ECE6] py-16 sm:py-24 lg:py-28 border-b border-[#D9E0DA]/20 overflow-hidden">
         {/* Glow ambient background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#2D4A3E] rounded-full blur-[150px]" />
           <div className="absolute top-0 right-10 w-[350px] h-[350px] bg-[#C49A45]/15 rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]"
+          >
+            <span>About Us</span>
+          </motion.div>
+
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]"
           >
-            Botanical Intelligence <br />
+            Welcome to <strong className="text-white font-bold">Pure Vision Chemicals</strong>, <br />
             <span className="italic font-normal text-[#C49A45]">
-              & Specialty Actives
+              where Vision meets Science.
             </span>
           </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-[#E4ECE6]/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto font-light"
+          >
+            We are a premier manufacturer and supplier specializing in high-performance <strong className="font-semibold text-white">specialty chemicals</strong> and premium <strong className="font-semibold text-white">herbal extracts</strong>. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, cosmetics & Home-Care.
+          </motion.p>
 
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-center justify-center gap-4 pt-2"
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Your end-to-end partner for custom botanical extracts and specialty cosmetic ingredients."
+              "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
           </motion.div>
@@ -57,55 +75,98 @@ export default function About() {
       </section>
 
 
-      {/* CORE PROFILE & TIMELINE */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      {/* WHY CHOOSE US SECTION */}
+      <section className="py-20 lg:py-24 bg-[#F8F8F3] border-b border-[#D9E0DA]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <motion.div 
-            className="lg:col-span-7 space-y-6"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">Our Story & Foundation</span>
-            
-            <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#1A2E26] leading-snug">
-              Technical Expertise, Sourcing Integrity, and Long-Term Value
-            </h2>
-
-            <div className="h-[2px] bg-[#C49A45] w-16" />
-            
-            <div className="space-y-4 text-[#62736B] leading-relaxed text-xs sm:text-sm font-light">
-              <p>
-                At <strong>Pure Vision Chemicals</strong>, we combine scientific expertise, global partnerships, and market intelligence to deliver specialty chemical solutions that keep pace with the evolving needs of modern industries. Built on a strong foundation of technical knowledge, integrity, and industry experience, we are committed to creating sustainable value for our customers through innovation, reliability, and long-term partnerships.
-              </p>
-              <p>
-                Founded in <strong>2025</strong>, Pure Vision Chemicals began its journey with a focus on personal care raw material sourcing. We have since evolved into a diversified specialty chemicals organization serving a broad spectrum of industries, including <strong>Personal Care, Home Care, Pet Care, and Food</strong>.
-              </p>
-              <p>
-                Our carefully curated portfolio is sourced from globally and locally recognized manufacturers and meets the highest standards of quality, regulatory compliance, and technical excellence. With dedicated market expertise, we provide customers with innovative ingredients, formulation support, and market-driven solutions that enable them to stay ahead in a rapidly changing business landscape.
-              </p>
+          {/* Section Header Badge matching user screenshot */}
+          <div className="text-center">
+            <div className="inline-block bg-[#1A2E26] text-white px-10 py-3.5 rounded-full shadow-lg border border-[#C49A45]/30">
+              <h2 className="font-serif-luxury text-xl sm:text-2xl font-bold tracking-wide">
+                Why Choose Us
+              </h2>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="lg:col-span-5 relative aspect-[4/3] sm:aspect-[4/5] min-h-[280px] sm:min-h-[360px] border border-[#D9E0DA] p-2 sm:p-3 bg-white shadow-xl"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/about-image.jpg"
-                alt="Pure Vision Corporate Profile"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-30" />
-            </div>
-          </motion.div>
+          {/* 5 Value Points Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pt-4">
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white border border-[#D9E0DA] p-7 space-y-3 shadow-xs hover:shadow-md transition-all border-l-4 border-l-[#C49A45]"
+            >
+              <h3 className="font-serif-luxury font-bold text-lg text-[#1A2E26]">
+                Technical Sales
+              </h3>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                Expertise in product solutions tailored to your technical requirements.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white border border-[#D9E0DA] p-7 space-y-3 shadow-xs hover:shadow-md transition-all border-l-4 border-l-[#1A2E26]"
+            >
+              <h3 className="font-serif-luxury font-bold text-lg text-[#1A2E26]">
+                Wide Market Reach
+              </h3>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                Access to diverse customer segments and global distribution networks.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white border border-[#D9E0DA] p-7 space-y-3 shadow-xs hover:shadow-md transition-all border-l-4 border-l-[#C49A45]"
+            >
+              <h3 className="font-serif-luxury font-bold text-lg text-[#1A2E26]">
+                Long Term Association & Growth
+              </h3>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                Focusing on building the market together as one united team.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white border border-[#D9E0DA] p-7 space-y-3 shadow-xs hover:shadow-md transition-all border-l-4 border-l-[#1A2E26]"
+            >
+              <h3 className="font-serif-luxury font-bold text-lg text-[#1A2E26]">
+                Transparency
+              </h3>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                Complete transparency for optimal performance and trust.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-white border border-[#D9E0DA] p-7 space-y-3 shadow-xs hover:shadow-md transition-all border-l-4 border-l-[#C49A45] md:col-span-2 lg:col-span-1"
+            >
+              <h3 className="font-serif-luxury font-bold text-lg text-[#1A2E26]">
+                Quick Delivery Assurance
+              </h3>
+              <p className="text-xs text-[#62736B] leading-relaxed font-light">
+                On-time delivery with guaranteed customer satisfaction every time.
+              </p>
+            </motion.div>
+
+          </div>
 
         </div>
       </section>
