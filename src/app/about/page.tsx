@@ -103,11 +103,7 @@ export default function About() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-70" />
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-4 bg-[#1A2E26]/90 border border-white/10 text-white space-y-0.5 sm:space-y-1">
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-widest text-[#C49A45] font-bold">Mumbai Headquarters</span>
-                <p className="font-serif-luxury text-xs sm:text-sm font-bold">Pure Sourcing & Technical Guidance</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-30" />
             </div>
           </motion.div>
 
