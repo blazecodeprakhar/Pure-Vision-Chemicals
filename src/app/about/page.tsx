@@ -172,7 +172,7 @@ export default function About() {
           {/* 3 Pillar Motion Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             
-            {/* Global Sourcing Network */}
+            {/* High-Quality Manufacturing & Sourcing */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -187,11 +187,11 @@ export default function About() {
                 </div>
                 
                 <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors">
-                  Global Sourcing Network
+                  High-Quality Manufacturing & Sourcing
                 </h3>
 
                 <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  Sourcing directly from globally renowned manufacturing partners under rigorous standards, ensuring pure, compliant, and fully traceable chemical supply lines.
+                  Manufacturing high-purity, nature-derived botanical extracts under rigorous standards, while seamlessly sourcing specialty chemicals from globally renowned partners to provide a comprehensive, end-to-end raw material solution.
                 </p>
               </div>
 
@@ -204,7 +204,7 @@ export default function About() {
               <div className="h-1 bg-transparent group-hover:bg-[#C49A45] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Technical Sales Support */}
+            {/* Technical Support & Guidance */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -219,11 +219,11 @@ export default function About() {
                 </div>
                 
                 <h3 className="font-serif-luxury font-bold text-2xl text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors">
-                  Technical Sales Support
+                  Technical Support & Guidance
                 </h3>
 
                 <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  Experienced chemical sales engineers strategically located across India to provide responsive localized service, COA sheets, and formulation guidance.
+                  Our experienced technical team offers dedicated assistance to streamline your product development, providing responsive localized service, comprehensive documentation, and expert formulation guidance.
                 </p>
               </div>
 
@@ -255,7 +255,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  We believe in growing alongside our clients by maintaining complete pricing transparency, dependable sourcing consistency, and long-term commitment.
+                  We believe in growing alongside our clients by maintaining complete transparency, dependable sourcing consistency, and long-term commitment.
                 </p>
               </div>
 
