@@ -110,7 +110,6 @@ export default function Footer() {
         {/* SUBFOOTER COPYRIGHT */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A3B8AC]/70 tracking-wider">
           <span>© {currentYear} Pure Vision Chemicals. All rights reserved.</span>
-          <span className="font-serif-luxury italic text-[#C49A45]">Botanical Intelligence & Specialty Actives</span>
         </div>
 
       </div>
