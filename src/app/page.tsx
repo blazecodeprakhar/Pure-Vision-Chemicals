@@ -146,8 +146,8 @@ export default function Home() {
               <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-none border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/hero-image.png"
-                    alt="Pure Vision Specialty Botanical Active Formulation"
+                    src="/heroimage.jpg"
+                    alt="Pure Vision Specialty Botanical Active Essential Oil"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     priority
