@@ -36,7 +36,17 @@ export default function Home() {
   const { inquiryCart, toggleCartItem, setCartOpen } = useCart();
   const [selectedCategory, setSelectedCategory] = useState<string>("Actives");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [catalogueViewMode, setCatalogueViewMode] = useState<"list" | "grid">("list");
+  const [catalogueViewMode, setCatalogueViewMode] = useState<"list" | "grid">("grid");
+
+  const handleCategorySelect = (categoryName: string) => {
+    setSelectedCategory(categoryName);
+    setTimeout(() => {
+      const element = document.getElementById("products-display");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
 
   // Filter products cleanly
   const filteredProducts = useMemo(() => {
@@ -283,7 +293,7 @@ export default function Home() {
                 return (
                   <div
                     key={cat.id}
-                    onClick={() => setSelectedCategory(cat.name)}
+                    onClick={() => handleCategorySelect(cat.name)}
                     className={`p-6 border transition-all duration-200 flex flex-col justify-between space-y-5 cursor-pointer group relative ${cat.bg} ${
                       isSelected
                         ? "border-[#C49A45] ring-1 ring-[#C49A45]/40 shadow-sm"
@@ -324,7 +334,7 @@ export default function Home() {
 
 
           {/* SELECTED CATEGORY LIVE RESULTS HEADER & SPEC SHEET CONTAINER */}
-          <div className="pt-8 space-y-6 bg-[#F8F8F3] p-4 sm:p-8 select-none">
+          <div id="products-display" className="pt-8 space-y-6 bg-[#F8F8F3] p-4 sm:p-8 select-none scroll-mt-20 sm:scroll-mt-24">
             
             {/* Header & Minimal Search Bar matching Screenshot 3 & 4 */}
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#D9E0DA]/80 pb-5">
