@@ -89,9 +89,9 @@ export default function Home() {
                 </span>
               </h1>
 
-              <p className="text-[#A3B8AC] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
+              <p className="text-[#E4ECE6]/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
                 <span className="block">
-                  <strong className="text-white italic font-serif-luxury font-semibold">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and speciality ingredient solution partner.
+                  <strong className="font-bold text-white tracking-wider">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and speciality ingredient solution partner.
                 </span>
                 <span className="block">
                   We specialize in providing innovative ingredient solutions to the Cosmetics, Dermaceuticals, and Home Care industries.
