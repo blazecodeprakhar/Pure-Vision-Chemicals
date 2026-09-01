@@ -83,14 +83,18 @@ export default function Footer() {
 
             </div>
 
-            {/* Quick 3-Page Navigation Links */}
-            <div className="pt-6 border-t border-white/10 flex items-center gap-8 text-xs uppercase font-bold tracking-widest text-[#A3B8AC]">
+            {/* Quick Navigation Links */}
+            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-8 text-xs uppercase font-bold tracking-widest text-[#A3B8AC]">
               <Link href="/" className="flex items-center gap-1.5 text-white hover:text-[#C49A45] transition-colors">
                 <span>Home</span>
                 <ArrowUpRight className="h-3.5 w-3.5 text-[#C49A45]" />
               </Link>
+              <Link href="/#catalog" className="flex items-center gap-1.5 text-white hover:text-[#C49A45] transition-colors">
+                <span>Our Products</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-[#C49A45]" />
+              </Link>
               <Link href="/about" className="flex items-center gap-1.5 text-white hover:text-[#C49A45] transition-colors">
-                <span>About</span>
+                <span>About Us</span>
                 <ArrowUpRight className="h-3.5 w-3.5 text-[#C49A45]" />
               </Link>
               <Link href="/contact" className="flex items-center gap-1.5 text-white hover:text-[#C49A45] transition-colors">

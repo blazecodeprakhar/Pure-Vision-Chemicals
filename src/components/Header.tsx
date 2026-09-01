@@ -23,7 +23,8 @@ export default function Header() {
   // Strictly 3 pages as requested
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "Our Products", href: "/#catalog" },
+    { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" }
   ];
 
