@@ -82,19 +82,20 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]">
-                <span>Botanical Intelligence • Specialty Actives</span>
-              </div>
-
               <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
-                Where Nature Meets <br />
+                Where Vision Meets <br />
                 <span className="italic font-normal text-[#C49A45]">
-                  Formulation.
+                  Science.
                 </span>
               </h1>
 
-              <p className="text-[#A3B8AC] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light">
-                Positioned at the forefront of India's dynamic specialty chemicals market, Pure Vision Chemicals delivers high-value performance ingredients sourced from globally renowned partners for Personal Care, Home Care, Pet Care, and Food formulation sectors.
+              <p className="text-[#A3B8AC] text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
+                <span className="block">
+                  <strong className="text-white italic font-serif-luxury font-semibold">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and speciality ingredient solution partner.
+                </span>
+                <span className="block">
+                  We specialize in providing innovative ingredient solutions to the Cosmetics, Dermaceuticals, and Home Care industries.
+                </span>
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
