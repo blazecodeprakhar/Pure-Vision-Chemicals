@@ -71,7 +71,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto rounded-full shadow-xs"
+            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto"
           >
             <span>Specification Sourcing • Technical Desk</span>
           </motion.div>
