@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description: "High-value specialty chemical ingredients sourced from globally renowned partners. Serving Personal Care, Home Care, Pet Care, and Food industries.",
   keywords: ["Pure Vision Chemicals", "PV Chem", "specialty chemical ingredients", "actives", "preservatives", "rheology modifiers", "natural oils", "botanical extracts", "Mumbai chemicals"],
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
     apple: "/logo.png",
   },
   openGraph: {
