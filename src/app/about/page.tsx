@@ -10,7 +10,11 @@ import {
   Compass,
   Users,
   Award,
-  ArrowRight
+  ArrowRight,
+  Truck,
+  Handshake,
+  Eye,
+  Headset
 } from "lucide-react";
 import Link from "next/link";
 
@@ -27,6 +31,14 @@ export default function About() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]"
+          >
+            <span>Welcome to Pure Vision Chemicals</span>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -48,16 +60,15 @@ export default function About() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Your end-to-end partner for custom botanical extracts and specialty cosmetic ingredients."
+              "Where Vision Meets Science."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
           </motion.div>
-
         </div>
       </section>
 
 
-      {/* CORE PROFILE & TIMELINE */}
+      {/* CORE PROFILE & EXPERIENCE HIGHLIGHT */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
@@ -78,13 +89,21 @@ export default function About() {
 
             <div className="space-y-4 text-[#62736B] leading-relaxed text-xs sm:text-sm font-light">
               <p>
-                At <strong>Pure Vision Chemicals</strong>, we combine scientific expertise, global partnerships, and market intelligence to deliver specialty chemical solutions that keep pace with the evolving needs of modern industries. Built on a strong foundation of technical knowledge, integrity, and industry experience, we are committed to creating sustainable value for our customers through innovation, reliability, and long-term partnerships.
+                We are a premier manufacturer and supplier specializing in high-performance <strong>specialty chemicals</strong> and premium <strong>herbal extracts</strong>. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, Cosmetics, and Home Care.
               </p>
               <p>
-                Founded in <strong>2025</strong>, Pure Vision Chemicals began its journey with a focus on personal care raw material sourcing. We have since evolved into a diversified specialty chemicals organization serving a broad spectrum of industries, including <strong>Personal Care, Home Care, Pet Care, and Food</strong>.
+                At <strong>Pure Vision Chemicals</strong>, we combine scientific expertise, global partnerships, and market intelligence to deliver specialty chemical solutions that keep pace with the evolving needs of modern formulation standards.
               </p>
               <p>
-                Our carefully curated portfolio is sourced from globally and locally recognized manufacturers and meets the highest standards of quality, regulatory compliance, and technical excellence. With dedicated market expertise, we provide customers with innovative ingredients, formulation support, and market-driven solutions that enable them to stay ahead in a rapidly changing business landscape.
+                Our carefully curated portfolio is sourced from globally and locally recognized manufacturers and meets the highest standards of quality, regulatory compliance, and technical excellence.
+              </p>
+            </div>
+
+            {/* Editorial Highlighted Quote Box */}
+            <div className="p-6 bg-[#1A2E26] text-[#E4ECE6] border-l-4 border-[#C49A45] shadow-md space-y-2 mt-4">
+              <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#C49A45]">15+ Years Industry Expertise</span>
+              <p className="font-serif-luxury italic text-sm sm:text-base text-white font-normal leading-relaxed">
+                "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
               </p>
             </div>
           </motion.div>
@@ -109,6 +128,152 @@ export default function About() {
 
         </div>
       </section>
+
+
+      {/* WHY CHOOSE US - EDITORIAL ADVANTAGES SECTION */}
+      <section className="bg-[#1A2E26] text-white py-20 lg:py-28 border-y border-[#D9E0DA]/20 relative overflow-hidden">
+        {/* Glow ambient accent */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2D4A3E] rounded-full blur-[180px] pointer-events-none opacity-30" />
+
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
+
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#C49A45] font-bold">
+              The Pure Vision Advantage
+            </span>
+            <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-white leading-tight">
+              Why Choose <span className="italic font-normal text-[#C49A45]">Us</span>
+            </h2>
+            <div className="h-[2px] bg-[#C49A45] w-12 mx-auto mt-2" />
+            <p className="text-xs sm:text-sm text-[#A3B8AC] font-light leading-relaxed pt-2">
+              Empowering formulation excellence with technical precision, global reach, and dependable supply integrity.
+            </p>
+          </div>
+
+          {/* 5 Pillar Advantage Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+            {/* 1. Technical Sales */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+            >
+              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
+                <Headset className="h-6 w-6" />
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 01</span>
+                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                  Technical Sales
+                </h3>
+                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  Expertise in product solutions tailored precisely to your specific chemical and botanical formulation needs.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 2. Wide Market Reach */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3, delay: 0.08 }}
+              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+            >
+              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
+                <Globe2 className="h-6 w-6" />
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 02</span>
+                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                  Wide Market Reach
+                </h3>
+                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  Access to diverse customer segments and global manufacturers across Personal Care, Dermaceuticals, and Home Care.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 3. Long Term Association & Growth */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3, delay: 0.16 }}
+              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+            >
+              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
+                <Handshake className="h-6 w-6" />
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 03</span>
+                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                  Long Term Association & Growth
+                </h3>
+                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  Focusing on building sustainable markets together as one united team through shared innovation and trust.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 4. Transparency */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3, delay: 0.24 }}
+              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+            >
+              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
+                <Eye className="h-6 w-6" />
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 04</span>
+                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                  Transparency
+                </h3>
+                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  Complete transparency in sourcing, technical documentation (COA/MSDS), and pricing for optimal performance.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 5. Quick Delivery Assurance */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3, delay: 0.32 }}
+              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 md:col-span-2 lg:col-span-1"
+            >
+              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
+                <Truck className="h-6 w-6" />
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 05</span>
+                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                  Quick Delivery Assurance
+                </h3>
+                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  On-time delivery logistics with guaranteed customer satisfaction across pan-India and international supply routes.
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+
+        </div>
+      </section>
+
 
       {/* MISSION & VISION */}
       <section className="bg-[#E4ECE6] border-y border-[#D9E0DA] py-20">
@@ -151,7 +316,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* CORE PHILOSOPHY & PILLARS - GRAND EDITORIAL REDESIGN */}
+
+      {/* CORE PHILOSOPHY & PILLARS */}
       <section className="py-24 lg:py-28 bg-[#F8F8F3] border-b border-[#D9E0DA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
 
@@ -282,7 +448,6 @@ export default function About() {
 
         </div>
       </section>
-
 
     </div>
   );
