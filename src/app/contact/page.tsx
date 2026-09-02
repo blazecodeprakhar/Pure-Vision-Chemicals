@@ -71,7 +71,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto"
+            className="inline-flex items-center gap-3 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] mx-auto rounded-full shadow-xs"
           >
             <span>Specification Sourcing • Technical Desk</span>
           </motion.div>
@@ -124,11 +124,11 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Direct Channel Cards */}
+            {/* Direct Channel Cards with Curved Edges & Shadows */}
             <div className="space-y-5">
               
-              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
-                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
+              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0 rounded-xl shadow-xs">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -141,8 +141,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
-                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
+              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0 rounded-xl shadow-xs">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
@@ -155,8 +155,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 bg-white border border-[#D9E0DA]">
-                <div className="flex h-10 w-10 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0">
+              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#1A2E26] text-[#C49A45] shrink-0 rounded-xl shadow-xs">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -169,9 +169,8 @@ export default function Contact() {
 
             </div>
 
-
-            {/* HQ Map Display Card */}
-            <div className="relative h-56 w-full border border-[#D9E0DA] bg-[#E4ECE6] flex items-center justify-center p-6 text-center">
+            {/* HQ Map Display Card with Curved Edges & Shadow */}
+            <div className="relative h-56 w-full border border-[#D9E0DA] bg-[#E4ECE6] flex items-center justify-center p-6 text-center rounded-2xl shadow-md overflow-hidden">
               <div className="space-y-2 z-10">
                 <MapPin className="h-8 w-8 text-[#1A2E26] mx-auto animate-bounce" />
                 <p className="font-serif-luxury font-bold text-[#1A2E26] text-base">Pure Vision Chemicals Mumbai HQ</p>
@@ -180,9 +179,9 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right Form */}
+          {/* Right Form Card with Curved Edges & Shadow */}
           <motion.div 
-            className="lg:col-span-7 bg-white border border-[#D9E0DA] p-8 sm:p-10 shadow-sm"
+            className="lg:col-span-7 bg-white border border-[#D9E0DA] p-8 sm:p-10 shadow-lg rounded-2xl"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -196,9 +195,9 @@ export default function Contact() {
               <motion.div 
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="bg-[#E4ECE6] border border-[#2D4A3E] p-8 text-center text-[#1A2E26] space-y-4"
+                className="bg-[#E4ECE6] border border-[#2D4A3E] p-8 text-center text-[#1A2E26] space-y-4 rounded-2xl shadow-md"
               >
-                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center mx-auto">
+                <div className="h-12 w-12 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center mx-auto rounded-xl shadow-xs">
                   <Check className="h-6 w-6" />
                 </div>
                 <h4 className="font-serif-luxury text-xl font-bold">Inquiry Submitted Successfully</h4>
@@ -219,7 +218,7 @@ export default function Contact() {
                       value={formState.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -231,7 +230,7 @@ export default function Contact() {
                       value={formState.company}
                       onChange={handleInputChange}
                       placeholder="Acme Formulations Ltd."
-                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                     />
                   </div>
                 </div>
@@ -246,7 +245,7 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleInputChange}
                       placeholder="purchasing@acme.com"
-                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -258,7 +257,7 @@ export default function Contact() {
                       value={formState.phone}
                       onChange={handleInputChange}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                     />
                   </div>
                 </div>
@@ -270,7 +269,7 @@ export default function Contact() {
                       name="interest"
                       value={formState.interest}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] appearance-none focus:outline-none focus:border-[#1A2E26] transition-all"
+                      className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] appearance-none focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                     >
                       <option value="Actives">Actives (Peptides, Hyaluronates)</option>
                       <option value="UV Filters & Moisturizer">UV Filters & Moisturizer</option>
@@ -287,7 +286,7 @@ export default function Contact() {
 
                 {/* Prepopulated Quote Cart Display */}
                 {inquiryCart.length > 0 && (
-                  <div className="space-y-2 p-4 bg-[#E4ECE6] border border-[#D9E0DA]">
+                  <div className="space-y-2 p-4 bg-[#E4ECE6] border border-[#D9E0DA] rounded-xl shadow-xs">
                     <div className="flex items-center justify-between text-[10px] font-bold text-[#1A2E26] uppercase tracking-wider">
                       <span className="flex items-center gap-1.5">
                         <ShoppingBag className="h-3.5 w-3.5 text-[#C49A45]" />
@@ -298,7 +297,7 @@ export default function Contact() {
                       {inquiryCart.map(item => (
                         <div key={item.id} className="text-xs py-1.5 text-[#1A2E26] flex justify-between font-medium">
                           <span>{item.name}</span>
-                          <span className="text-[9px] text-[#62736B] uppercase font-semibold">{item.category}</span>
+                          <span className="text-[9px] text-[#62736B] uppercase font-semibold bg-white/60 px-2 py-0.5 rounded-md">{item.category}</span>
                         </div>
                       ))}
                     </div>
@@ -314,13 +313,13 @@ export default function Contact() {
                     value={formState.message}
                     onChange={handleInputChange}
                     placeholder="Specify molecular weights, purity levels, estimated volume quantities required..."
-                    className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all"
+                    className="w-full px-4 py-3 border border-[#D9E0DA] bg-[#F8F8F3] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-all rounded-xl shadow-xs"
                   />
                 </div>
 
                 <button 
                   type="submit"
-                  className="w-full flex items-center justify-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer shadow-md"
+                  className="w-full flex items-center justify-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5"
                 >
                   <span>Submit Sourcing Request</span>
                   <ArrowRight className="h-4 w-4 text-[#C49A45]" />

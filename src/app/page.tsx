@@ -101,14 +101,14 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
                   href="#catalog"
-                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   <span>Explore Ingredients</span>
                   <ArrowRight className="h-4 w-4 text-[#1A2E26]" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-md hover:shadow-lg"
                 >
                   <span>Request Custom Quote</span>
                 </Link>
@@ -139,8 +139,8 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-none border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl">
-                <div className="relative w-full h-full overflow-hidden">
+              <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl overflow-hidden">
+                <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <Image
                     src="/heroimage.jpg"
                     alt="Pure Vision Specialty Botanical Active Essential Oil"
@@ -206,7 +206,7 @@ export default function Home() {
                 placeholder={`Search ${PRODUCTS.length}+ ingredients...`}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors shadow-xs"
+                className="w-full pl-10 pr-4 py-3 bg-white border border-[#D9E0DA] text-xs text-[#1A2E26] focus:outline-none focus:border-[#1A2E26] transition-colors rounded-xl shadow-xs"
               />
               {searchQuery && (
                 <button
@@ -771,10 +771,10 @@ export default function Home() {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 80, opacity: 0 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] max-w-xl bg-[#1A2E26] text-white p-4 shadow-2xl border border-[#C49A45]/40 flex items-center justify-between"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] max-w-xl bg-[#1A2E26] text-white p-4 shadow-2xl border border-[#C49A45]/40 flex items-center justify-between rounded-2xl backdrop-blur-md"
           >
             <div className="flex items-center gap-3">
-              <div className="h-9 w-9 bg-[#C49A45] text-[#1A2E26] flex items-center justify-center font-bold text-xs">
+              <div className="h-9 w-9 bg-[#C49A45] text-[#1A2E26] flex items-center justify-center font-bold text-xs rounded-xl shadow-xs">
                 {inquiryCart.length}
               </div>
               <div>
@@ -785,7 +785,7 @@ export default function Home() {
 
             <button
               onClick={() => setCartOpen(true)}
-              className="bg-white hover:bg-[#E4ECE6] text-[#1A2E26] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
+              className="bg-white hover:bg-[#E4ECE6] text-[#1A2E26] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer rounded-xl shadow-md hover:shadow-lg"
             >
               Review Quote List
             </button>
