@@ -132,7 +132,7 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
 
           {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="text-center max-w-4xl mx-auto space-y-3">
             <span className="text-xs uppercase tracking-[0.3em] text-[#C49A45] font-bold">
               The Pure Vision Advantage
             </span>
@@ -140,7 +140,7 @@ export default function About() {
               Why Choose <span className="italic font-normal text-[#C49A45]">Us</span>
             </h2>
             <div className="h-[2px] bg-[#C49A45] w-12 mx-auto mt-2" />
-            <p className="text-xs sm:text-sm text-[#A3B8AC] font-light leading-relaxed pt-2">
+            <p className="text-xs sm:text-sm text-[#A3B8AC] font-light leading-relaxed pt-2 sm:whitespace-nowrap">
               Empowering formulation excellence with technical precision, global reach, and dependable supply integrity.
             </p>
           </div>
