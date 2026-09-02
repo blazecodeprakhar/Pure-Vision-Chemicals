@@ -11,10 +11,10 @@ export default function Footer() {
     <footer className="relative bg-[#093366] text-[#E4ECE6] border-t border-[#D9E0DA]/20 py-20 lg:py-24 select-none mt-auto">
       <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        
+
         {/* MAIN EDITORIAL FOOTER BODY */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Hero Statement & CTA */}
           <div className="lg:col-span-7 space-y-6">
             <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#008F7C]">
@@ -45,16 +45,16 @@ export default function Footer() {
 
           {/* Right Direct Details & Nav */}
           <div className="lg:col-span-5 space-y-8 lg:pt-6">
-            
+
             {/* Contact channels list with icons */}
             <div className="space-y-5 text-xs sm:text-sm font-light text-[#A3B8AC]">
-              
+
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <Mail className="h-4 w-4 text-white" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
+                  <Mail className="h-4 w-4 text-[#008F7C]" />
                 </div>
-                <a 
-                  href="mailto:purevisionchem@outlook.com" 
+                <a
+                  href="mailto:purevisionchem@outlook.com"
                   className="text-white hover:text-[#008F7C] transition-colors font-medium"
                 >
                   purevisionchem@outlook.com
@@ -62,11 +62,11 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 shadow-xs">
-                  <Phone className="h-4 w-4 text-white" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
+                  <Phone className="h-4 w-4 text-[#008F7C]" />
                 </div>
-                <a 
-                  href="tel:+919326395502" 
+                <a
+                  href="tel:+919326395502"
                   className="text-white hover:text-[#008F7C] transition-colors font-medium"
                 >
                   +91 93263 95502
@@ -74,8 +74,8 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                  <MapPin className="h-4 w-4 text-white" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                  <MapPin className="h-4 w-4 text-[#008F7C]" />
                 </div>
                 <span className="leading-relaxed text-white/90">
                   Unit 201, Jai Malhar, Mumbai - 400064, India
