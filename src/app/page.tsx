@@ -115,7 +115,7 @@ export default function Home() {
               </div>
 
               {/* Quick Metrics Bar */}
-              <div className="pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
+              <div className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 text-left">
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">{PRODUCTS.length}+</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Raw Materials</p>
@@ -123,10 +123,6 @@ export default function Home() {
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">{CATEGORIES.length}</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
-                </div>
-                <div>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">100+</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Botanical Extracts</p>
                 </div>
                 <div>
                   <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
@@ -694,12 +690,12 @@ export default function Home() {
 
 
 
-      {/* TECHNICAL EXCELLENCE & SOURCING MODEL BANNER */}
+      {/* TECHNICAL EXCELLENCE & SOURCING MODEL BANNER - COMMENTED OUT */}
+      {/* 
       <section className="py-20 lg:py-28 bg-[#F8F8F3] border-t border-[#D9E0DA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-            {/* Left Editorial Image Frame with Label */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -722,7 +718,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right Editorial Copy & Typography Pairing */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -746,7 +741,6 @@ export default function Home() {
                 Our sales engineers across India provide formulation guidance, technical documentation (COA/MSDS), and dependable supply chain logistics to keep your production moving forward.
               </p>
 
-              {/* Feature Badges */}
               <div className="pt-1 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-wider text-[#1A2E26]">
                 <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ COA & MSDS Verified</span>
                 <span className="bg-[#E4ECE6] border border-[#D9E0DA] px-3 py-1.5">✓ Formulation Support</span>
@@ -767,6 +761,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
 
       {/* STICKY BOTTOM QUOTE LIST FLOATING BAR */}
