@@ -90,9 +90,9 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setCartOpen(!cartOpen)}
-              className="relative flex items-center gap-2 rounded-md bg-[#093366] hover:bg-[#0B3A71] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer shadow-md hover:shadow-lg hover:shadow-[#008F7C]/20 active:scale-95 border border-[#008F7C]/50"
+              className="group relative overflow-hidden flex items-center gap-2 rounded-md bg-[#093366] hover:bg-[#0B3A71] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 border border-[#008F7C]/50 hover:border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700"
             >
-              <ShoppingBag className="h-4 w-4 text-[#008F7C]" />
+              <ShoppingBag className="h-4 w-4 text-[#008F7C] group-hover:scale-110 transition-transform duration-300" />
               <span className="hidden sm:inline">Request Quote</span>
               {inquiryCart.length > 0 && (
                 <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#008F7C] text-[10px] text-white font-bold ml-0.5 shadow-xs">

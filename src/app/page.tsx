@@ -102,14 +102,14 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
                   href="#catalog"
-                  className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#008F7C] to-[#008F7C] hover:from-[#007767] hover:to-[#007767] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:shadow-[#008F7C]/20 hover:-translate-y-0.5"
+                  className="group relative overflow-hidden inline-flex items-center justify-center gap-3 bg-[#008F7C] hover:bg-[#007767] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#008F7C]/40 hover:-translate-y-1 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
                 >
                   <span>Explore Ingredients</span>
-                  <ArrowRight className="h-4 w-4 text-white" />
+                  <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-[#008F7C]/60 hover:border-[#008F7C] bg-[#008F7C]/10 hover:bg-[#008F7C]/20 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
+                  className="group relative overflow-hidden inline-flex items-center justify-center gap-2 border border-[#008F7C]/60 hover:border-[#008F7C] bg-[#008F7C]/10 hover:bg-[#008F7C]/20 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-[#008F7C]/20 hover:-translate-y-1 active:scale-95 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-transform before:duration-700"
                 >
                   <span>Request Custom Quote</span>
                 </Link>
@@ -786,7 +786,7 @@ export default function Home() {
 
             <button
               onClick={() => setCartOpen(true)}
-              className="bg-white hover:bg-[#E4ECE6] text-[#093366] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
+              className="group relative overflow-hidden bg-[#008F7C] hover:bg-[#007767] text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
             >
               Review Quote List
             </button>

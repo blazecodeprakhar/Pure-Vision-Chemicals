@@ -35,10 +35,10 @@ export default function Footer() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 bg-[#008F7C] hover:bg-[#007767] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:shadow-[#008F7C]/25 hover:-translate-y-0.5"
+                className="group relative overflow-hidden inline-flex items-center gap-2.5 bg-[#008F7C] hover:bg-[#007767] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#008F7C]/40 hover:-translate-y-1 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
               >
                 <span>Start an Enquiry</span>
-                <ArrowUpRight className="h-4 w-4 text-white" />
+                <ArrowUpRight className="h-4 w-4 text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </Link>
             </div>
           </div>
