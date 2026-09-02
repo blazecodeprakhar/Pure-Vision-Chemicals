@@ -125,11 +125,15 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Direct Channel Cards with Curved Edges & Shadows */}
+            {/* Direct Channel Cards with Motion Hover */}
             <div className="space-y-5">
               
-              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs">
+              <motion.div 
+                whileHover={{ x: 6, scale: 1.015 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
+              >
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -140,10 +144,14 @@ export default function Contact() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs">
+              <motion.div 
+                whileHover={{ x: 6, scale: 1.015 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
+              >
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
@@ -154,10 +162,14 @@ export default function Contact() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-lg">
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs">
+              <motion.div 
+                whileHover={{ x: 6, scale: 1.015 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
+              >
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -166,7 +178,7 @@ export default function Contact() {
                     Unit 201, Jai Malhar, Mumbai - 400064, India
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 

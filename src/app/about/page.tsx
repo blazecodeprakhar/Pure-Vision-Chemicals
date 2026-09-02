@@ -286,7 +286,14 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Mission */}
-            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6, scale: 1.015 }}
+              transition={{ duration: 0.4 }}
+              className="bg-white p-8 border border-[#D9E0DA] hover:border-[#008F7C]/50 space-y-4 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300"
+            >
               <div className="flex items-center gap-3 text-[#093366]">
                 <div className="h-10 w-10 bg-[#093366] text-[#008F7C] flex items-center justify-center rounded-xl shadow-xs">
                   <Target className="h-5 w-5" />
@@ -299,10 +306,17 @@ export default function About() {
               <p className="text-xs text-[#62736B] leading-relaxed font-light">
                 Our main goals are to provide the personal care and cosmetic industries with value-added raw materials, unparalleled customer service, and a competitive edge in innovation.
               </p>
-            </div>
+            </motion.div>
 
             {/* Vision */}
-            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6, scale: 1.015 }}
+              transition={{ duration: 0.4, delay: 0.15 }}
+              className="bg-white p-8 border border-[#D9E0DA] hover:border-[#008F7C]/50 space-y-4 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300"
+            >
               <div className="flex items-center gap-3 text-[#093366]">
                 <div className="h-10 w-10 bg-[#093366] text-[#008F7C] flex items-center justify-center rounded-xl shadow-xs">
                   <Compass className="h-5 w-5" />
@@ -315,7 +329,7 @@ export default function About() {
               <p className="text-xs text-[#62736B] leading-relaxed font-light">
                 To be the global benchmark for technical excellence in chemical manufacturing and botanical extraction, empowering our partners to create safer, highly effective, and sustainable products for a better tomorrow.
               </p>
-            </div>
+            </motion.div>
 
           </div>
         </div>

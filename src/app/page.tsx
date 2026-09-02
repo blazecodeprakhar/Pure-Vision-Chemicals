@@ -115,44 +115,53 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Quick Metrics Bar */}
-              <div className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 text-left">
-                <div>
+              {/* Quick Metrics Bar with Pop-in Animations */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 text-left"
+              >
+                <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
                   <p className="font-serif-luxury text-3xl font-bold text-white">{PRODUCTS.length}+</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Raw Materials</p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
                   <p className="font-serif-luxury text-3xl font-bold text-white">{CATEGORIES.length}</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
                   <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
                   <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Established</p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
             </motion.div>
 
-            {/* Right Editorial Hero Image Container */}
+            {/* Right Editorial Hero Image Container with Gentle Floating Motion */}
             <motion.div 
               className="lg:col-span-5 flex justify-center"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.92, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl overflow-hidden">
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl overflow-hidden hover:border-[#008F7C]/50 transition-colors duration-500"
+              >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <Image
                     src="/heroimage.jpg"
                     alt="Pure Vision Specialty Botanical Active Essential Oil"
                     fill
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-cover transition-transform duration-700 hover:scale-108"
                     priority
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#093366] via-transparent to-transparent opacity-40" />
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
           </div>
@@ -282,12 +291,15 @@ export default function Home() {
                 const isSelected = selectedCategory === cat.name;
 
                 return (
-                  <div
+                  <motion.div
                     key={cat.id}
                     onClick={() => handleCategorySelect(cat.name)}
-                    className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-5 cursor-pointer group relative rounded-2xl shadow-xs hover:shadow-lg ${cat.bg} ${isSelected
-                        ? "border-[#008F7C] ring-1 ring-[#008F7C]/40 shadow-md"
-                        : "border-[#D9E0DA] hover:border-[#008F7C]/40"
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                    className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-5 cursor-pointer group relative rounded-2xl shadow-xs hover:shadow-xl ${cat.bg} ${isSelected
+                        ? "border-[#008F7C] ring-2 ring-[#008F7C]/50 shadow-md"
+                        : "border-[#D9E0DA] hover:border-[#008F7C]/50"
                       }`}
                   >
                     <div className="space-y-3">
@@ -314,7 +326,7 @@ export default function Home() {
                       <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${isSelected ? "text-[#008F7C] translate-x-0.5" : "text-[#62736B]/60 group-hover:text-[#093366]"
                         }`} />
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
