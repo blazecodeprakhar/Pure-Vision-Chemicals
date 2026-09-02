@@ -542,7 +542,7 @@ export default function Home() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
                   <Droplets className="h-6 w-6" />
                 </div>
                 
@@ -582,7 +582,7 @@ export default function Home() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
                 
@@ -622,7 +622,7 @@ export default function Home() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
                   <Leaf className="h-6 w-6" />
                 </div>
                 
@@ -662,7 +662,7 @@ export default function Home() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-9 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71]">
                   <Globe2 className="h-6 w-6" />
                 </div>
                 

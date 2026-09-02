@@ -159,7 +159,7 @@ export default function About() {
               className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#008F7C]/15 border border-[#008F7C]/30 text-[#008F7C] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
                   <Headset className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -184,7 +184,7 @@ export default function About() {
               className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#008F7C]/15 border border-[#008F7C]/30 text-[#008F7C] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
                   <Globe2 className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -209,7 +209,7 @@ export default function About() {
               className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#008F7C]/15 border border-[#008F7C]/30 text-[#008F7C] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
                   <Handshake className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -234,7 +234,7 @@ export default function About() {
               className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#008F7C]/15 border border-[#008F7C]/30 text-[#008F7C] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
                   <Eye className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -259,7 +259,7 @@ export default function About() {
               className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#008F7C]/15 border border-[#008F7C]/30 text-[#008F7C] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
                   <Truck className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
@@ -295,7 +295,7 @@ export default function About() {
               className="bg-white p-8 border border-[#D9E0DA] hover:border-[#008F7C]/50 space-y-4 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex items-center gap-3 text-[#093366]">
-                <div className="h-10 w-10 bg-[#093366] text-[#008F7C] flex items-center justify-center rounded-xl shadow-xs">
+                <div className="h-10 w-10 bg-[#093366] text-white flex items-center justify-center rounded-xl shadow-xs">
                   <Target className="h-5 w-5" />
                 </div>
                 <div>
@@ -318,7 +318,7 @@ export default function About() {
               className="bg-white p-8 border border-[#D9E0DA] hover:border-[#008F7C]/50 space-y-4 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300"
             >
               <div className="flex items-center gap-3 text-[#093366]">
-                <div className="h-10 w-10 bg-[#093366] text-[#008F7C] flex items-center justify-center rounded-xl shadow-xs">
+                <div className="h-10 w-10 bg-[#093366] text-white flex items-center justify-center rounded-xl shadow-xs">
                   <Compass className="h-5 w-5" />
                 </div>
                 <div>
@@ -367,7 +367,7 @@ export default function About() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
+                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
                   <Globe2 className="h-6 w-6" />
                 </div>
 
@@ -399,7 +399,7 @@ export default function About() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
+                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
 
@@ -431,7 +431,7 @@ export default function About() {
               className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-[#008F7C] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
+                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
                   <Users className="h-6 w-6" />
                 </div>
 

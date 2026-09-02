@@ -50,8 +50,8 @@ export default function Footer() {
             <div className="space-y-5 text-xs sm:text-sm font-light text-[#A3B8AC]">
               
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
-                  <Mail className="h-4 w-4 text-[#008F7C]" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Mail className="h-4 w-4 text-white" />
                 </div>
                 <a 
                   href="mailto:purevisionchem@outlook.com" 
@@ -62,8 +62,8 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
-                  <Phone className="h-4 w-4 text-[#008F7C]" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Phone className="h-4 w-4 text-white" />
                 </div>
                 <a 
                   href="tel:+919326395502" 
@@ -74,8 +74,8 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                  <MapPin className="h-4 w-4 text-[#008F7C]" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#0B3A71] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                  <MapPin className="h-4 w-4 text-white" />
                 </div>
                 <span className="leading-relaxed text-white/90">
                   Unit 201, Jai Malhar, Mumbai - 400064, India

@@ -133,7 +133,7 @@ export default function Contact() {
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
               >
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-white shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -151,7 +151,7 @@ export default function Contact() {
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
               >
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-white shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
@@ -169,7 +169,7 @@ export default function Contact() {
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
               >
-                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-[#008F7C] shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#093366] text-white shrink-0 rounded-xl shadow-xs group-hover:bg-[#008F7C] group-hover:text-white transition-colors duration-300">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -229,7 +229,7 @@ export default function Contact() {
                 animate={{ scale: 1, opacity: 1 }}
                 className="bg-[#E4ECE6] border border-[#0B3A71] p-8 text-center text-[#093366] space-y-4 rounded-2xl shadow-md"
               >
-                <div className="h-12 w-12 bg-[#093366] text-[#008F7C] flex items-center justify-center mx-auto rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center mx-auto rounded-xl shadow-xs">
                   <Check className="h-6 w-6" />
                 </div>
                 <h4 className="font-serif-luxury text-xl font-bold">Inquiry Submitted Successfully</h4>
