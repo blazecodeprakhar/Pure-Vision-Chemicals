@@ -37,18 +37,18 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] rounded-md shadow-xs"
           >
-            <span>About Us</span>
+            <span>Welcome to Pure Vision Chemicals</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]"
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
           >
-            Welcome to Pure Vision Chemicals, <br />
+            Botanical Intelligence <br />
             <span className="italic font-normal text-[#C49A45]">
-              where Vision meets Science.
+              & Speciality Actives
             </span>
           </motion.h1>
 
@@ -60,7 +60,7 @@ export default function About() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
+              "Your end-to-end partner for custom botanical extracts and speciality cosmetic ingredients."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
           </motion.div>
