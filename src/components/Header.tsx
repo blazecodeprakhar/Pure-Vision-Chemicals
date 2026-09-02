@@ -40,11 +40,21 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
           {/* Standalone Logo Image */}
-          <Link href="/" className="flex items-center cursor-pointer">
+          <Link
+            href="/"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="flex items-center cursor-pointer select-none"
+          >
             <img
               src="/logo.png"
               alt="Pure Vision Chemicals"
-              className="h-7 sm:h-9 w-auto object-contain"
+              draggable={false}
+              className="h-7 sm:h-9 w-auto object-contain select-none pointer-events-auto"
             />
           </Link>
 
