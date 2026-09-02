@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Pure Vision Chemicals"
-              className="h-11 sm:h-14 w-auto object-contain"
+              className="h-7 sm:h-9 w-auto object-contain"
             />
           </Link>
 
