@@ -59,11 +59,11 @@ export default function Contact() {
       
       {/* GRAND EDITORIAL CONTACT HERO SECTION */}
       <section className="relative bg-[#1A2E26] text-[#E4ECE6] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA]/20 overflow-hidden">
-        {/* Ambient Glow with Teal & Gold Accents */}
-        <div className="absolute inset-0 pointer-events-none opacity-25">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#2D4A3E] rounded-full blur-[150px]" />
-          <div className="absolute top-0 right-10 w-[350px] h-[350px] bg-[#C49A45]/15 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-[#0D9488]/15 rounded-full blur-[100px]" />
+        {/* Ambient Glow with Vibrant Teal & Gold Accents */}
+        <div className="absolute inset-0 pointer-events-none opacity-60">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#2D4A3E] rounded-full blur-[140px]" />
+          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#C49A45]/25 rounded-full blur-[90px]" />
+          <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#0D9488]/35 rounded-full blur-[90px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">

@@ -37,6 +37,7 @@ export default function Header() {
     <>
       {/* LUXURY EDITORIAL HEADER WITH CURVED EDGES & SHADOW */}
       <header className="sticky top-0 z-40 w-full border-b border-[#D9E0DA] bg-[#F8F8F3]/90 backdrop-blur-md shadow-xs">
+        <div className="h-[2px] w-full bg-gradient-to-r from-[#C49A45] via-[#0D9488] to-[#C49A45]" />
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
           {/* Standalone Logo Image */}
