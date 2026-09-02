@@ -43,17 +43,14 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 cursor-pointer group">
             <img
               src="/logo.png"
-              alt="Pure Vision Chemicals Logo"
+              alt="Pure Vision Chemicals Icon"
               className="h-10 w-10 shrink-0 object-contain transition-transform group-hover:scale-105"
             />
-            <div className="flex flex-col">
-              <span className="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-tight">
-                PURE VISION
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-[#62736B] font-medium">
-                CHEMICALS
-              </span>
-            </div>
+            <img
+              src="/logo_text.png"
+              alt="Pure Vision Chemicals"
+              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Nav links (Strictly 3 pages) */}
