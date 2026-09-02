@@ -37,18 +37,18 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] rounded-md shadow-xs"
           >
-            <span>Welcome to Pure Vision Chemicals</span>
+            <span>About Us</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]"
           >
-            Botanical Intelligence <br />
+            Welcome to Pure Vision Chemicals, <br />
             <span className="italic font-normal text-[#C49A45]">
-              & Speciality Actives
+              where Vision meets Science.
             </span>
           </motion.h1>
 
@@ -60,7 +60,7 @@ export default function About() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Your end-to-end partner for custom botanical extracts and speciality cosmetic ingredients."
+              "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
           </motion.div>
@@ -79,29 +79,23 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">Our Story & Foundation</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C49A45]">About Us</span>
 
             <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#1A2E26] leading-snug">
-              Technical Expertise, Sourcing Integrity, and Long-Term Value
+              Welcome to Pure Vision Chemicals, where Vision meets Science.
             </h2>
 
             <div className="h-[2px] bg-[#C49A45] w-16" />
 
-            <div className="space-y-4 text-[#62736B] leading-relaxed text-xs sm:text-sm font-light">
+            <div className="space-y-4 text-[#62736B] leading-relaxed text-sm font-light">
               <p>
-                We are a premier manufacturer and supplier specializing in high-performance <strong>specialty chemicals</strong> and premium <strong>herbal extracts</strong>. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, Cosmetics, and Home Care.
-              </p>
-              <p>
-                At <strong>Pure Vision Chemicals</strong>, we combine scientific expertise, global partnerships, and market intelligence to deliver specialty chemical solutions that keep pace with the evolving needs of modern formulation standards.
-              </p>
-              <p>
-                Our carefully curated portfolio is sourced from globally and locally recognized manufacturers and meets the highest standards of quality, regulatory compliance, and technical excellence.
+                We are a premier manufacturer and supplier specializing in high-performance specialty chemicals and premium herbal extracts. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, cosmetics & Home-Care.
               </p>
             </div>
 
-            {/* Editorial Highlighted Quote Box */}
+            {/* Highlighted Quote Box */}
             <div className="p-6 bg-[#1A2E26] text-[#E4ECE6] border-l-4 border-[#C49A45] shadow-lg rounded-2xl space-y-2 mt-4">
-              <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#C49A45]">15+ Years Industry Expertise</span>
+              <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#C49A45]">15+ Years Industry Experience</span>
               <p className="font-serif-luxury italic text-sm sm:text-base text-white font-normal leading-relaxed">
                 "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
               </p>
