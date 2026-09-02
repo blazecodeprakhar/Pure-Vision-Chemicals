@@ -101,14 +101,14 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
                   href="#catalog"
-                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   <span>Explore Ingredients</span>
                   <ArrowRight className="h-4 w-4 text-[#1A2E26]" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-md hover:shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
                 >
                   <span>Request Custom Quote</span>
                 </Link>
@@ -785,7 +785,7 @@ export default function Home() {
 
             <button
               onClick={() => setCartOpen(true)}
-              className="bg-white hover:bg-[#E4ECE6] text-[#1A2E26] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer rounded-xl shadow-md hover:shadow-lg"
+              className="bg-white hover:bg-[#E4ECE6] text-[#1A2E26] px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
             >
               Review Quote List
             </button>

@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 <span>Start an Enquiry</span>
                 <ArrowUpRight className="h-4 w-4 text-[#1A2E26]" />

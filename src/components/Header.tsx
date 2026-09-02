@@ -89,7 +89,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setCartOpen(!cartOpen)}
-              className="relative flex items-center gap-2 rounded-full bg-[#1A2E26] hover:bg-[#2D4A3E] px-5 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer shadow-md hover:shadow-lg active:scale-95 border border-[#1A2E26]"
+              className="relative flex items-center gap-2 rounded-md bg-[#1A2E26] hover:bg-[#2D4A3E] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer shadow-md hover:shadow-lg active:scale-95 border border-[#1A2E26]"
             >
               <ShoppingBag className="h-4 w-4 text-[#C49A45]" />
               <span className="hidden sm:inline">Request Quote</span>
@@ -225,7 +225,7 @@ export default function Header() {
                     </p>
                     <button
                       onClick={() => setCartOpen(false)}
-                      className="mt-6 inline-block bg-[#1A2E26] hover:bg-[#2D4A3E] px-6 py-3 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer rounded-xl shadow-md hover:shadow-lg"
+                      className="mt-6 inline-block bg-[#1A2E26] hover:bg-[#2D4A3E] px-6 py-3 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
                     >
                       Browse Ingredients
                     </button>
@@ -261,7 +261,7 @@ export default function Header() {
                 <div className="border-t border-[#D9E0DA] bg-[#E4ECE6]/50 p-6 space-y-3">
                   <button
                     onClick={handleCartEnquiryTrigger}
-                    className="w-full flex items-center justify-center gap-2 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold tracking-widest uppercase transition-all cursor-pointer rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5"
+                    className="w-full flex items-center justify-center gap-2 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold tracking-widest uppercase transition-all cursor-pointer rounded-md shadow-md hover:shadow-xl hover:-translate-y-0.5"
                   >
                     <span>Proceed to Sourcing Request</span>
                     <ArrowRight className="h-4 w-4 text-[#C49A45]" />
