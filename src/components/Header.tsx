@@ -41,13 +41,11 @@ export default function Header() {
 
           {/* Logo & Brand text */}
           <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-md border border-[#D9E0DA] bg-white p-1 shadow-sm transition-transform group-hover:scale-105">
-              <img
-                src="/logo.png"
-                alt="Pure Vision Chemicals Logo"
-                className="h-full w-full object-contain p-0.5"
-              />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Pure Vision Chemicals Logo"
+              className="h-10 w-10 shrink-0 object-contain transition-transform group-hover:scale-105"
+            />
             <div className="flex flex-col">
               <span className="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-tight">
                 PURE VISION
