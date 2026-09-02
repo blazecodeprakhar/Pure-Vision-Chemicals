@@ -339,7 +339,7 @@ export default function Contact() {
 
                 <button 
                   type="submit"
-                  className="w-full flex items-center justify-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-xl hover:-translate-y-0.5"
+                  className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#1A2E26] via-[#0D9488] to-[#1A2E26] hover:brightness-110 text-white py-4 text-xs font-bold uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-[#0D9488]/20 hover:-translate-y-0.5 border border-[#0D9488]/40"
                 >
                   <span>Submit Sourcing Request</span>
                   <ArrowRight className="h-4 w-4 text-[#C49A45]" />

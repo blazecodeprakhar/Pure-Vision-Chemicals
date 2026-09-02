@@ -8,7 +8,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1A2E26] text-[#E4ECE6] border-t border-[#D9E0DA]/20 py-20 lg:py-24 select-none mt-auto">
+    <footer className="relative bg-[#1A2E26] text-[#E4ECE6] border-t border-[#D9E0DA]/20 py-20 lg:py-24 select-none mt-auto">
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#C49A45] via-[#0D9488] to-[#C49A45]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* MAIN LUXURY EDITORIAL FOOTER BODY */}
@@ -34,10 +35,10 @@ export default function Footer() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2.5 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#C49A45] to-[#0D9488] hover:from-[#b0873a] hover:to-[#0b7e74] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:shadow-[#0D9488]/20 hover:-translate-y-0.5"
               >
                 <span>Start an Enquiry</span>
-                <ArrowUpRight className="h-4 w-4 text-[#1A2E26]" />
+                <ArrowUpRight className="h-4 w-4 text-white" />
               </Link>
             </div>
           </div>
@@ -49,8 +50,8 @@ export default function Footer() {
             <div className="space-y-5 text-xs sm:text-sm font-light text-[#A3B8AC]">
               
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center shrink-0 shadow-xs">
-                  <Mail className="h-4 w-4 text-[#C49A45]" />
+                <div className="h-8 w-8 rounded-xl border border-[#0D9488]/30 bg-[#0D9488]/10 flex items-center justify-center shrink-0 shadow-xs">
+                  <Mail className="h-4 w-4 text-[#14B8A6]" />
                 </div>
                 <a 
                   href="mailto:purevisionchem@outlook.com" 
@@ -61,8 +62,8 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center shrink-0 shadow-xs">
-                  <Phone className="h-4 w-4 text-[#C49A45]" />
+                <div className="h-8 w-8 rounded-xl border border-[#0D9488]/30 bg-[#0D9488]/10 flex items-center justify-center shrink-0 shadow-xs">
+                  <Phone className="h-4 w-4 text-[#14B8A6]" />
                 </div>
                 <a 
                   href="tel:+919326395502" 
@@ -73,8 +74,8 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                  <MapPin className="h-4 w-4 text-[#C49A45]" />
+                <div className="h-8 w-8 rounded-xl border border-[#0D9488]/30 bg-[#0D9488]/10 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                  <MapPin className="h-4 w-4 text-[#14B8A6]" />
                 </div>
                 <span className="leading-relaxed text-white/90">
                   Unit 201, Jai Malhar, Mumbai - 400064, India

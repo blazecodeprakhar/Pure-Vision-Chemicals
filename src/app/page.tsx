@@ -102,14 +102,14 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
                   href="#catalog"
-                  className="inline-flex items-center justify-center gap-3 bg-[#C49A45] hover:bg-[#b0873a] text-[#1A2E26] font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#C49A45] to-[#0D9488] hover:from-[#b0873a] hover:to-[#0b7e74] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-lg hover:shadow-xl hover:shadow-[#0D9488]/20 hover:-translate-y-0.5"
                 >
                   <span>Explore Ingredients</span>
-                  <ArrowRight className="h-4 w-4 text-[#1A2E26]" />
+                  <ArrowRight className="h-4 w-4 text-white" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-[#C49A45] bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 border border-[#0D9488]/60 hover:border-[#14B8A6] bg-[#0D9488]/10 hover:bg-[#0D9488]/20 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all cursor-pointer rounded-md shadow-md hover:shadow-lg"
                 >
                   <span>Request Custom Quote</span>
                 </Link>

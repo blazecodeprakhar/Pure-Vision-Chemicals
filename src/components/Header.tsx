@@ -77,7 +77,7 @@ export default function Header() {
                   {isActive && (
                     <motion.span
                       layoutId="activeNavUnderline"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C49A45] rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#C49A45] to-[#0D9488] rounded-full"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -90,12 +90,12 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setCartOpen(!cartOpen)}
-              className="relative flex items-center gap-2 rounded-md bg-[#1A2E26] hover:bg-[#2D4A3E] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer shadow-md hover:shadow-lg active:scale-95 border border-[#1A2E26]"
+              className="relative flex items-center gap-2 rounded-md bg-[#1A2E26] hover:bg-[#2D4A3E] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all cursor-pointer shadow-md hover:shadow-lg hover:shadow-[#0D9488]/20 active:scale-95 border border-[#0D9488]/40 hover:border-[#0D9488]"
             >
-              <ShoppingBag className="h-4 w-4 text-[#C49A45]" />
+              <ShoppingBag className="h-4 w-4 text-[#14B8A6]" />
               <span className="hidden sm:inline">Request Quote</span>
               {inquiryCart.length > 0 && (
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#C49A45] text-[10px] text-white font-bold ml-0.5 shadow-xs">
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-r from-[#C49A45] to-[#0D9488] text-[10px] text-white font-bold ml-0.5 shadow-xs">
                   {inquiryCart.length}
                 </span>
               )}

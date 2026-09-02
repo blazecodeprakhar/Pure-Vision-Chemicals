@@ -444,7 +444,7 @@ export default function About() {
           <div className="pt-4 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all rounded-md shadow-md hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#1A2E26] via-[#0D9488] to-[#1A2E26] hover:brightness-110 text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all rounded-md shadow-md hover:shadow-xl hover:shadow-[#0D9488]/20 hover:-translate-y-0.5 border border-[#0D9488]/40"
             >
               <span>Get in Touch with our Team</span>
               <ArrowRight className="h-4 w-4 text-[#C49A45]" />
