@@ -48,7 +48,7 @@ export default function About() {
           >
             Botanical Intelligence <br />
             <span className="italic font-normal text-[#C49A45]">
-              & Specialty Actives
+              & Speciality Actives
             </span>
           </motion.h1>
 
@@ -60,7 +60,7 @@ export default function About() {
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
             <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
-              "Where Vision Meets Science."
+              "Your end-to-end partner for custom botanical extracts and speciality cosmetic ingredients."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#C49A45]/40" />
           </motion.div>
