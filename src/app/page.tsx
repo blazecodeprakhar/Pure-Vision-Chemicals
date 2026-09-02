@@ -36,7 +36,7 @@ export default function Home() {
   const { inquiryCart, toggleCartItem, setCartOpen } = useCart();
   const [selectedCategory, setSelectedCategory] = useState<string>("Actives");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [catalogueViewMode, setCatalogueViewMode] = useState<"list" | "grid">("grid");
+  const [catalogueViewMode, setCatalogueViewMode] = useState<"list" | "grid">("list");
 
   const handleCategorySelect = (categoryName: string) => {
     setSelectedCategory(categoryName);
@@ -284,8 +284,8 @@ export default function Home() {
                   <div
                     key={cat.id}
                     onClick={() => handleCategorySelect(cat.name)}
-                    className={`p-6 border transition-all duration-200 flex flex-col justify-between space-y-5 cursor-pointer group relative ${cat.bg} ${isSelected
-                        ? "border-[#C49A45] ring-1 ring-[#C49A45]/40 shadow-sm"
+                    className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-5 cursor-pointer group relative rounded-2xl shadow-xs hover:shadow-lg ${cat.bg} ${isSelected
+                        ? "border-[#C49A45] ring-1 ring-[#C49A45]/40 shadow-md"
                         : "border-[#D9E0DA] hover:border-[#C49A45]/40"
                       }`}
                   >
@@ -355,10 +355,10 @@ export default function Home() {
                   )}
                 </div>
 
-                <div className="inline-flex border border-[#D9E0DA] bg-white p-0.5 shrink-0">
+                <div className="inline-flex border border-[#D9E0DA] bg-white p-0.5 shrink-0 rounded-lg shadow-xs overflow-hidden">
                   <button
                     onClick={() => setCatalogueViewMode("list")}
-                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${catalogueViewMode === "list"
+                    className={`px-3 py-1 text-[11px] font-semibold transition-colors cursor-pointer rounded-md ${catalogueViewMode === "list"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
                       }`}
@@ -367,7 +367,7 @@ export default function Home() {
                   </button>
                   <button
                     onClick={() => setCatalogueViewMode("grid")}
-                    className={`px-2.5 py-1 text-[11px] font-semibold transition-colors cursor-pointer ${catalogueViewMode === "grid"
+                    className={`px-3 py-1 text-[11px] font-semibold transition-colors cursor-pointer rounded-md ${catalogueViewMode === "grid"
                         ? "bg-[#1A2E26] text-white"
                         : "text-[#62736B] hover:text-[#1A2E26]"
                       }`}
@@ -450,7 +450,7 @@ export default function Home() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: Math.min(idx * 0.03, 0.3) }}
-                      className="w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-5 flex flex-col justify-between transition-all duration-300 group hover:shadow-md"
+                      className="w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-5 flex flex-col justify-between transition-all duration-300 group rounded-xl shadow-xs hover:shadow-lg"
                     >
 
                       <div className="space-y-2">

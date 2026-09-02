@@ -35,7 +35,7 @@ export default function About() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45]"
+            className="inline-flex items-center gap-2 border border-[#C49A45]/40 bg-[#C49A45]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C49A45] rounded-full shadow-sm"
           >
             <span>Welcome to Pure Vision Chemicals</span>
           </motion.div>
@@ -100,7 +100,7 @@ export default function About() {
             </div>
 
             {/* Editorial Highlighted Quote Box */}
-            <div className="p-6 bg-[#1A2E26] text-[#E4ECE6] border-l-4 border-[#C49A45] shadow-md space-y-2 mt-4">
+            <div className="p-6 bg-[#1A2E26] text-[#E4ECE6] border-l-4 border-[#C49A45] shadow-lg rounded-2xl space-y-2 mt-4">
               <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#C49A45]">15+ Years Industry Expertise</span>
               <p className="font-serif-luxury italic text-sm sm:text-base text-white font-normal leading-relaxed">
                 "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
@@ -109,13 +109,13 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="lg:col-span-5 relative aspect-[4/3] sm:aspect-[4/5] min-h-[280px] sm:min-h-[360px] border border-[#D9E0DA] p-2 sm:p-3 bg-white shadow-xl"
+            className="lg:col-span-5 relative aspect-[4/3] sm:aspect-[4/5] min-h-[280px] sm:min-h-[360px] border border-[#D9E0DA] p-2 sm:p-3 bg-white shadow-2xl rounded-2xl overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden rounded-xl">
               <Image
                 src="/about-image.jpg"
                 alt="Pure Vision Corporate Profile"
@@ -130,7 +130,7 @@ export default function About() {
       </section>
 
 
-      {/* WHY CHOOSE US - EDITORIAL ADVANTAGES SECTION */}
+      {/* WHY CHOOSE US - PERFECTLY CENTERED EDITORIAL ADVANTAGES SECTION */}
       <section className="bg-[#1A2E26] text-white py-20 lg:py-28 border-y border-[#D9E0DA]/20 relative overflow-hidden">
         {/* Glow ambient accent */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2D4A3E] rounded-full blur-[180px] pointer-events-none opacity-30" />
@@ -151,8 +151,8 @@ export default function About() {
             </p>
           </div>
 
-          {/* 5 Pillar Advantage Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* 5 Pillar Advantage Centered Flex Grid */}
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
 
             {/* 1. Technical Sales */}
             <motion.div
@@ -161,19 +161,21 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
-              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
-                <Headset className="h-6 w-6" />
-              </div>
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 01</span>
-                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
-                  Technical Sales
-                </h3>
-                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                  Expertise in product solutions tailored precisely to your specific chemical and botanical formulation needs.
-                </p>
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                  <Headset className="h-6 w-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 01</span>
+                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                    Technical Sales
+                  </h3>
+                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                    Expertise in product solutions tailored precisely to your specific chemical and botanical formulation needs.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -184,19 +186,21 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.08 }}
-              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
-              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
-                <Globe2 className="h-6 w-6" />
-              </div>
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 02</span>
-                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
-                  Wide Market Reach
-                </h3>
-                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                  Access to diverse customer segments and global manufacturers across Personal Care, Dermaceuticals, and Home Care.
-                </p>
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                  <Globe2 className="h-6 w-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 02</span>
+                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                    Wide Market Reach
+                  </h3>
+                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                    Access to diverse customer segments and global manufacturers across Personal Care, Dermaceuticals, and Home Care.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -207,19 +211,21 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.16 }}
-              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
-              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
-                <Handshake className="h-6 w-6" />
-              </div>
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 03</span>
-                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
-                  Long Term Association & Growth
-                </h3>
-                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                  Focusing on building sustainable markets together as one united team through shared innovation and trust.
-                </p>
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                  <Handshake className="h-6 w-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 03</span>
+                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                    Long Term Association & Growth
+                  </h3>
+                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                    Focusing on building sustainable markets together as one united team through shared innovation and trust.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -230,19 +236,21 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.24 }}
-              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
-              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
-                <Eye className="h-6 w-6" />
-              </div>
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 04</span>
-                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
-                  Transparency
-                </h3>
-                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                  Complete transparency in sourcing, technical documentation (COA/MSDS), and pricing for optimal performance.
-                </p>
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                  <Eye className="h-6 w-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 04</span>
+                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                    Transparency
+                  </h3>
+                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                    Complete transparency in sourcing, technical documentation (COA/MSDS), and pricing for optimal performance.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -253,19 +261,21 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.32 }}
-              className="bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 md:col-span-2 lg:col-span-1"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#C49A45]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
             >
-              <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110">
-                <Truck className="h-6 w-6" />
-              </div>
-              <div className="space-y-1.5">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 05</span>
-                <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
-                  Quick Delivery Assurance
-                </h3>
-                <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                  On-time delivery logistics with guaranteed customer satisfaction across pan-India and international supply routes.
-                </p>
+              <div className="space-y-4">
+                <div className="h-12 w-12 bg-[#C49A45]/15 border border-[#C49A45]/30 text-[#C49A45] flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                  <Truck className="h-6 w-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#C49A45]">Pillar 05</span>
+                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#C49A45] transition-colors">
+                    Quick Delivery Assurance
+                  </h3>
+                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                    On-time delivery logistics with guaranteed customer satisfaction across pan-India and international supply routes.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -281,9 +291,9 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Mission */}
-            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4">
+            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
               <div className="flex items-center gap-3 text-[#1A2E26]">
-                <div className="h-10 w-10 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center">
+                <div className="h-10 w-10 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center rounded-xl shadow-xs">
                   <Target className="h-5 w-5" />
                 </div>
                 <div>
@@ -297,9 +307,9 @@ export default function About() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4">
+            <div className="bg-white p-8 border border-[#D9E0DA] space-y-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
               <div className="flex items-center gap-3 text-[#1A2E26]">
-                <div className="h-10 w-10 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center">
+                <div className="h-10 w-10 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center rounded-xl shadow-xs">
                   <Compass className="h-5 w-5" />
                 </div>
                 <div>
@@ -345,10 +355,10 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E] rounded-xl shadow-xs">
                   <Globe2 className="h-6 w-6" />
                 </div>
 
@@ -377,10 +387,10 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E] rounded-xl shadow-xs">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
 
@@ -409,10 +419,10 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
+              className="bg-white border border-[#D9E0DA] hover:border-[#C49A45]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
             >
               <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E]">
+                <div className="h-13 w-13 bg-[#1A2E26] text-[#C49A45] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#2D4A3E] rounded-xl shadow-xs">
                   <Users className="h-6 w-6" />
                 </div>
 
@@ -439,7 +449,7 @@ export default function About() {
           <div className="pt-4 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 bg-[#1A2E26] hover:bg-[#2D4A3E] text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5"
             >
               <span>Get in Touch with our Team</span>
               <ArrowRight className="h-4 w-4 text-[#C49A45]" />
