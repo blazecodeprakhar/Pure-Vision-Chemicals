@@ -14,8 +14,6 @@ import {
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
-import sampleLogo from "@/assets/Sample logo 1-2.png";
-
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
@@ -45,7 +43,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 cursor-pointer group">
             <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-md border border-[#D9E0DA] bg-white p-1 shadow-sm transition-transform group-hover:scale-105">
               <Image
-                src={sampleLogo}
+                src="/logo.png"
                 alt="Pure Vision Chemicals Logo"
                 fill
                 className="object-contain p-0.5"
