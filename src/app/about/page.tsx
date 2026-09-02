@@ -103,7 +103,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="lg:col-span-5 relative h-[320px] sm:h-[360px] lg:h-[345px] border border-[#D9E0DA] p-2 sm:p-3 bg-white shadow-2xl rounded-2xl overflow-hidden self-end"
+            className="lg:col-span-5 relative aspect-[4/3] sm:aspect-[4/5] min-h-[280px] sm:min-h-[360px] border border-[#D9E0DA] p-2 sm:p-3 bg-white shadow-2xl rounded-2xl overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -114,7 +114,7 @@ export default function About() {
                 src="/about-image.jpg"
                 alt="Pure Vision Corporate Profile"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A2E26] via-transparent to-transparent opacity-30" />
             </div>
