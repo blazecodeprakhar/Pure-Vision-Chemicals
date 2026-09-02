@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Pure Vision Chemicals Logo"
-              className="h-10 w-10 shrink-0 object-contain transition-transform group-hover:scale-105"
+              className="h-10 w-10 shrink-0 object-contain"
             />
             <div className="flex flex-col">
               <span className="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-tight">
