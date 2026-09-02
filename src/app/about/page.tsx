@@ -248,7 +248,7 @@ export default function About() {
                     Transparency
                   </h3>
                   <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
-                    Complete transparency in sourcing, technical documentation (COA/MSDS), and pricing for optimal performance.
+                    Complete transparency in sourcing and technical documentation for optimal performance.
                   </p>
                 </div>
               </div>
