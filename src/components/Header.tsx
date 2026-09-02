@@ -39,21 +39,13 @@ export default function Header() {
       <header className="sticky top-0 z-40 w-full border-b border-[#D9E0DA] bg-[#F8F8F3]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
-          {/* Logo & Brand text */}
-          <Link href="/" className="flex items-center gap-3 cursor-pointer group">
+          {/* Standalone Logo Image */}
+          <Link href="/" className="flex items-center cursor-pointer">
             <img
               src="/logo.png"
-              alt="Pure Vision Chemicals Logo"
-              className="h-10 w-10 shrink-0 object-contain"
+              alt="Pure Vision Chemicals"
+              className="h-11 sm:h-14 w-auto object-contain"
             />
-            <div className="flex flex-col">
-              <span className="font-serif-luxury text-lg sm:text-xl font-bold tracking-tight text-[#1A2E26] group-hover:text-[#2D4A3E] transition-colors leading-tight">
-                PURE VISION
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-[#62736B] font-medium">
-                CHEMICALS
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav links (Strictly 3 pages) */}
