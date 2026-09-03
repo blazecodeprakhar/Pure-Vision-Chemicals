@@ -32,14 +32,7 @@ export default function About() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 border border-[#008F7C]/40 bg-[#008F7C]/10 px-4 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#008F7C] rounded-md shadow-xs"
-          >
-            <span>Welcome to Pure Vision Chemicals</span>
-          </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

@@ -182,30 +182,47 @@ export default function Contact() {
 
             </div>
 
-            {/* HQ Google Map Display Embed with Theme Styling */}
-            <div className="relative h-64 w-full border border-[#D9E0DA] bg-[#E4ECE6] rounded-2xl shadow-md overflow-hidden group">
-              <iframe
-                title="Pure Vision Chemicals Location Map"
-                src="https://maps.google.com/maps?q=19.0764258,72.8650275&z=15&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: "contrast(102%) saturate(85%)" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
+            {/* HQ Map Location Card */}
+            <div className="relative h-44 sm:h-48 w-full border border-[#D9E0DA] bg-gradient-to-br from-[#F0F4F1] via-[#E4ECE6] to-[#D5E2D9] rounded-2xl shadow-md overflow-hidden p-4 sm:p-5 flex flex-col justify-between group">
+              {/* Subtle background dot pattern */}
+              <div 
+                className="absolute inset-0 opacity-15 pointer-events-none" 
+                style={{ 
+                  backgroundImage: `radial-gradient(#093366 1px, transparent 1px)`, 
+                  backgroundSize: '16px 16px' 
+                }} 
               />
-              
-              {/* Overlay Badge to open direct Google Maps location */}
-              <div className="absolute bottom-3 right-3 z-10">
+
+              {/* Location Text Details */}
+              <div className="relative z-10 space-y-2 max-w-md">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#093366] text-[#008F7C] shadow-xs shrink-0">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-serif-luxury font-bold text-base text-[#093366]">
+                      Pure Vision Chemicals Mumbai HQ
+                    </h4>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-[#008F7C]">
+                      Headquarters
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-[#093366] font-medium leading-relaxed pt-1 pl-11">
+                  Unit 201, Jai Malhar, Mumbai 400064, India
+                </p>
+              </div>
+
+              {/* Bottom Right Button for Google Maps */}
+              <div className="relative z-10 flex justify-end">
                 <a
                   href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-[#093366] hover:bg-[#0B3A71] text-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-all rounded-md shadow-lg border border-[#008F7C]/30 hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-[#093366] hover:bg-[#0B3A71] text-white px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 rounded-xl shadow-lg border border-[#008F7C]/30 hover:scale-105 active:scale-95"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-[#008F7C]" />
-                  <span>Open Google Maps</span>
+                  <MapPin className="h-4 w-4 text-[#008F7C]" />
+                  <span>OPEN GOOGLE MAPS</span>
                 </a>
               </div>
             </div>
