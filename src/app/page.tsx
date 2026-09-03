@@ -194,9 +194,7 @@ export default function Home() {
           {/* Top Header: Title, Description & Integrated Search Bar */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#D9E0DA] pb-8">
             <div className="space-y-3 max-w-2xl">
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#008F7C]">
-                The Portfolio / 2025–26
-              </span>
+
               <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#093366] leading-tight">
                 Ingredients with <br />
                 <span className="italic font-normal text-[#008F7C]">
