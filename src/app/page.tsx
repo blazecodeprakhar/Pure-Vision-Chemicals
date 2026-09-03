@@ -64,13 +64,13 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none">
 
       {/* HERO SECTION - LUXURY PERFUME / BOTANICAL EDITORIAL */}
-      <section className="relative overflow-hidden bg-[#093366] text-[#E4ECE6] py-20 sm:py-24 lg:py-32 border-b border-[#D9E0DA]/20">
+      <section className="relative overflow-hidden bg-[#E4ECE6] text-[#093366] py-20 sm:py-24 lg:py-32 border-b border-[#D9E0DA]">
 
-        {/* Background Gradient Glow with Vibrant Teal & Gold Accents */}
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0B3A71] rounded-full blur-[140px]" />
-          <div className="absolute top-0 right-10 w-[450px] h-[450px] bg-[#008F7C]/25 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-10 w-[450px] h-[450px] bg-[#008F7C]/35 rounded-full blur-[100px]" />
+        {/* Background Gradient Glow with Soft Pista & Teal Accents */}
+        <div className="absolute inset-0 pointer-events-none opacity-70">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#008F7C]/15 rounded-full blur-[140px]" />
+          <div className="absolute top-0 right-10 w-[450px] h-[450px] bg-[#0B3A71]/10 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-10 w-[450px] h-[450px] bg-[#008F7C]/20 rounded-full blur-[100px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -83,16 +83,16 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
+              <h1 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#093366] leading-[1.12]">
                 Where Vision Meets <br />
                 <span className="italic font-normal text-[#008F7C]">
                   Science.
                 </span>
               </h1>
 
-              <p className="text-[#E4ECE6]/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
+              <p className="text-[#093366]/85 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
                 <span className="block">
-                  <strong className="font-bold text-white tracking-wider">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and specialty ingredient solution partner.
+                  <strong className="font-bold text-[#093366] tracking-wider">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and specialty ingredient solution partner.
                 </span>
                 <span className="block">
                   We specialize in providing innovative ingredient solutions to the Cosmetics, Dermaceuticals, and Home Care industries.
@@ -109,7 +109,7 @@ export default function Home() {
                 </a>
                 <Link
                   href="/contact"
-                  className="group relative overflow-hidden inline-flex items-center justify-center gap-2 border border-[#008F7C]/60 hover:border-[#008F7C] bg-[#008F7C]/10 hover:bg-[#008F7C]/20 text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-[#008F7C]/20 hover:-translate-y-1 active:scale-95 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-transform before:duration-700"
+                  className="group relative overflow-hidden inline-flex items-center justify-center gap-2 border border-[#093366] hover:bg-[#093366] text-[#093366] hover:text-white font-semibold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:-translate-y-1 active:scale-95"
                 >
                   <span>Request Custom Quote</span>
                 </Link>
@@ -120,19 +120,19 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 text-left"
+                className="pt-8 border-t border-[#093366]/15 grid grid-cols-3 gap-6 text-left"
               >
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">{PRODUCTS.length}+</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Raw Materials</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">{PRODUCTS.length}+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Raw Materials</p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">{CATEGORIES.length}</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Core Categories</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">{CATEGORIES.length}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Core Categories</p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <p className="font-serif-luxury text-3xl font-bold text-white">2025</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#A3B8AC] mt-1 font-semibold">Established</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">2025</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Established</p>
                 </motion.div>
               </motion.div>
 
@@ -148,7 +148,7 @@ export default function Home() {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-white/15 p-2.5 sm:p-3 bg-white/5 backdrop-blur-md shadow-2xl overflow-hidden hover:border-[#008F7C]/50 transition-colors duration-500"
+                className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-[#D9E0DA] p-2.5 sm:p-3 bg-white/70 backdrop-blur-md shadow-2xl overflow-hidden hover:border-[#008F7C]/50 transition-colors duration-500"
               >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <Image
@@ -159,7 +159,7 @@ export default function Home() {
                     priority
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#093366] via-transparent to-transparent opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#093366]/40 via-transparent to-transparent opacity-40" />
                 </div>
               </motion.div>
             </motion.div>

@@ -58,12 +58,12 @@ export default function Contact() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none pb-20">
       
       {/* GRAND EDITORIAL CONTACT HERO SECTION */}
-      <section className="relative bg-[#093366] text-[#E4ECE6] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA]/20 overflow-hidden">
-        {/* Ambient Glow with Vibrant Teal & Gold Accents */}
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#0B3A71] rounded-full blur-[140px]" />
-          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#008F7C]/25 rounded-full blur-[90px]" />
-          <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#008F7C]/35 rounded-full blur-[90px]" />
+      <section className="relative bg-[#E4ECE6] text-[#093366] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA] overflow-hidden">
+        {/* Glow ambient background with Soft Pista & Teal Accents */}
+        <div className="absolute inset-0 pointer-events-none opacity-70">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#008F7C]/15 rounded-full blur-[140px]" />
+          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#0B3A71]/10 rounded-full blur-[90px]" />
+          <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#008F7C]/20 rounded-full blur-[90px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
@@ -81,7 +81,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-[#093366] leading-[1.12]"
           >
             Request Samples <br />
             <span className="italic font-normal text-[#008F7C]">
@@ -96,7 +96,7 @@ export default function Contact() {
             className="flex items-center justify-center gap-4 pt-2"
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#008F7C]/40" />
-            <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
+            <p className="font-serif-luxury italic text-base sm:text-xl text-[#62736B] tracking-wide max-w-2xl font-normal leading-relaxed">
               "Collaborate directly with our technical sales experts for specification sheets, stock availability, and bulk pricing."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#008F7C]/40" />

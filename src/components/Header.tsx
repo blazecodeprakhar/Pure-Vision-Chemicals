@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
       {/* BRAND LOGO COLORED HEADER */}
-      <header className="sticky top-0 z-40 w-full border-b border-[#D9E0DA] bg-[#F8F8F3]/90 backdrop-blur-md shadow-xs">
+      <header className="sticky top-0 z-40 w-full border-b border-[#D9E0DA] bg-[#E4ECE6]/90 backdrop-blur-md shadow-xs">
         <div className="h-[2.5px] w-full bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
@@ -90,9 +90,9 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setCartOpen(!cartOpen)}
-              className="group relative overflow-hidden flex items-center gap-2 rounded-md bg-[#093366] hover:bg-[#0B3A71] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 border border-[#008F7C]/50 hover:border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700"
+              className="group relative overflow-hidden flex items-center gap-2 rounded-md bg-[#008F7C] hover:bg-[#007767] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700"
             >
-              <ShoppingBag className="h-4 w-4 text-[#008F7C] group-hover:scale-110 transition-transform duration-300" />
+              <ShoppingBag className="h-4 w-4 text-white group-hover:scale-110 transition-transform duration-300" />
               <span className="hidden sm:inline">Request Quote</span>
               {inquiryCart.length > 0 && (
                 <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#008F7C] text-[10px] text-white font-bold ml-0.5 shadow-xs">

@@ -23,22 +23,21 @@ export default function About() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none pb-20">
 
       {/* GRAND EDITORIAL ABOUT HERO SECTION */}
-      <section className="relative bg-[#093366] text-[#E4ECE6] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA]/20 overflow-hidden">
-        {/* Glow ambient background with Vibrant Teal & Gold Accents */}
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#0B3A71] rounded-full blur-[140px]" />
-          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#008F7C]/25 rounded-full blur-[90px]" />
-          <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#008F7C]/35 rounded-full blur-[90px]" />
+      <section className="relative bg-[#E4ECE6] text-[#093366] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA] overflow-hidden">
+        {/* Glow ambient background with Soft Pista & Teal Accents */}
+        <div className="absolute inset-0 pointer-events-none opacity-70">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#008F7C]/15 rounded-full blur-[140px]" />
+          <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-[#0B3A71]/10 rounded-full blur-[90px]" />
+          <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#008F7C]/20 rounded-full blur-[90px]" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12]"
+            className="font-serif-luxury text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-[#093366] leading-[1.12]"
           >
             Botanical Intelligence <br />
             <span className="italic font-normal text-[#008F7C]">
@@ -53,7 +52,7 @@ export default function About() {
             className="flex items-center justify-center gap-4 pt-2"
           >
             <span className="hidden sm:block h-[1px] w-12 bg-[#008F7C]/40" />
-            <p className="font-serif-luxury italic text-base sm:text-xl text-[#A3B8AC] tracking-wide max-w-2xl font-normal leading-relaxed">
+            <p className="font-serif-luxury italic text-base sm:text-xl text-[#62736B] tracking-wide max-w-2xl font-normal leading-relaxed">
               "Your end-to-end partner for custom botanical extracts and speciality cosmetic ingredients."
             </p>
             <span className="hidden sm:block h-[1px] w-12 bg-[#008F7C]/40" />
@@ -88,9 +87,9 @@ export default function About() {
             </div>
 
             {/* Highlighted Quote Box */}
-            <div className="p-6 bg-[#093366] text-[#E4ECE6] border-l-4 border-[#008F7C] shadow-lg rounded-2xl space-y-2 mt-4">
+            <div className="p-6 bg-[#E4ECE6] text-[#093366] border-l-4 border-[#008F7C] shadow-md rounded-2xl space-y-2 mt-4">
               <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#008F7C]">15+ Years Industry Experience</span>
-              <p className="font-serif-luxury italic text-sm sm:text-base text-white font-normal leading-relaxed">
+              <p className="font-serif-luxury italic text-sm sm:text-base text-[#093366] font-normal leading-relaxed">
                 "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
               </p>
             </div>
@@ -110,7 +109,7 @@ export default function About() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#093366] via-transparent to-transparent opacity-30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#093366]/30 via-transparent to-transparent opacity-30" />
             </div>
           </motion.div>
 
@@ -119,9 +118,9 @@ export default function About() {
 
 
       {/* WHY CHOOSE US - PERFECTLY CENTERED EDITORIAL ADVANTAGES SECTION */}
-      <section className="bg-[#093366] text-white py-20 lg:py-28 border-y border-[#D9E0DA]/20 relative overflow-hidden">
+      <section className="bg-[#E4ECE6] text-[#093366] py-20 lg:py-28 border-y border-[#D9E0DA] relative overflow-hidden">
         {/* Glow ambient accent */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0B3A71] rounded-full blur-[180px] pointer-events-none opacity-30" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#008F7C]/15 rounded-full blur-[180px] pointer-events-none opacity-40" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
 
@@ -130,11 +129,11 @@ export default function About() {
             <span className="text-xs uppercase tracking-[0.3em] text-[#008F7C] font-bold">
               The Pure Vision Advantage
             </span>
-            <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-white leading-tight">
+            <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#093366] leading-tight">
               Why Choose <span className="italic font-normal text-[#008F7C]">Us</span>
             </h2>
             <div className="h-[2px] bg-[#008F7C] w-12 mx-auto mt-2" />
-            <p className="text-xs sm:text-sm text-[#A3B8AC] font-light leading-relaxed pt-2 sm:whitespace-nowrap">
+            <p className="text-xs sm:text-sm text-[#62736B] font-light leading-relaxed pt-2 sm:whitespace-nowrap">
               Empowering formulation excellence with technical precision, global reach, and dependable supply integrity.
             </p>
           </div>
@@ -149,18 +148,18 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3 }}
-              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white border border-[#D9E0DA] p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-sm hover:shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#008F7C] rounded-xl shadow-xs">
                   <Headset className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 01</span>
-                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#008F7C] transition-colors">
+                  <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Technical Sales
                   </h3>
-                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] leading-relaxed font-light">
                     Expertise in product solutions tailored precisely to your specific chemical and botanical formulation needs.
                   </p>
                 </div>
@@ -174,18 +173,18 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.08 }}
-              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white border border-[#D9E0DA] p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-sm hover:shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#008F7C] rounded-xl shadow-xs">
                   <Globe2 className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 02</span>
-                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#008F7C] transition-colors">
+                  <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Wide Market Reach
                   </h3>
-                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] leading-relaxed font-light">
                     Access to diverse customer segments and global manufacturers across Personal Care, Dermaceuticals, and Home Care.
                   </p>
                 </div>
@@ -199,18 +198,18 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.16 }}
-              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white border border-[#D9E0DA] p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-sm hover:shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#008F7C] rounded-xl shadow-xs">
                   <Handshake className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 03</span>
-                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#008F7C] transition-colors">
+                  <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Long Term Association & Growth
                   </h3>
-                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] leading-relaxed font-light">
                     Focusing on building sustainable markets together as one united team through shared innovation and trust.
                   </p>
                 </div>
@@ -224,18 +223,18 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.24 }}
-              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white border border-[#D9E0DA] p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-sm hover:shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#008F7C] rounded-xl shadow-xs">
                   <Eye className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 04</span>
-                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#008F7C] transition-colors">
+                  <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Transparency
                   </h3>
-                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] leading-relaxed font-light">
                     Complete transparency in sourcing and technical documentation for optimal performance.
                   </p>
                 </div>
@@ -249,18 +248,18 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, delay: 0.32 }}
-              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white/5 border border-white/10 p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-xl hover:shadow-2xl hover:bg-white/10 flex flex-col justify-between"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm bg-white border border-[#D9E0DA] p-7 hover:border-[#008F7C]/50 transition-all duration-300 group space-y-4 rounded-2xl shadow-sm hover:shadow-xl flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-12 w-12 bg-[#093366] border border-[#008F7C]/40 text-white flex items-center justify-center transition-transform group-hover:scale-110 rounded-xl shadow-xs">
+                <div className="h-12 w-12 bg-[#093366] text-white flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-[#008F7C] rounded-xl shadow-xs">
                   <Truck className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 05</span>
-                  <h3 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#008F7C] transition-colors">
+                  <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Quick Delivery Assurance
                   </h3>
-                  <p className="text-xs text-[#A3B8AC] leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] leading-relaxed font-light">
                     On-time delivery logistics with guaranteed customer satisfaction across pan-India and international supply routes.
                   </p>
                 </div>
