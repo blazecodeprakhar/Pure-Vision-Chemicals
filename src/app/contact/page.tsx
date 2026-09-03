@@ -121,7 +121,8 @@ export default function Contact() {
             {/* Direct Channel Cards with Motion Hover */}
             <div className="space-y-5">
               
-              <motion.div 
+              <motion.a 
+                href="mailto:sales@purevisionchemicals.com"
                 whileHover={{ x: 6, scale: 1.015 }}
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
@@ -131,15 +132,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <h5 className="font-bold text-xs uppercase tracking-wider text-[#093366]">Email Address</h5>
-                  <p className="text-xs text-[#62736B] mt-1">
-                    <a href="mailto:sales@purevisionchemicals.com" className="hover:text-[#008F7C] transition-colors font-medium">
-                      sales@purevisionchemicals.com
-                    </a>
+                  <p className="text-xs text-[#62736B] mt-1 group-hover:text-[#008F7C] transition-colors font-medium">
+                    sales@purevisionchemicals.com
                   </p>
                 </div>
-              </motion.div>
+              </motion.a>
 
-              <motion.div 
+              <motion.a 
+                href="tel:+919326395502"
                 whileHover={{ x: 6, scale: 1.015 }}
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
@@ -149,13 +149,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h5 className="font-bold text-xs uppercase tracking-wider text-[#093366]">Telephone</h5>
-                  <p className="text-xs text-[#62736B] mt-1">
-                    <a href="tel:+919326395502" className="hover:text-[#008F7C] transition-colors font-medium">
-                      +91 93263 95502
-                    </a>
+                  <p className="text-xs text-[#62736B] mt-1 group-hover:text-[#008F7C] transition-colors font-medium">
+                    +91 93263 95502
                   </p>
                 </div>
-              </motion.div>
+              </motion.a>
 
               <motion.a 
                 href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"

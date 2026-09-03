@@ -75,43 +75,43 @@ export default function Footer() {
             {/* Contact channels list with icons */}
             <div className="space-y-5 text-xs sm:text-sm font-light text-[#62736B]">
 
-              <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
-                  <Mail className="h-4 w-4 text-[#008F7C]" />
+              <a
+                href="mailto:sales@purevisionchemicals.com"
+                className="flex items-center gap-3.5 group cursor-pointer"
+              >
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#008F7C] transition-colors duration-300">
+                  <Mail className="h-4 w-4 text-[#008F7C] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <a
-                  href="mailto:sales@purevisionchemicals.com"
-                  className="text-[#093366] hover:text-[#008F7C] transition-colors font-medium"
-                >
+                <span className="text-[#093366] group-hover:text-[#008F7C] transition-colors font-medium">
                   sales@purevisionchemicals.com
-                </a>
-              </div>
+                </span>
+              </a>
 
-              <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
-                  <Phone className="h-4 w-4 text-[#008F7C]" />
+              <a
+                href="tel:+919326395502"
+                className="flex items-center gap-3.5 group cursor-pointer"
+              >
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#008F7C] transition-colors duration-300">
+                  <Phone className="h-4 w-4 text-[#008F7C] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <a
-                  href="tel:+919326395502"
-                  className="text-[#093366] hover:text-[#008F7C] transition-colors font-medium"
-                >
+                <span className="text-[#093366] group-hover:text-[#008F7C] transition-colors font-medium">
                   +91 93263 95502
-                </a>
-              </div>
+                </span>
+              </a>
 
-              <div className="flex items-center gap-3.5 group">
+              <a
+                href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3.5 group cursor-pointer"
+              >
                 <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#008F7C] transition-colors duration-300">
                   <MapPin className="h-4 w-4 text-[#008F7C] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <a
-                  href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="leading-relaxed text-[#093366] hover:text-[#008F7C] transition-colors font-medium cursor-pointer"
-                >
+                <span className="leading-relaxed text-[#093366] group-hover:text-[#008F7C] transition-colors font-medium">
                   Unit 201, Jai Malhar, Mumbai - 400064, India
-                </a>
-              </div>
+                </span>
+              </a>
 
             </div>
 
