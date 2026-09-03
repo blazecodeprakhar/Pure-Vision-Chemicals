@@ -54,10 +54,10 @@ export default function Footer() {
                   <Mail className="h-4 w-4 text-[#008F7C]" />
                 </div>
                 <a
-                  href="mailto:purevisionchem@outlook.com"
+                  href="mailto:sales@purevisionchemicals.com"
                   className="text-white hover:text-[#008F7C] transition-colors font-medium"
                 >
-                  purevisionchem@outlook.com
+                  sales@purevisionchemicals.com
                 </a>
               </div>
 

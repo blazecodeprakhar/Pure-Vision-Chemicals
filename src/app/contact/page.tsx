@@ -139,8 +139,8 @@ export default function Contact() {
                 <div>
                   <h5 className="font-bold text-xs uppercase tracking-wider text-[#093366]">Email Address</h5>
                   <p className="text-xs text-[#62736B] mt-1">
-                    <a href="mailto:purevisionchem@outlook.com" className="hover:text-[#008F7C] transition-colors font-medium">
-                      purevisionchem@outlook.com
+                    <a href="mailto:sales@purevisionchemicals.com" className="hover:text-[#008F7C] transition-colors font-medium">
+                      sales@purevisionchemicals.com
                     </a>
                   </p>
                 </div>

@@ -169,7 +169,7 @@ export default function Header() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#093366]">Email Address</p>
-                    <a href="mailto:purevisionchem@outlook.com" className="hover:text-[#008F7C] transition-colors block mt-0.5">purevisionchem@outlook.com</a>
+                    <a href="mailto:sales@purevisionchemicals.com" className="hover:text-[#008F7C] transition-colors block mt-0.5">sales@purevisionchemicals.com</a>
                   </div>
                 </div>
               </div>
