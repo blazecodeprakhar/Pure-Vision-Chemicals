@@ -100,12 +100,17 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
-                  <MapPin className="h-4 w-4 text-[#008F7C]" />
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#008F7C] transition-colors duration-300">
+                  <MapPin className="h-4 w-4 text-[#008F7C] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <span className="leading-relaxed text-[#093366] font-medium">
+                <a
+                  href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed text-[#093366] hover:text-[#008F7C] transition-colors font-medium cursor-pointer"
+                >
                   Unit 201, Jai Malhar, Mumbai - 400064, India
-                </span>
+                </a>
               </div>
 
             </div>

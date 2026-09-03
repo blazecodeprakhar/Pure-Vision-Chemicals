@@ -157,7 +157,10 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.a 
+                href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ x: 6, scale: 1.015 }}
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 className="flex items-start gap-4 p-5 bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 transition-all duration-300 rounded-2xl shadow-sm hover:shadow-xl cursor-pointer group"
@@ -167,11 +170,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h5 className="font-bold text-xs uppercase tracking-wider text-[#093366]">HQ Office Address</h5>
-                  <p className="text-xs text-[#62736B] mt-1 leading-relaxed font-light">
+                  <p className="text-xs text-[#62736B] mt-1 leading-relaxed font-light group-hover:text-[#008F7C] transition-colors">
                     Unit 201, Jai Malhar, Mumbai - 400064, India
                   </p>
                 </div>
-              </motion.div>
+              </motion.a>
 
             </div>
 
