@@ -99,8 +99,8 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-start gap-3.5 group">
-                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+              <div className="flex items-center gap-3.5 group">
+                <div className="h-8 w-8 rounded-xl border border-[#008F7C]/40 bg-[#008F7C]/10 flex items-center justify-center shrink-0 shadow-xs">
                   <MapPin className="h-4 w-4 text-[#008F7C]" />
                 </div>
                 <span className="leading-relaxed text-[#093366] font-medium">
