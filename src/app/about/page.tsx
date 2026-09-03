@@ -133,7 +133,7 @@ export default function About() {
               Why Choose <span className="italic font-normal text-[#008F7C]">Us</span>
             </h2>
             <div className="h-[2px] bg-[#008F7C] w-12 mx-auto mt-2" />
-            <p className="text-xs sm:text-sm text-[#62736B] font-light leading-relaxed pt-2 sm:whitespace-nowrap">
+            <p className="text-xs sm:text-sm text-[#62736B] font-light leading-relaxed pt-2">
               Empowering formulation excellence with technical precision, global reach, and dependable supply integrity.
             </p>
           </div>

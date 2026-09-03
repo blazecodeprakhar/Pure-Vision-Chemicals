@@ -41,13 +41,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased overflow-x-hidden max-w-full`}
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#F8F8F3] text-[#1A2E26]">
+      <body className="min-h-full flex flex-col font-sans bg-[#F8F8F3] text-[#1A2E26] overflow-x-hidden max-w-full">
         <CartProvider>
           <Header />
-          <main className="flex-1 flex flex-col">
+          <main className="flex-1 flex flex-col overflow-x-hidden max-w-full">
             {children}
           </main>
           <Footer />
