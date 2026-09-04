@@ -133,7 +133,7 @@ export default function Home() {
               </div>
 
               {/* Quick Metrics Bar with Pop-in Animations */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -156,13 +156,13 @@ export default function Home() {
             </motion.div>
 
             {/* Right Editorial Hero Image Container with Gentle Floating Motion */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 flex justify-center"
               initial={{ opacity: 0, scale: 0.92, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 className="relative w-full max-w-[420px] aspect-[4/5] rounded-2xl border border-[#D9E0DA] p-2.5 sm:p-3 bg-white/70 backdrop-blur-md shadow-2xl overflow-hidden hover:border-[#008F7C]/50 transition-colors duration-500"
@@ -313,8 +313,8 @@ export default function Home() {
                     whileTap={{ scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 350, damping: 25 }}
                     className={`p-6 border transition-all duration-300 flex flex-col justify-between space-y-5 cursor-pointer group relative rounded-2xl shadow-xs hover:shadow-xl ${cat.bg} ${isSelected
-                        ? "border-[#008F7C] ring-2 ring-[#008F7C]/50 shadow-md"
-                        : "border-[#D9E0DA] hover:border-[#008F7C]/50"
+                      ? "border-[#008F7C] ring-2 ring-[#008F7C]/50 shadow-md"
+                      : "border-[#D9E0DA] hover:border-[#008F7C]/50"
                       }`}
                   >
                     <div className="space-y-3">
@@ -387,8 +387,8 @@ export default function Home() {
                   <button
                     onClick={() => setCatalogueViewMode("list")}
                     className={`px-3 py-1 text-[11px] font-semibold transition-colors cursor-pointer rounded-md ${catalogueViewMode === "list"
-                        ? "bg-[#093366] text-white"
-                        : "text-[#62736B] hover:text-[#093366]"
+                      ? "bg-[#093366] text-white"
+                      : "text-[#62736B] hover:text-[#093366]"
                       }`}
                   >
                     Spec List
@@ -396,8 +396,8 @@ export default function Home() {
                   <button
                     onClick={() => setCatalogueViewMode("grid")}
                     className={`px-3 py-1 text-[11px] font-semibold transition-colors cursor-pointer rounded-md ${catalogueViewMode === "grid"
-                        ? "bg-[#093366] text-white"
-                        : "text-[#62736B] hover:text-[#093366]"
+                      ? "bg-[#093366] text-white"
+                      : "text-[#62736B] hover:text-[#093366]"
                       }`}
                   >
                     Card Grid
@@ -445,8 +445,8 @@ export default function Home() {
                       <button
                         onClick={() => toggleCartItem(product)}
                         className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer shrink-0 whitespace-nowrap ${isInCart
-                            ? "text-[#008F7C] font-bold bg-[#093366] px-3.5 py-1.5"
-                            : "text-[#62736B] hover:text-[#093366] bg-transparent"
+                          ? "text-[#008F7C] font-bold bg-[#093366] px-3.5 py-1.5"
+                          : "text-[#62736B] hover:text-[#093366] bg-transparent"
                           }`}
                       >
                         {isInCart ? (
@@ -501,8 +501,8 @@ export default function Home() {
                         <button
                           onClick={() => toggleCartItem(product)}
                           className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-all cursor-pointer ${isInCart
-                              ? "bg-[#0B3A71] text-white"
-                              : "bg-[#F0F4F1] hover:bg-[#093366] text-[#093366] hover:text-white border border-[#D9E0DA]"
+                            ? "bg-[#0B3A71] text-white"
+                            : "bg-[#F0F4F1] hover:bg-[#093366] text-[#093366] hover:text-white border border-[#D9E0DA]"
                             }`}
                         >
                           {isInCart ? (
@@ -813,7 +813,7 @@ export default function Home() {
 
             <button
               onClick={() => setCartOpen(true)}
-              className="group relative overflow-hidden bg-[#008F7C] hover:bg-[#007767] text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
+              className="group relative overflow-hidden bg-[#0B3A71] hover:bg-[#07264c] text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-xl hover:shadow-black/20 hover:-translate-y-0.5 active:scale-95 border border-white/20 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
             >
               Review Quote List
             </button>

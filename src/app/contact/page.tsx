@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Check, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Check,
   ArrowRight,
   ChevronDown,
   ShoppingBag
@@ -56,7 +56,7 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none pb-20">
-      
+
       {/* GRAND EDITORIAL CONTACT HERO SECTION */}
       <section className="relative bg-[#E4ECE6] text-[#093366] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA] overflow-hidden">
         {/* Glow ambient background with Soft Pista & Teal Accents */}
@@ -67,10 +67,10 @@ export default function Contact() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          
 
 
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -82,7 +82,7 @@ export default function Contact() {
             </span>
           </motion.h1>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.25 }}
@@ -102,9 +102,9 @@ export default function Contact() {
       {/* CONTACT BODY & FORM */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Details */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-5 space-y-8"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -120,8 +120,8 @@ export default function Contact() {
 
             {/* Direct Channel Cards with Motion Hover */}
             <div className="space-y-5">
-              
-              <motion.a 
+
+              <motion.a
                 href="mailto:sales@purevisionchemicals.com"
                 whileHover={{ x: 6, scale: 1.015 }}
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
@@ -138,7 +138,7 @@ export default function Contact() {
                 </div>
               </motion.a>
 
-              <motion.a 
+              <motion.a
                 href="tel:+919326395502"
                 whileHover={{ x: 6, scale: 1.015 }}
                 transition={{ type: "spring", stiffness: 350, damping: 25 }}
@@ -155,7 +155,7 @@ export default function Contact() {
                 </div>
               </motion.a>
 
-              <motion.a 
+              <motion.a
                 href="https://maps.app.goo.gl/MFdwPsYWStsuoMrz9"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -180,7 +180,7 @@ export default function Contact() {
           </motion.div>
 
           {/* Right Form Card with Curved Edges & Shadow */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-7 bg-white border border-[#D9E0DA] p-8 sm:p-10 shadow-lg rounded-2xl"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -190,9 +190,9 @@ export default function Contact() {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#008F7C]">Official Form</span>
               <h3 className="font-serif-luxury text-2xl font-bold text-[#093366] mt-1">Specification Sourcing Request</h3>
             </div>
-            
+
             {submitted ? (
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 className="bg-[#E4ECE6] border border-[#0B3A71] p-8 text-center text-[#093366] space-y-4 rounded-2xl shadow-md"
@@ -207,11 +207,11 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form onSubmit={handleFormSubmit} className="space-y-6">
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Your Name *</label>
-                    <input 
+                    <input
                       type="text"
                       name="name"
                       required
@@ -223,7 +223,7 @@ export default function Contact() {
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Company Name *</label>
-                    <input 
+                    <input
                       type="text"
                       name="company"
                       required
@@ -238,7 +238,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Corporate Email *</label>
-                    <input 
+                    <input
                       type="email"
                       name="email"
                       required
@@ -250,7 +250,7 @@ export default function Contact() {
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Phone / WhatsApp *</label>
-                    <input 
+                    <input
                       type="tel"
                       name="phone"
                       required
@@ -265,7 +265,7 @@ export default function Contact() {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">Primary Category of Interest</label>
                   <div className="relative">
-                    <select 
+                    <select
                       name="interest"
                       value={formState.interest}
                       onChange={handleInputChange}
@@ -306,7 +306,7 @@ export default function Contact() {
 
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-[#62736B] uppercase tracking-wider">To request information, please complete the contact form below *</label>
-                  <textarea 
+                  <textarea
                     name="message"
                     rows={5}
                     required
@@ -317,12 +317,12 @@ export default function Contact() {
                   />
                 </div>
 
-                <button 
+                <button
                   type="submit"
-                  className="group relative overflow-hidden w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#093366] via-[#008F7C] to-[#093366] hover:brightness-110 text-white py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-2xl hover:shadow-[#008F7C]/30 hover:-translate-y-1 active:scale-95 border border-[#008F7C]/50 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
+                  className="group relative overflow-hidden w-full flex items-center justify-center gap-3 bg-[#093366] hover:bg-[#0B3A71] text-white py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-md hover:shadow-2xl hover:shadow-[#093366]/30 hover:-translate-y-1 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
                 >
                   <span>Let's Connect</span>
-                  <ArrowRight className="h-4 w-4 text-[#008F7C] group-hover:translate-x-1.5 transition-transform duration-300" />
+                  <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" />
                 </button>
 
               </form>

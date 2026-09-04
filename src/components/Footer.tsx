@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
                 href="/contact"
-                className="group relative overflow-hidden inline-flex items-center gap-2.5 bg-[#008F7C] hover:bg-[#007767] text-white font-extrabold px-6 py-3.5 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#008F7C]/40 hover:-translate-y-1 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
+                className="group relative overflow-hidden inline-flex items-center gap-2.5 bg-[#093366] hover:bg-[#0B3A71] text-white font-extrabold px-6 py-3.5 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#093366]/40 hover:-translate-y-1 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
               >
                 <span>Start an Enquiry</span>
                 <ArrowUpRight className="h-4 w-4 text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

@@ -456,10 +456,10 @@ export default function About() {
           <div className="pt-4 text-center">
             <Link
               href="/contact"
-              className="group relative overflow-hidden inline-flex items-center gap-3 bg-gradient-to-r from-[#093366] via-[#008F7C] to-[#093366] hover:brightness-110 text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-md shadow-md hover:shadow-2xl hover:shadow-[#008F7C]/30 hover:-translate-y-1 active:scale-95 border border-[#008F7C]/50 before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
+              className="group relative overflow-hidden inline-flex items-center gap-3 bg-[#093366] hover:bg-[#0B3A71] text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-md shadow-md hover:shadow-2xl hover:shadow-[#093366]/30 hover:-translate-y-1 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
             >
               <span>Get in Touch with our Team</span>
-              <ArrowRight className="h-4 w-4 text-[#008F7C] group-hover:translate-x-1.5 transition-transform duration-300" />
+              <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" />
             </Link>
           </div>
 

@@ -54,11 +54,10 @@ export default function Header() {
     <>
       {/* BRAND LOGO COLORED HEADER - SEAMLESS AT TOP, BORDER/SHADOW FORMS ON SCROLL */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#E4ECE6]/95 backdrop-blur-md border-b border-[#D9E0DA] shadow-md"
-            : "bg-transparent border-b border-transparent shadow-none"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
+          ? "bg-[#E4ECE6]/95 backdrop-blur-md border-b border-[#D9E0DA] shadow-md"
+          : "bg-transparent border-b border-transparent shadow-none"
+          }`}
       >
         <div className="h-[2.5px] w-full bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -90,11 +89,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative py-2 transition-colors duration-200 ${
-                    isActive
-                      ? "text-[#093366] font-bold"
-                      : "text-[#62736B] hover:text-[#093366]"
-                  }`}
+                  className={`relative py-2 transition-colors duration-200 ${isActive
+                    ? "text-[#093366] font-bold"
+                    : "text-[#62736B] hover:text-[#093366]"
+                    }`}
                 >
                   <span>{link.name}</span>
                   {isActive && (
@@ -113,12 +111,12 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setCartOpen(!cartOpen)}
-              className="group relative overflow-hidden flex items-center gap-2 rounded-md bg-[#008F7C] hover:bg-[#007767] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl hover:shadow-[#008F7C]/30 hover:-translate-y-0.5 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700"
+              className="group relative overflow-hidden flex items-center gap-2 rounded-md bg-[#093366] hover:bg-[#0B3A71] px-4 py-2.5 text-xs tracking-wider uppercase font-semibold text-white transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl hover:shadow-[#093366]/30 hover:-translate-y-0.5 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:transition-transform before:duration-700"
             >
               <ShoppingBag className="h-4 w-4 text-white group-hover:scale-110 transition-transform duration-300" />
               <span className="hidden sm:inline">Request Quote</span>
               {inquiryCart.length > 0 && (
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#008F7C] text-[10px] text-white font-bold ml-0.5 shadow-xs">
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#0B3A71] text-[10px] text-white font-bold ml-0.5 shadow-xs">
                   {inquiryCart.length}
                 </span>
               )}
@@ -172,11 +170,10 @@ export default function Header() {
                         key={link.href}
                         href={link.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`block py-3 px-4 transition-all rounded-xl border-b border-[#D9E0DA]/50 ${
-                          isActive
-                            ? "bg-[#E4ECE6] text-[#093366] font-bold border-l-4 border-l-[#008F7C] shadow-xs"
-                            : "text-[#62736B] hover:text-[#093366] hover:bg-white/60"
-                        }`}
+                        className={`block py-3 px-4 transition-all rounded-xl border-b border-[#D9E0DA]/50 ${isActive
+                          ? "bg-[#E4ECE6] text-[#093366] font-bold border-l-4 border-l-[#008F7C] shadow-xs"
+                          : "text-[#62736B] hover:text-[#093366] hover:bg-white/60"
+                          }`}
                       >
                         {link.name}
                       </Link>
