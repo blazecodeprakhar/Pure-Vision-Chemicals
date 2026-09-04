@@ -48,7 +48,7 @@ export const PRODUCTS: Product[] = [
   { id: "func-10", name: "Lumisense PO (Piroctone Olamine)", category: "Functional Products" },
   { id: "func-11", name: "Lumisense BTAC50 (Behentrimonium Chloride & Cetearyl Alcohol)", category: "Functional Products" },
   { id: "func-12", name: "Lumisense BTMS 50 (Behentrimonium Methosulfate & Cetearyl Alcohol)", category: "Functional Products" },
-  { id: "func-13", name: "Stearamidopropyl Dimethylamine", category: "Functional Products" },
+  { id: "func-13", name: "Lumisense SDA (Stearamidopropyl Dimethylamine)", category: "Functional Products" },
   { id: "func-14", name: "Lumisense HRP (Hydrolyzed Rice Protein)", category: "Functional Products" },
   { id: "func-15", name: "Lumisense M68 (Cetearyl Glucoside & Cetearyl Alcohol)", category: "Functional Products" },
   { id: "func-16", name: "Lumisense SMO (Sorbitan Oleate)", category: "Functional Products" },

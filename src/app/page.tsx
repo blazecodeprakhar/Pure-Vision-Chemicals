@@ -157,7 +157,7 @@ export default function Home() {
 
             {/* Right Editorial Hero Image Container with Gentle Floating Motion */}
             <motion.div
-              className="lg:col-span-5 flex justify-center"
+              className="lg:col-span-5 flex justify-center lg:justify-end"
               initial={{ opacity: 0, scale: 0.92, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
