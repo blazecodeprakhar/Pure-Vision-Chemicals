@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
   { id: "func-7", name: "Kojic Dipalmitate", category: "Functional Products" },
   { id: "func-8", name: "Pseudo-Ceramide", category: "Functional Products" },
   { id: "func-9", name: "Polyglyceryl-4 Caprate", category: "Functional Products" },
-  { id: "func-10", name: "Piroctone Olamine", category: "Functional Products" },
+  { id: "func-10", name: "Lumisense PO (Piroctone Olamine)", category: "Functional Products" },
   { id: "func-11", name: "Lumisense BTAC50 (Behentrimonium Chloride & Cetearyl Alcohol)", category: "Functional Products" },
   { id: "func-12", name: "Lumisense BTMS 50 (Behentrimonium Methosulfate & Cetearyl Alcohol)", category: "Functional Products" },
   { id: "func-13", name: "Stearamidopropyl Dimethylamine", category: "Functional Products" },

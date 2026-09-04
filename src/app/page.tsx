@@ -59,6 +59,23 @@ export default function Home() {
     });
   }, [selectedCategory, searchQuery]);
 
+  const renderProductNameWithFormattedBrackets = (fullName: string) => {
+    const parenIndex = fullName.indexOf("(");
+    if (parenIndex === -1) {
+      return <span className="font-semibold">{fullName}</span>;
+    }
+
+    const title = fullName.slice(0, parenIndex).trim();
+    const brackets = fullName.slice(parenIndex).trim();
+
+    return (
+      <>
+        <span className="font-semibold">{title}</span>{" "}
+        <span className="font-normal text-xs text-[#62736B] tracking-normal">{brackets}</span>
+      </>
+    );
+  };
+
 
   return (
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none">
@@ -420,8 +437,8 @@ export default function Home() {
                         <span className="font-serif-luxury text-xs text-[#008F7C] font-bold w-6">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <h4 className="font-sans font-semibold text-sm sm:text-base text-[#0B3A71] tracking-tight group-hover:text-[#093366] transition-colors">
-                          {product.name}
+                        <h4 className="font-sans text-sm sm:text-base text-[#0B3A71] tracking-tight group-hover:text-[#093366] transition-colors">
+                          {renderProductNameWithFormattedBrackets(product.name)}
                         </h4>
                       </div>
 
@@ -474,8 +491,8 @@ export default function Home() {
                           </span>
                         </div>
 
-                        <h3 className="font-sans font-semibold text-base text-[#093366] group-hover:text-[#0B3A71] transition-colors leading-snug pt-1">
-                          {product.name}
+                        <h3 className="font-sans text-base text-[#093366] group-hover:text-[#0B3A71] transition-colors leading-snug pt-1">
+                          {renderProductNameWithFormattedBrackets(product.name)}
                         </h3>
                       </div>
 
