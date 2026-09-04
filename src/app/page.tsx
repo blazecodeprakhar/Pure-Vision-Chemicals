@@ -64,7 +64,7 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none">
 
       {/* HERO SECTION - LUXURY PERFUME / BOTANICAL EDITORIAL */}
-      <section className="relative overflow-hidden bg-[#E4ECE6] text-[#093366] py-20 sm:py-24 lg:py-32 border-b border-[#D9E0DA]">
+      <section className="relative overflow-hidden bg-[#E4ECE6] text-[#093366] min-h-[calc(100vh-5rem)] flex items-center py-12 sm:py-16 lg:py-20 border-b border-[#D9E0DA]">
 
         {/* Background Gradient Glow with Soft Pista & Teal Accents */}
         <div className="absolute inset-0 pointer-events-none opacity-70">
