@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -19,6 +19,21 @@ export default function Header() {
   const router = useRouter();
   const { inquiryCart, toggleCartItem, clearCart, cartOpen, setCartOpen } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Strictly 3 pages as requested
   const navLinks = [
@@ -33,10 +48,18 @@ export default function Header() {
     router.push("/contact");
   };
 
+  const isHeaderVisible = isScrolled || mobileMenuOpen || cartOpen;
+
   return (
     <>
-      {/* BRAND LOGO COLORED HEADER - LOCKED TO SCREEN */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-[#D9E0DA] bg-[#E4ECE6]/95 backdrop-blur-md shadow-md">
+      {/* BRAND LOGO COLORED HEADER - HIDDEN AT TOP, REVEALED ON SCROLL */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-[#D9E0DA] bg-[#E4ECE6]/95 backdrop-blur-md shadow-md transition-all duration-300 ${
+          isHeaderVisible
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
         <div className="h-[2.5px] w-full bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 
