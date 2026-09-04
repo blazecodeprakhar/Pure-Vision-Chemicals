@@ -54,10 +54,10 @@ export default function Header() {
     <>
       {/* BRAND LOGO COLORED HEADER - SEAMLESS AT TOP, BORDER/SHADOW FORMS ON SCROLL */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 w-full bg-[#E4ECE6] transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? "border-b border-[#D9E0DA] shadow-md"
-            : "border-b border-transparent shadow-none"
+            ? "bg-[#E4ECE6]/95 backdrop-blur-md border-b border-[#D9E0DA] shadow-md"
+            : "bg-transparent border-b border-transparent shadow-none"
         }`}
       >
         <div className="h-[2.5px] w-full bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
