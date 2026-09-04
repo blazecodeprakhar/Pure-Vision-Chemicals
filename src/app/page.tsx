@@ -433,18 +433,18 @@ export default function Home() {
                       transition={{ duration: 0.15, delay: Math.min(idx * 0.015, 0.15) }}
                       className="py-3.5 sm:py-4 flex items-center justify-between hover:bg-white/60 px-2 sm:px-4 transition-all duration-200 group"
                     >
-                      <div className="flex items-center gap-6 sm:gap-10">
-                        <span className="font-serif-luxury text-xs text-[#008F7C] font-bold w-6">
+                      <div className="flex items-center gap-6 sm:gap-10 min-w-0 pr-4">
+                        <span className="font-serif-luxury text-xs text-[#008F7C] font-bold w-6 shrink-0">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <h4 className="font-sans text-sm sm:text-base text-[#0B3A71] tracking-tight group-hover:text-[#093366] transition-colors">
+                        <h4 className="font-sans text-sm sm:text-base text-[#0B3A71] tracking-tight group-hover:text-[#093366] transition-colors min-w-0">
                           {renderProductNameWithFormattedBrackets(product.name)}
                         </h4>
                       </div>
 
                       <button
                         onClick={() => toggleCartItem(product)}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer ${isInCart
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer shrink-0 whitespace-nowrap ${isInCart
                             ? "text-[#008F7C] font-bold bg-[#093366] px-3.5 py-1.5"
                             : "text-[#62736B] hover:text-[#093366] bg-transparent"
                           }`}
