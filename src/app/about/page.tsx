@@ -23,7 +23,7 @@ export default function About() {
     <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none pb-20">
 
       {/* GRAND EDITORIAL ABOUT HERO SECTION */}
-      <section className="relative bg-[#E4ECE6] text-[#093366] py-16 sm:py-28 lg:py-32 border-b border-[#D9E0DA] overflow-hidden">
+      <section className="relative bg-[#E4ECE6] text-[#093366] pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 border-b border-[#D9E0DA] overflow-hidden">
         {/* Glow ambient background with Soft Pista & Teal Accents */}
         <div className="absolute inset-0 pointer-events-none opacity-70">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#008F7C]/15 rounded-full blur-[140px]" />
