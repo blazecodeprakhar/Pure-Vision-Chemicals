@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-[#F8F8F3] text-[#1A2E26] max-w-full">
         <CartProvider>
           <Header />
-          <main className="flex-1 flex flex-col pt-0 max-w-full">
+          <main className="flex-1 flex flex-col pt-16 sm:pt-20 max-w-full">
             {children}
           </main>
           <Footer />
