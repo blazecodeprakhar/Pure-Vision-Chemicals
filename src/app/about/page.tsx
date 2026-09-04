@@ -155,7 +155,7 @@ export default function About() {
                   <Headset className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 01</span>
+                  {/* <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 01</span> */}
                   <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Technical Sales
                   </h3>
@@ -180,7 +180,7 @@ export default function About() {
                   <Globe2 className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 02</span>
+                  {/* <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 02</span> */}
                   <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Wide Market Reach
                   </h3>
@@ -205,7 +205,7 @@ export default function About() {
                   <Handshake className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 03</span>
+                  {/* <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 03</span> */}
                   <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Long Term Association & Growth
                   </h3>
@@ -230,7 +230,7 @@ export default function About() {
                   <Eye className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 04</span>
+                  {/* <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 04</span> */}
                   <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Transparency
                   </h3>
@@ -255,7 +255,7 @@ export default function About() {
                   <Truck className="h-6 w-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 05</span>
+                  {/* <span className="text-[10px] font-bold uppercase tracking-widest text-[#008F7C]">Pillar 05</span> */}
                   <h3 className="font-serif-luxury text-xl font-bold text-[#093366] group-hover:text-[#008F7C] transition-colors">
                     Quick Delivery Assurance
                   </h3>

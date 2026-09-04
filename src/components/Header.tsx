@@ -35,8 +35,8 @@ export default function Header() {
 
   return (
     <>
-      {/* BRAND LOGO COLORED HEADER */}
-      <header className="sticky top-0 z-50 w-full border-b border-[#D9E0DA] bg-[#E4ECE6] shadow-sm">
+      {/* BRAND LOGO COLORED HEADER - LOCKED TO SCREEN */}
+      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-[#D9E0DA] bg-[#E4ECE6]/95 backdrop-blur-md shadow-md">
         <div className="h-[2.5px] w-full bg-gradient-to-r from-[#008F7C] via-[#0B3A71] to-[#008F7C]" />
         <div className="mx-auto flex max-w-7xl h-16 sm:h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
 

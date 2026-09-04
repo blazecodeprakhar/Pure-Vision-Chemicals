@@ -102,7 +102,7 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
                   href="#catalog"
-                  className="group relative overflow-hidden inline-flex items-center justify-center gap-3 bg-[#008F7C] hover:bg-[#007767] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#008F7C]/40 hover:-translate-y-1 active:scale-95 border border-[#008F7C] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
+                  className="group relative overflow-hidden inline-flex items-center justify-center gap-3 bg-[#093366] hover:bg-[#0B3A71] text-white font-extrabold px-8 py-4 text-xs uppercase tracking-widest transition-all duration-300 cursor-pointer rounded-md shadow-lg hover:shadow-2xl hover:shadow-[#093366]/40 hover:-translate-y-1 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
                 >
                   <span>Explore Ingredients</span>
                   <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -152,7 +152,7 @@ export default function Home() {
               >
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <Image
-                    src="/heroimage.jpg"
+                    src="/hero_image.jpg"
                     alt="Pure Vision Specialty Botanical Active Essential Oil"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-108"
