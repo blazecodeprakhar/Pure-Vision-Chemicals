@@ -372,10 +372,12 @@ export default function About() {
                 </p>
               </div>
 
+              {/* 
               <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
                 <span className="text-[#008F7C] font-bold">✓</span>
                 <span>Traceable Supply Lines</span>
               </div>
+              */}
 
               {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
@@ -404,10 +406,12 @@ export default function About() {
                 </p>
               </div>
 
+              {/* 
               <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
                 <span className="text-[#008F7C] font-bold">✓</span>
                 <span>Responsive Guidance</span>
               </div>
+              */}
 
               {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
@@ -436,10 +440,12 @@ export default function About() {
                 </p>
               </div>
 
+              {/* 
               <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
                 <span className="text-[#008F7C] font-bold">✓</span>
                 <span>Complete Transparency</span>
               </div>
+              */}
 
               {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
