@@ -131,8 +131,8 @@ export default function Home() {
                   <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Core Categories</p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">2025</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Established</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">15+ Yrs</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Expertise</p>
                 </motion.div>
               </motion.div>
 
