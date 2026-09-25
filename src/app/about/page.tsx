@@ -82,15 +82,17 @@ export default function About() {
 
             <div className="space-y-4 text-[#62736B] leading-relaxed text-sm font-light">
               <p>
-                Pure Vision Chemicals is a trusted distributor, supplier and liaison partner, connecting manufacturers with high-quality botanical extracts and specialty ingredients for innovative product development. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, cosmetics & Home-Care.
+                We are a trusted distributor, supplier and liaison partner, connecting manufacturers with high-quality botanical extracts and specialty ingredients for innovative product development.
+              </p>
+              <p>
+                With a commitment to <strong className="font-semibold text-[#093366]">quality, regulatory standards, reliability and long-term partnership</strong>, we help our customers transform innovative formulations into successful products.
               </p>
             </div>
 
             {/* Highlighted Quote Box */}
             <div className="p-6 bg-[#E4ECE6] text-[#093366] border-l-4 border-[#008F7C] shadow-md rounded-2xl space-y-2 mt-4">
-              <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-[#008F7C]">15+ Years Industry Experience</span>
               <p className="font-serif-luxury italic text-sm sm:text-base text-[#093366] font-normal leading-relaxed">
-                "We leverage our 15+ years of industry experience and technical precision to align your specific formulation needs with the exact product fit, ensuring optimal performance every time."
+                “Your formulation deserves more than just a distributor or a supplier. It deserves a partner who understands your needs, values your success and grows with you.”
               </p>
             </div>
           </motion.div>
