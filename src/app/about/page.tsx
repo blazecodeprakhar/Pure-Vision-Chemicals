@@ -20,7 +20,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none pb-20">
+    <div className="relative min-h-screen bg-[#F8F8F3] text-[#093366] flex flex-col select-none">
 
       {/* GRAND EDITORIAL ABOUT HERO SECTION */}
       <section className="relative bg-[#E4ECE6] text-[#093366] pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 border-b border-[#D9E0DA] overflow-hidden">
@@ -275,7 +275,7 @@ export default function About() {
 
 
       {/* MISSION & VISION */}
-      <section className="bg-[#E4ECE6] border-y border-[#D9E0DA] py-20">
+      <section className="bg-[#E4ECE6] border-t border-[#D9E0DA] py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
