@@ -109,7 +109,7 @@ export default function Home() {
 
               <p className="text-[#093366]/85 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light space-y-2">
                 <span className="block">
-                  <strong className="font-bold text-[#093366] tracking-wider">PURE VISION CHEMICALS</strong> is a premier manufacturer of botanical extracts and specialty ingredient solution partner.
+                  <strong className="font-bold text-[#093366] tracking-wider">Pure Vision Chemicals</strong> is a trusted distributor, supplier and liaison partner, connecting manufacturers with high-quality botanical extracts and specialty ingredients for innovative product development.
                 </span>
                 <span className="block">
                   We specialize in providing innovative ingredient solutions to the Cosmetics, Dermaceuticals, and Home Care industries.
@@ -148,8 +148,8 @@ export default function Home() {
                   <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Core Categories</p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">15+ Yrs</p>
-                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Expertise</p>
+                  <p className="font-serif-luxury text-3xl font-bold text-[#093366]">One</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#62736B] mt-1 font-semibold">Trusted Partner</p>
                 </motion.div>
               </motion.div>
 
@@ -189,7 +189,7 @@ export default function Home() {
       <section className="bg-[#E4ECE6] border-b border-[#D9E0DA] py-7 select-none">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-            <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#62736B]">Our Core Philosophy</span>
+            <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#62736B]">Our Core Value</span>
             <p className="font-serif-luxury text-lg sm:text-2xl italic font-normal text-[#093366]">
               "Customer first, strong partnership, succeed together."
             </p>

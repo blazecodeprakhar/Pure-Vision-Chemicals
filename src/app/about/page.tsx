@@ -82,7 +82,7 @@ export default function About() {
 
             <div className="space-y-4 text-[#62736B] leading-relaxed text-sm font-light">
               <p>
-                We are a premier manufacturer and supplier specializing in high-performance specialty chemicals and premium herbal extracts. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, cosmetics & Home-Care.
+                Pure Vision Chemicals is a trusted distributor, supplier and liaison partner, connecting manufacturers with high-quality botanical extracts and specialty ingredients for innovative product development. Founded on the pillars of innovation, quality, and sustainability, we serve as a trusted partner to global industries, including Dermaceuticals, cosmetics & Home-Care.
               </p>
             </div>
 
