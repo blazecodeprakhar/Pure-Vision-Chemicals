@@ -330,11 +330,11 @@ export default function About() {
       </section>
 
 
-      {/* CORE PHILOSOPHY & PILLARS */}
+      {/* CORE PHILOSOPHY & PILLARS - DISABLED */}
+      {/*
       <section className="py-24 lg:py-28 bg-[#F8F8F3] border-b border-[#D9E0DA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
 
-          {/* Header with Font Pairing */}
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#62736B] font-semibold">Corporate Pillars</span>
             <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#093366] leading-tight">
@@ -348,10 +348,8 @@ export default function About() {
             </p>
           </div>
 
-          {/* 3 Pillar Motion Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
 
-            {/* High-Quality Manufacturing & Sourcing */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -374,18 +372,9 @@ export default function About() {
                 </p>
               </div>
 
-              {/* 
-              <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
-                <span className="text-[#008F7C] font-bold">✓</span>
-                <span>Traceable Supply Lines</span>
-              </div>
-              */}
-
-              {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Technical Support & Guidance */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -408,18 +397,9 @@ export default function About() {
                 </p>
               </div>
 
-              {/* 
-              <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
-                <span className="text-[#008F7C] font-bold">✓</span>
-                <span>Responsive Guidance</span>
-              </div>
-              */}
-
-              {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
-            {/* Sincere Partnership */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -442,14 +422,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* 
-              <div className="pt-4 border-t border-[#D9E0DA]/60 flex items-center gap-2 text-xs font-semibold text-[#093366]">
-                <span className="text-[#008F7C] font-bold">✓</span>
-                <span>Complete Transparency</span>
-              </div>
-              */}
-
-              {/* Bottom Gold Accent */}
               <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
             </motion.div>
 
@@ -467,6 +439,7 @@ export default function About() {
 
         </div>
       </section>
+      */}
 
     </div>
   );
