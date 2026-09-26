@@ -35,7 +35,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Strictly 3 pages as requested
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Products", href: "/#catalog" },

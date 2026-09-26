@@ -5,12 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Globe2,
-  ShieldCheck,
   Target,
   Compass,
-  Users,
-  Award,
-  ArrowRight,
   Truck,
   Handshake,
   Eye,
@@ -328,118 +324,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-
-      {/* CORE PHILOSOPHY & PILLARS - COMMENTED OUT */}
-      {/*
-      <section className="py-24 lg:py-28 bg-[#F8F8F3] border-b border-[#D9E0DA]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="text-xs uppercase tracking-widest text-[#62736B] font-semibold">Corporate Pillars</span>
-            <h2 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#093366] leading-tight">
-              Our Core Philosophy <br />
-              <span className="italic font-normal text-[#008F7C]">
-                & Guiding Values
-              </span>
-            </h2>
-            <p className="font-serif-luxury italic text-sm sm:text-base text-[#62736B] font-normal leading-relaxed pt-1">
-              "Customer first, strong partnership, succeed together. These values shape every formulation and relationship."
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
-            >
-              <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
-                  <Globe2 className="h-6 w-6" />
-                </div>
-
-                <h3 className="font-serif-luxury font-bold text-2xl text-[#093366] group-hover:text-[#0B3A71] transition-colors">
-                  High-Quality Manufacturing & Sourcing
-                </h3>
-
-                <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  Manufacturing high-purity, nature-derived botanical extracts under rigorous standards, while seamlessly sourcing specialty chemicals from globally renowned partners to provide a comprehensive, end-to-end raw material solution.
-                </p>
-              </div>
-
-              <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
-            >
-              <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
-
-                <h3 className="font-serif-luxury font-bold text-2xl text-[#093366] group-hover:text-[#0B3A71] transition-colors">
-                  Technical Support & Guidance
-                </h3>
-
-                <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  Our experienced technical team offers dedicated assistance to streamline your product development, providing responsive localized service, comprehensive documentation, and expert formulation guidance.
-                </p>
-              </div>
-
-              <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
-              className="bg-white border border-[#D9E0DA] hover:border-[#008F7C]/50 p-8 sm:p-10 flex flex-col justify-between space-y-8 rounded-2xl shadow-xs hover:shadow-2xl transition-all duration-300 group relative overflow-hidden cursor-pointer"
-            >
-              <div className="space-y-5">
-                <div className="h-13 w-13 bg-[#093366] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#0B3A71] rounded-xl shadow-xs">
-                  <Users className="h-6 w-6" />
-                </div>
-
-                <h3 className="font-serif-luxury font-bold text-2xl text-[#093366] group-hover:text-[#0B3A71] transition-colors">
-                  Sincere Partnership
-                </h3>
-
-                <p className="text-xs sm:text-sm text-[#62736B] leading-relaxed font-light">
-                  We believe in growing alongside our clients by maintaining complete transparency, dependable sourcing consistency, and long-term commitment.
-                </p>
-              </div>
-
-              <div className="h-1 bg-transparent group-hover:bg-[#008F7C] transition-colors duration-300 absolute bottom-0 left-0 right-0" />
-            </motion.div>
-
-          </div>
-
-          <div className="pt-4 text-center">
-            <Link
-              href="/contact"
-              className="group relative overflow-hidden inline-flex items-center gap-3 bg-[#093366] hover:bg-[#0B3A71] text-white px-9 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-md shadow-md hover:shadow-2xl hover:shadow-[#093366]/30 hover:-translate-y-1 active:scale-95 border border-[#093366] before:absolute before:inset-0 before:-translate-x-full hover:before:translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:transition-transform before:duration-700"
-            >
-              <span>Get in Touch with our Team</span>
-              <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1.5 transition-transform duration-300" />
-            </Link>
-          </div>
-
-        </div>
-      </section>
-      */}
 
     </div>
   );
